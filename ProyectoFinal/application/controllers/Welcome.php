@@ -24,4 +24,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message',$data);
 		
 	}
+	function nuevoUsuario(){
+		$this->load->view('templates/headers/headerForm.php');
+		$this->load->view('templates/formularios/signin.php');
+	}
 }

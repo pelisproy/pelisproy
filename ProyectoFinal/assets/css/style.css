@@ -1,0 +1,289 @@
+/*-------------------- General --------------------*/
+body {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	height: auto;
+	width: 100%;
+	margin: 0 auto;
+}
+/*-------------------- Header --------------------*/
+.header {
+	height: 140px;
+	width: 100%;
+	border-bottom: 2px solid #2447B2;
+}
+.logo {
+	float: left;
+	width: 50%;
+	height: 100%;
+	margin-left: 30px;
+	margin-top: 1%;
+}
+.botones {
+	float: right;
+	width: 40%;
+	margin-top: 30px;
+}
+.identificarse, .registrarse {
+	margin: 3%;
+	float: right;
+	display: inline;
+	border-radius: 10px;
+	font-family: "Calibri";
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #2447B2;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	line-height: 100%;
+}
+.identificarse {
+	margin-right: 50px;
+	padding: 8px;
+}
+.registrarse {
+	padding: 8px 11px 8px 11px;
+}
+.identificarse:hover, .registrarse:hover {
+	background-color: white;
+	color: #2447B2;
+	transition: all .3s ease-in;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: initial;
+}
+
+@media only screen and (max-width : 750px) {
+	.botones {
+		width: 25%;
+		margin-right: 20px;
+	}
+	.identificarse, .registrarse {
+		margin: 0;
+		float: left;
+		display: block;
+	}
+}
+@media only screen and (max-width : 750px) {
+	.logo a img {
+		width: 90%;
+	}
+}
+/*-------------------- Navegación --------------------*/
+.navegacion {
+	height: 50px;
+	width: 90%;
+	margin: 10px 5% 10px 5%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+a > img {
+	cursor: pointer;
+}
+.menu {
+    float: left;
+    list-style: none;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 50%;
+	line-height: 100%;
+	background-color: #2447B2;
+	border-radius: 5px;
+	border: 1px solid #122459;
+}
+.menu ul {
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+.menu ul li {
+	height: 100%;
+	width: 24%;
+	display: inline-block;
+	padding-left: 7%;
+	padding-right:7%;
+	padding-top: 12px;
+	text-align: center;
+}
+.menu ul li:first-child, .menu ul li:nth-child(2), .menu ul li:nth-child(3) {
+	border-right: 1px solid #122459;
+}
+.menu ul li a {
+	color: white;
+	text-decoration: none;
+	text-align: center;	
+	font-family: "Calibri";
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+.menu ul li:hover {
+	cursor: pointer; 
+}
+.menu ul li:hover a {
+	color: #FFFF00; 
+}
+.menuResponsive {
+	display: none;
+	height: 100%;
+	width: 50%;
+	float: left;
+	background-color: #2447B2;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid #122459;
+	padding: 1%;
+}
+.menuResponsive a {
+	float: right;
+}
+.menuResponsive a img {
+	height: 30px;
+	width: 80px;
+}
+.glyphicon-menu-hamburger {
+	margin-top:6px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.buscador {
+	width: 50%;
+	float: right;
+	display: inline;
+}
+.buscador * {
+	margin: 3px;
+	float: right;	
+}
+.buscador select {
+	height: 40px;
+	width: 100px;
+	margin-bottom: 10px;	
+}
+.buscador input[type="text"] {
+	height: 100%;
+	padding: 8px;	
+	margin-bottom: 10px;
+}
+.buscador button {
+	height: 40px;
+	width: 100px;
+	top: 0;
+	font-weight: bold;
+	border-radius: 5px;
+	color: white;
+	background-color: #2447B2;
+	padding-bottom: 5px;
+}
+.buscador button:hover {
+	color: #FFFF00;	
+}
+#campoBusqueda {
+	height: 100%;
+	width: 250px;
+	border-radius: 2px;
+}
+@media only screen and (max-width : 1100px) {
+	.glyphicon-search {
+		display: inline;
+		height: 100%;
+		width: 80px;
+		border: 1px solid black;
+		border-radius: 5px;
+		float: right;
+		text-align: center;
+	}
+	.buscador select, .buscador input[type="text"] {
+		display: none;	
+	}
+}
+@media only screen and (max-width: 900px) {
+	.menuResponsive {
+		display: inline;
+	}
+	.menu {
+		height: 160px;
+		width: 42.4%;
+	    float: left;
+	    list-style: none;
+		overflow: hidden;
+		display: none;
+		position: absolute;
+		top: 195px;
+		background-color: #2447B2;
+		border: 1px solid #122459; 
+	}
+	.menu ul {
+		height: 160px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.menu ul li {
+		height: 25%;
+		width: 100%;
+		display: block;
+		text-align: center;
+		border-bottom: 1px solid black;
+	}
+	.menu ul li:last-child {
+		border: none;
+	}
+}
+/*-------------------- Carrusel --------------------*/
+.carrusel {
+	height: 500px;
+	width: 90%;
+	margin: 10px 5% 10px 5%;
+	border: 1px solid black;
+}
+/*-------------------- Lista --------------------*/
+/*-------------------- Populares --------------------*/
+/*-------------------- Footer --------------------*/
+.footer {
+	height: 160px;
+	width: 100%;
+	background-color: #383838;
+	border: 1px solid black;
+	text-align: center;
+	color: white;
+	font-size: 90%;
+}
+.footer a[href="index.html"] {
+	float: left;
+	margin: 3%;
+}
+.footer .extra_info, .footer .copyright {
+	float: right;
+	width: 70%;
+}
+.footer .extra_info {
+	height: 20%;
+}
+.footer .copyright {
+	height: 80%;
+}
+.footer .extra_info a {
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: 110%;
+}
+.footer .extra_info a:hover {
+	color: tomato;
+}
+.footer .copyright i {
+	font-weight: bold;
+}
+.footer .icons {
+	float: right;
+}
