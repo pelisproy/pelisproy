@@ -20,8 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('templates/headers/headerPrin.php');
 		$data['menu'] = menu_ul('home');
 		$this->load->view('welcome_message',$data);
+		$this->load->view('templates/footers/foot.php');
 		
 	}
 	function nuevoUsuario(){
