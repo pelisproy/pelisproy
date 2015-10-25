@@ -14,7 +14,7 @@ class sign_model extends CI_Model{
 				'avatar'=>base_url('/assets/images/mr_x.gif'),
 				'sexo'=>$sexo,
 				'nacionalidad'=>$nacionalidad,
-				'tipo'=>'usuario'
+				'tipoUsuario'=>'usuario'
 		);
 		return $this->db->insert('usuario', $data);
 		if($data['error'] = $this->db->_error_message());

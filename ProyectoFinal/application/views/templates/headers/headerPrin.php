@@ -24,8 +24,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<a href="index.html"><img src="<?= base_url(); ?>/assets/images/logo2.png" height="120" width="400"></a>
 				</div>
 				<div class="botones">
-					<button onclick="" class="identificarse"> Identifícate </button>
-					<button  class="registrarse"> <a href="<?= base_url(); ?>/Welcome/nuevoUsuario">Regístrate</a> </button>
+					
+					<?php if ($this->session->userdata('username')):?>
+					<button class="identificarse"> <a href="<?=site_url('login/logout')?>">Desconectarse </a> </button>
+					<button class="identificarse"> <a href="#"><?php echo $this->session->userdata('username')?> </a> </button>
+					<?php else:?>
+					<button class="identificarse"> <a href="<?= base_url(); ?>/login">Conectarse </a> </button>
+					<button class="registrarse"> <a href="<?= base_url(); ?>/Welcome/nuevoUsuario">Regístrate</a> </button>
+					<?php endif;?>
+					
 				</div>
 			</div>
 			<div class="navegacion">
