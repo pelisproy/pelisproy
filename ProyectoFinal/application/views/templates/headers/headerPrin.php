@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
@@ -21,24 +21,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<a href=<?=base_url('/home/');?><img src="<?= base_url(); ?>/assets/images/logo.png" height="120" width="400"/></a>
+					<a href="index.html"><img src="<?= base_url(); ?>/assets/images/logo2.png" height="120" width="400"></a>
 				</div>
 				<div class="botones">
 					
 					<?php if ($this->session->userdata('username')):?>
 					<button class="identificarse"> <a href="<?=site_url('login/logout')?>">Desconectarse </a> </button>
 					<button class="identificarse"> <a href="#"><?php echo $this->session->userdata('username')?> </a> </button>
+					<!-- Ejemplo botón sólo visible por un administrador -->
+					<?php if ($this->session->userdata('tipoUsuario') != null && $this->session->userdata('tipoUsuario') == 0):?>
+						<button class="identificarse"> <a href="#"><?php echo "Bienvenido Administrador: " . $this->session->userdata('username')?> </a> </button>
+					<?php endif;?>
+					<!-- Fin de ejemplo -->
+					
 					<?php else:?>
 					<button class="identificarse"> <a href="<?= base_url(); ?>/login">Conectarse </a> </button>
-					<button class="registrarse"> <a href="<?= base_url(); ?>/home/nuevoUsuario">Regístrate</a> </button>
+					<button class="registrarse"> <a href="<?= base_url(); ?>/Welcome/nuevoUsuario">Regístrate</a> </button>
 					<?php endif;?>
-					
 				</div>
 			</div>
 			<div class="navegacion">
 				<div class="menuResponsive">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
-					<a href=<?=base_url('/home/');?><img src="<?= base_url(); ?>/assests/images/logo.png"></a>
+					<a href="index.html"><img src="<?= base_url(); ?>/assests/images/logo2.png"></a>
 				</div>
 				<div class="menu">
 					<?php echo menu_ul('home'); ?>

@@ -21,13 +21,16 @@ public function __construct()
 		$this->load->model('usuario_model');
 		
 		
-	if($this->usuario_model->login($_POST['username'],$_POST['password'])){
-		$this->session->set_userdata('username', $_POST['username']);
-		redirect('welcome');
-	
-	}else{
-		redirect('login');
-	}
+		$variableUsuario = $this->usuario_model->login($_POST['username'],$_POST['password']);
+		if($variableUsuario != null){
+			$this->session->set_userdata('username', $_POST['username']);
+			// Control para ver que devuelve login
+			//echo $this->usuario_model->login($_POST['username'],$_POST['password']);
+			$this->session->set_userdata('tipoUsuario', $variableUsuario);
+			redirect('welcome');
+		}else{
+			redirect('login');
+		}
 	}
 		$this->load->view('templates/formularios/login.php');
 			

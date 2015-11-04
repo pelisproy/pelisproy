@@ -12,15 +12,18 @@ class Usuario_model extends CI_Model {
 	
 	public function login($username,$password)
 	{
-		
 		$this->db->where('nickname',$username);
 		$this->db->where('password',$password);
 		$v=$this->db->get('usuario');
 		if($v->num_rows()>0)
 		{
-			return true;
+			$tipoUsuario = null;
+			foreach ($v -> result_array() as $resultado) {
+				$tipoUsuario = $resultado['tipoUsuario'];
+			}
+				return $tipoUsuario;
 		}else{
-			return false;
+			return null;
 		}
 	}
 	
