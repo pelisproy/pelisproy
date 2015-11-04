@@ -30,14 +30,14 @@ class Films_model extends CI_Model{
 		return $data;
 	}
 	public function borrarFicha($id){
-		return $this->db->where('id', $id);
+		$this->db->where('id', $id);
 		return $this->db->delete('pelicula');
-		if($data['error'] = $this->db->_error_message());
-		return $data;
+		/*if($data['error'] = $this->db->_error_message());
+		return $data;*/
 	}
 	public function mostrarTodasPeliculas(){
-		$this->db->select('nombre, sinopsis, caratula, anyo, director');
-		$this->db->from('pelicula');
+		$query=$this->db->get('pelicula');
+		return $query->result_array();
 	}
 	public function mostrarPeliculaEspecifica($id){
 	//CAMBIAR ID POR LO QUE SE VEA CONVENIENTE (TITULO, ACTOR, ETC) MIRAR SI SE PUEDE HACER EN UNA SOLA FUNCIÓN O EN VARIAS

@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<a href="index.html"><img src="<?= base_url(); ?>/assets/images/logo2.png" height="120" width="400"></a>
+					<a href=<?=base_url('/home/');?><img src="<?= base_url(); ?>/assets/images/logo.png" height="120" width="400"/></a>
 				</div>
 				<div class="botones">
 					
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<button class="identificarse"> <a href="#"><?php echo $this->session->userdata('username')?> </a> </button>
 					<?php else:?>
 					<button class="identificarse"> <a href="<?= base_url(); ?>/login">Conectarse </a> </button>
-					<button class="registrarse"> <a href="<?= base_url(); ?>/Welcome/nuevoUsuario">Regístrate</a> </button>
+					<button class="registrarse"> <a href="<?= base_url(); ?>/home/nuevoUsuario">Regístrate</a> </button>
 					<?php endif;?>
 					
 				</div>
@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="navegacion">
 				<div class="menuResponsive">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
-					<a href="index.html"><img src="<?= base_url(); ?>/assests/images/logo2.png"></a>
+					<a href=<?=base_url('/home/');?><img src="<?= base_url(); ?>/assests/images/logo.png"></a>
 				</div>
 				<div class="menu">
 					<?php echo menu_ul('home'); ?>

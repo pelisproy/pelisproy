@@ -115,3 +115,4 @@
                         </div>
                     </fieldset>
                 </div>
+<a href="<?=base_url();?>/home/">Volver atrás</a>

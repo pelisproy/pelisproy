@@ -1,5 +1,5 @@
 <div class="footer">
-			<a href="index.html"><img src="<?= base_url(); ?>/assets/images/logo2.png" height="80" width="250"></a>
+			<a href=<?=base_url('/home/');?>><img src="<?= base_url(); ?>/assets/images/logo.png"></a>
 			<div class="extra_info">
 				<a href=""> ¿Quiénes somos? </a>
 				<a href=""> Contáctanos </a>

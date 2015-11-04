@@ -1,24 +1,24 @@
 <?php
 
 $config['navigation'] = array(
-            'home' => array(
+           /* 'home' => array(
                 'id'     => 'home',
                 'title'  => 'Home',
                 'link'   => ''
-            ),
-            'diretcores' => array(
+            ),*/
+            'directores' => array(
                 'id'     => 'directores',
                 'title'  => 'Directores',
-                'link'   => ''
+                'link'   => '../director/listarDirector'
             ),
             'cartelera' => array(
                 'id'     => 'cartelera',
                 'title'  => 'Cartelera',
-                'link'   => ''
+                'link'   => 'films/listarPelis'
             ),
             'actores' => array(
                 'title'  => 'Actores',
-                'link'   => ''
+                'link'   => '../actor/listaActor'
             )
         );
 
