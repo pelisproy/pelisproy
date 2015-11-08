@@ -15,7 +15,7 @@ class Films_model extends CI_Model{
 		if($data['error'] = $this->db->_error_message());
 		return $data;
 	}
-	public function modificarFicha($id){
+	public function modificarFicha($id, $nombre, $sinopsis, $caratula, $anyo, $director){
 		$data = array(
             'nombre'=>$nombre,
 			'sinopsis'=>$sinopsis,
@@ -24,9 +24,14 @@ class Films_model extends CI_Model{
 			'director'=>$director
             );
 
-		return $this->db->where('id', $id);
-		return $this->db->update('pelicula', $data); 
-		if($data['error'] = $this->db->_error_message());
+		$this->db->where('id', $id);
+		//$this->db->update('pelicula', $data);
+		if (!$this->db->update('pelicula', $data))
+		{
+			//return mysqli_errno($this->db->update('pelicula', $data));
+			//return mysqli_error($this->db->update('pelicula', $data));
+			return false;
+		}
 		return $data;
 	}
 	public function borrarFicha($id){

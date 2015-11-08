@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 		public function cargarFormCrearFicha(){
 			$this->load->view('templates/headers/headerPrin.php');
-			$this->load->view('/films/crearFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÍA IR A LA CARPETA FORMULARIOS
+			$this->load->view('/films/crearFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÃ�A IR A LA CARPETA FORMULARIOS
 		}
 		public function crearFicha(){
 			//PARTE DE SUBIR LA IMAGEN
@@ -45,17 +45,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('templates/footers/foot.php');
 		}
 		public function cargarFormModFicha(){
-			$this->load->view('templates/headers/headerSec.php');
-			$this->load->view('films/modificarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÍA IR A LA CARPETA FORMULARIOS
+			$this->load->view('templates/headers/headerPrin.php');
+			$datos['contenido']=$this->films_model->mostrarTodasPeliculas();
+			$this->load->view('films/modificarFicha.php', $datos);
+			$this->load->view('templates/footers/foot.php');
+			
 		}
 		public function modificarFicha(){
-			$this->load->view('templates/headers/headerSec.php');
-			$this->load->view('films/modificarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÍA IR A LA CARPETA FORMULARIOS
-			$this->films_model->modificarFicha();
+			$id=$this->input->post('id');
+			$nombre=$this->input->post('nombre');
+			$sinopsis=$this->input->post('sinopsis');
+			$caratula=$this->input->post('caratula');
+// 			$caratula=$config['file_image'];
+			$anyo=$this->input->post('anyo');
+			$director=$this->input->post('director');
+// 			$this->load->view('films/modificarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÃ�A IR A LA CARPETA FORMULARIOS
+			if ($this->films_model->modificarFicha($id, $nombre, $sinopsis, $caratula, $anyo, $director)) {
+				echo $id;
+				echo "Pelicula modificada correctamente";
+			} else {
+				echo "Ha ocurrido algún error";
+			}
 		}
 		public function cargarFormBorFicha(){
 			$this->load->view('templates/headers/headerSec.php');
-			$this->load->view('films/borrarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÍA IR A LA CARPETA FORMULARIOS
+			$this->load->view('films/borrarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÃ�A IR A LA CARPETA FORMULARIOS
 		}
 	public function borrarFicha(){
 			$id=$this->uri->segment(3);
