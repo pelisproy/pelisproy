@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     $(function() {
 
+    	$('[data-toggle="tooltip"]').tooltip();
+
 		$('#datetimepicker').datetimepicker();
 
 	    $('.glyphicon-menu-hamburger').on('click', function() {
@@ -54,7 +56,7 @@ function validarActor() {
 	document.querySelector('.actores div input[type="text"]').style.borderColor = '';
 
 	var actor = document.querySelector('.actores div input[type="text"]').value.trim();
-	var regEx = /^[A-Za-záéíóúñ]{3,}$/;
+	var regEx = /^[A-Za-záéíóúñ\s]{3,}$/;
 
 	if(regEx.test(actor)) {
 		agregarActor(actor);
@@ -69,7 +71,7 @@ function validarActorResponsive() {
 	document.querySelector('#actores div input[type="text"]').style.borderColor = '';
 
 	var actor = document.querySelector('#actores div input[type="text"]').value.trim();
-	var regEx = /^[A-Za-záéíóúñ]{3,}$/;
+	var regEx = /^[A-Za-záéíóúñ\s]{3,}$/;
 
 	if(regEx.test(actor)) {
 		agregarActorResponsive(actor);
@@ -101,11 +103,11 @@ function validar() {
 
 	var correcto = true;
 
-	var regExNombre = /^[A-Za-záéíóúñ&$:!]{3,}$/;
+	var regExNombre = /^[A-Za-z0-9áéíóúñ&$:\s!]{3,}$/;
 	var regExEstreno = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
-	var regExGenero = /^[A-Za-záéíóúñ]{3,}$/;
-	var regExSinopsis = /^[\wáéíóúñ.:,!]{100,}$/;
-	var regExDirector = /^[A-Za-záéíóúñ]{3,}$/;
+	var regExGenero = /^[A-Za-záéíóúñ\s]{3,}$/;
+	var regExSinopsis = /^[\wáéíóúñ.:,\s!]{100,}$/;
+	var regExDirector = /^[A-Za-záéíóúñ\s]{3,}$/;
 
 	if(!regExNombre.test(nombre)) {
 		document.getElementById('nombre').style.backgroundColor = '#FFADAD';
@@ -245,4 +247,6 @@ function comprobarExtension(formulario, archivo) {
       	} 
     }  
 }
+
+
 
