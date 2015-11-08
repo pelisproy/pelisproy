@@ -1,0 +1,167 @@
+/*-------------------- CreaciónPeli --------------------*/
+form {
+	height: 460px;
+	width: 90%;
+	margin: 25px 5% 28px 5%;
+}
+form fieldset legend {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 150%;
+	font-weight: bold;
+}
+form fieldset legend strong {
+	font-size: 50%;
+	text-transform: initial;
+}
+.left {
+	height: 330px;
+	width: 49.9%;
+	float: left;
+	border-right: 1px solid #CBCBCB;
+	padding-left: 3%;
+}
+.formResponsive {
+	display: none;
+}
+.right {
+	height: 330px;
+	width: 49.9%;
+	float: right;
+	padding-left: 3%;
+}
+textarea {
+	resize: none;
+}
+.actores, #actores {
+	height: 140px;
+}
+.actores div:nth-child(4), #actores div:nth-child(4) {
+	float: right;
+	margin-top: 10px;
+	margin-right: 8%;
+}
+.actores input[type="button"], #actores input[type="button"] {
+	height: 34px;
+	width: 80%;
+	position: absolute;
+	right: 20%;
+	background-color: #2447B2;
+	color: white;
+	font-family: 'Calibri';
+	font-size: 110%;
+	font-weight: bold;
+	border-radius: 5px;
+	text-align: center;
+}
+.actores input[type="button"]:hover, #actores input[type="button"]:hover {
+	background-color: #19327D;
+	color: #FFFF00;
+}
+.file {
+	height: 34px;
+	width: 100%;
+}
+.file div:last-child {
+	float: left;
+	height: 34px;
+	width: 200px;
+}
+.file div button {
+	height: 34px;
+	width: 55%;
+	float: left;
+	background-color: #2447B2;
+	color: white;
+	font-family: 'Calibri';
+	font-size: 110%;
+	font-weight: bold;
+	border-radius: 5px;
+	text-align: center;
+}
+.file div button:hover {
+	background-color: #19327D;
+	color: #FFFF00;
+}
+.file div input[type="file"] {
+	display: none;
+}
+.button { 
+	text-align: center;
+}
+.button input {
+	margin-top: 1.5%;
+}
+input[type="button"] {
+	font-weight: bold;
+}
+.obligatorio {
+	color: red;
+}
+@media only screen and (max-width: 992px) {
+	form {
+		height: 500px;
+	}
+	.left {
+		height: 390px;
+	}
+	.right {
+		height: 390px;
+	}
+	form fieldset .file button {
+		width: 65%;
+		left: 36%;
+	}
+	.actores div:nth-child(4), #actores div:nth-child(4) {
+		float: left;
+		margin-top: 10px;
+	}
+	.file {
+		float: left;
+		width: 100%;
+		margin-top: 15px;
+	}
+	.file div:last-child {
+		float: left;
+	}
+}
+@media only screen and (max-width: 768px) {
+	form {
+		height: 880px;
+	}
+	form fieldset legend {
+		text-align: left;
+	}
+	.left {
+		width: 100%;
+		border: 0;
+	}
+	.formResponsive {
+		display: block;
+	}
+	.right {
+		display: none;
+	}
+	#actores div:nth-child(4) {
+		width: 100%;
+	}
+	.button {
+		display: inline-block;
+		margin-top: 370px;
+		margin-left: 41%;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.button {
+		margin-left: 40%;
+	}
+}
+@media only screen and (max-width: 410px) {
+	.file div:first-child {
+		width: 35%;
+	}
+	.button {
+		margin-left: 32%;
+	}
+}

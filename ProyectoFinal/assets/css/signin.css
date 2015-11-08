@@ -1,0 +1,65 @@
+/*-------------------- Registro --------------------*/
+form {
+	width: 87%;
+	margin: 25px 5% 28px 5%;
+}
+form fieldset {
+	padding-left: 3%;
+}
+form fieldset legend {
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 150%;
+	font-weight: bold;
+}
+label {
+	float: left;
+}
+input[type="button"] {
+	font-weight: bold;
+}
+.correct {
+	position: absolute;
+	height: 33px;
+	width: 110px;
+	padding: 5px;
+	border: 1px solid #036904;
+	background-color: #47A347;
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+	text-align: center;
+}
+.incorrect {
+	position: absolute;
+	height: 33px;
+	width: 110px;
+	padding: 5px;
+	border: 1px solid #9A0612;
+	background-color: #AC3030;
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+	text-align: center;
+}
+.obligatorio {
+	color: red;
+}
+.alert {
+	display: none;
+}
+@media only screen and (min-width: 992px) {
+	.alert {
+		width: 75%;
+	}
+}
+@media only screen and (max-width: 992px) {
+	form fieldset div.button {
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.alert {
+		width: 60%;
+	}
+}

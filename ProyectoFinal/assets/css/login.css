@@ -1,0 +1,14 @@
+/*-------------------- Login --------------------*/
+.container {
+	float: left;
+	width: 70%;
+}
+.row {
+	margin: 1%;
+}
+label {
+	float: left;
+}
+button[type="submit"] {
+	font-weight: bold;
+}

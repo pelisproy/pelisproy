@@ -1,0 +1,125 @@
+/*-------------------- BannerPubli --------------------*/
+.bannerPubli {
+	height: 150px;
+	width: 90%;
+	margin: 15px 5% 15px 5%;
+	border: 1px solid black;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.bannerPubli img {
+	height: 148px;
+	width: 100%;
+	border-radius: 10px;
+}
+/*-------------------- Footer --------------------*/
+.footer {
+	height: 160px;
+	width: 100%;
+	background-color: #383838;
+	border: 1px solid black;
+	text-align: center;
+	color: white;
+	font-size: 90%;
+}
+.footer > a {
+	float: left;
+	width: 18%;
+	margin: 2%;
+}
+.footer a img {
+	height: 80px;
+	width: 100%;
+}
+.footer .extraInfo, .footer .copyright {
+	float: right;
+	width: 60%;
+}
+.footer .extraInfo {
+	height: 20%;
+}
+.footer .copyright {
+	height: 80%;
+}
+.footer .extraInfo > a {
+	float: left;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: 110%;
+	margin-right: 10%;
+	padding-top: 1%;
+	height: 100%;
+}
+.footer .extraInfo a:hover {
+	color: tomato;
+}
+.footer .copyright i {
+	float: left;
+	font-size: 110%;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 4%;
+}
+.footer .extraInfo .icons {
+	float: right;
+	height: 100%;
+	width: 20%;
+}
+.footer .extraInfo .icons a {
+	float: right;
+}
+.footer .extraInfo .icons a img {
+	float: right;
+	height: 30px;
+	width: 30px;
+	margin-right: 3%;
+}
+@media only screen and (max-width: 1900px) {
+	.footer .copyright {
+		width: 60.5%;
+	}
+}
+@media only screen and (max-width: 1700px) {
+	.footer .copyright {
+		width: 61%;
+	}
+}
+@media only screen and (max-width: 1500px) {
+	.footer .copyright {
+		width: 61.5%;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	.footer .copyright {
+		width: 62%;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.footer .copyright {
+		width: 64%;
+	}
+	.footer .extraInfo {
+		width: 61%;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.footer .copyright {
+		width: 68%;
+	}
+	.footer .extraInfo {
+		width: 63%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.footer .copyright {
+		width: 75%;
+	}
+	.footer .extraInfo {
+		width: 67%;
+	}
+	.footer .extraInfo > a {
+		margin-right: 5%;
+	}
+}

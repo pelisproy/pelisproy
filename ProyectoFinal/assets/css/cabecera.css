@@ -7,36 +7,41 @@ body {
 	height: auto;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0;
 }
 /*-------------------- Header --------------------*/
 .header {
-	height: 140px;
+	height: 150px;
 	width: 100%;
 	border-bottom: 2px solid #2447B2;
+	background-color: #B5E7FF;
 }
 .logo {
 	float: left;
 	width: 50%;
 	height: 100%;
-	margin-left: 30px;
-	margin-top: 1%;
+	margin: 1% 0 0 30px;
+}
+.logo a img {
+	height: 120px;
+	width: 400px;
 }
 .botones {
 	float: right;
 	width: 40%;
-	margin-top: 30px;
+	margin-top: 38px;
 }
 .identificarse, .registrarse {
 	margin: 3%;
 	float: right;
 	display: inline;
 	border-radius: 10px;
-	font-family: "Calibri";
+	font-family: 'Calibri';
 	font-weight: bold;
 	font-size: 14px;
 	background-color: #2447B2;
-	text-align: center;
 	color: white;
+	text-align: center;
 	cursor: pointer;
 	line-height: 100%;
 }
@@ -47,14 +52,32 @@ body {
 .registrarse {
 	padding: 8px 11px 8px 11px;
 }
+.identificarse a, .registrarse a {
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+}
 .identificarse:hover, .registrarse:hover {
 	background-color: white;
 	color: #2447B2;
-	transition: all .3s ease-in;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-    transition-delay: initial;
+	-webkit-transition: all .3s ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-transition-delay: initial;
+    -moz-transition: all .3s ease-in;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-in;
+    -moz-transition-delay: initial;
+    -o-transition: all .3s ease-in;
+    -o-transition-property: all;
+    -o-transition-duration: 0.2s;
+    -o-transition-timing-function: ease-in;
+    -o-transition-delay: initial;
+}
+.identificarse:hover a, .registrarse:hover a {
+	color: #2447B2;
 }
 
 @media only screen and (max-width : 750px) {
@@ -73,13 +96,13 @@ body {
 		width: 90%;
 	}
 }
-/*-------------------- NavegaciÃ³n --------------------*/
+/*-------------------- Navegación --------------------*/
 .navegacion {
-	height: 50px;
+	height: 60px;
 	width: 90%;
-	margin: 10px 5% 10px 5%;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	margin: 10px 5% 0 5%;
+	padding-top: 5px;
+	padding-bottom: 12px;
 }
 a > img {
 	cursor: pointer;
@@ -100,15 +123,14 @@ a > img {
 .menu ul {
 	height: 100%;
 	width: 100%;
-	margin: 0 auto;
+	margin: auto;
 	padding: 0;
 }
 .menu ul li {
+	float: left;
 	height: 100%;
-	width: 24%;
+	width: 25%;
 	display: inline-block;
-	padding-left: 7%;
-	padding-right:7%;
 	padding-top: 12px;
 	text-align: center;
 }
@@ -124,8 +146,10 @@ a > img {
 	font-size: 16px;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
+	vertical-align: top;
 }
 .menu ul li:hover {
+	background-color: #19327D;
 	cursor: pointer; 
 }
 .menu ul li:hover a {
@@ -171,6 +195,7 @@ a > img {
 .buscador input[type="text"] {
 	height: 100%;
 	padding: 8px;	
+	margin-top: 4px;
 	margin-bottom: 10px;
 }
 .buscador button {
@@ -184,6 +209,7 @@ a > img {
 	padding-bottom: 5px;
 }
 .buscador button:hover {
+	background-color: #19327D;
 	color: #FFFF00;	
 }
 #campoBusqueda {
@@ -208,18 +234,20 @@ a > img {
 @media only screen and (max-width: 900px) {
 	.menuResponsive {
 		display: inline;
+		border-radius: 0;
 	}
 	.menu {
 		height: 160px;
-		width: 42.4%;
+		width: 45%;
 	    float: left;
 	    list-style: none;
 		overflow: hidden;
 		display: none;
 		position: absolute;
-		top: 195px;
+		top: 206px;
 		background-color: #2447B2;
 		border: 1px solid #122459; 
+		border-radius: 0;
 	}
 	.menu ul {
 		height: 160px;
@@ -237,53 +265,4 @@ a > img {
 	.menu ul li:last-child {
 		border: none;
 	}
-}
-/*-------------------- Carrusel --------------------*/
-.carrusel {
-	height: 500px;
-	width: 90%;
-	margin: 10px 5% 10px 5%;
-	border: 1px solid black;
-}
-/*-------------------- Lista --------------------*/
-/*-------------------- Populares --------------------*/
-/*-------------------- Footer --------------------*/
-.footer {
-	height: 160px;
-	width: 100%;
-	background-color: #383838;
-	border: 1px solid black;
-	text-align: center;
-	color: white;
-	font-size: 90%;
-}
-.footer a[href="index.html"] {
-	float: left;
-	margin: 3%;
-}
-.footer .extra_info, .footer .copyright {
-	float: right;
-	width: 70%;
-}
-.footer .extra_info {
-	height: 20%;
-}
-.footer .copyright {
-	height: 80%;
-}
-.footer .extra_info a {
-	font-weight: bold;
-	text-decoration: none;
-	text-align: center;
-	color: white;
-	font-size: 110%;
-}
-.footer .extra_info a:hover {
-	color: tomato;
-}
-.footer .copyright i {
-	font-weight: bold;
-}
-.footer .icons {
-	float: right;
 }

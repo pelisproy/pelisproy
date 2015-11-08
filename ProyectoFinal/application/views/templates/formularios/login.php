@@ -3,7 +3,7 @@
 <form class="form-horizontal" action="" method="post">
 <div class="row">
 <fieldset>
-<legend> Regístrate </legend>
+<legend> Identifícate </legend>
 <div class="form-group">
 <div class="col-md-3">
 <label class="control-label"> Nick <span class="obligatorio">*</span></label>
