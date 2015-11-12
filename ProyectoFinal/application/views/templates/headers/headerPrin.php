@@ -28,6 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<?php if ($this->session->userdata('username')):?>
 					<button class="identificarse"> <a href="<?=site_url('login/logout')?>">Desconectarse </a> </button>
 					<button class="identificarse"> <a href="#"><?php echo $this->session->userdata('username')?> </a> </button>
+					<button class="identificarse"> <a href="#"><?php echo $this->session->userdata('idUsuario')?> </a> </button>
 					<!-- Ejemplo botón sólo visible por un administrador -->
 					<?php if ($this->session->userdata('tipoUsuario') != null && $this->session->userdata('tipoUsuario') == 0):?>
 						<button class="identificarse"> <a href="#"><?php echo "Bienvenido Administrador: " . $this->session->userdata('username')?> </a> </button>

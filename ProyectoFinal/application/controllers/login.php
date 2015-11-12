@@ -1,4 +1,4 @@
-<?php
+	<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller{
@@ -27,6 +27,7 @@ public function __construct()
 			// Control para ver que devuelve login
 			//echo $this->usuario_model->login($_POST['username'],$_POST['password']);
 			$this->session->set_userdata('tipoUsuario', $variableUsuario);
+			$this->session->set_userdata('idUsuario', $this->usuario_model->idUsuario($_POST['username']));
 			redirect('welcome');
 		}else{
 			redirect('login');
@@ -44,3 +45,4 @@ public function __construct()
 	}
 	}
 
+	

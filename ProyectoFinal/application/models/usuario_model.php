@@ -27,4 +27,20 @@ class Usuario_model extends CI_Model {
 		}
 	}
 	
+	public function idUsuario($username) {
+		$this->db->where('nickname',$username);
+		$v=$this->db->get('usuario');
+		if($v->num_rows()>0)
+		{
+			$tipoUsuario = null;
+			foreach ($v -> result_array() as $resultado) {
+				$idUsuario = $resultado['id'];
+			}
+				return $idUsuario;
+		}else{
+			return null;
+		}
+		
+	}
+	
 }
