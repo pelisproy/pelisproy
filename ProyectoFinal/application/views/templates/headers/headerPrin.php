@@ -49,14 +49,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="menu">
 					<?php echo menu_ul('home'); ?>
 				</div>
+				<form action="<?= base_url(); ?>buscador" method="post">
 				<div class="buscador">
-					<input type="text" class="form-control" id="campoBusqueda" placeholder="Buscar...">
-                	<select class="form-control">
-                    	<option value="defecto" selected="selected"> Buscar por... </option>
-                         <option value="pelicula"> Película </option>
-                        <option value="actor"> Actor </option>
-                        <option value="director"> Director </option>
-                    </select>
+					<input type="text" class="form-control" name="busqueda" id="campoBusqueda" placeholder="Buscar...">
+                	
 					<button class="glyphicon glyphicon-search"> Buscar </button>
+				
 				</div>
+				</form>
 			</div>
