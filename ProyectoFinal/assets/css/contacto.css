@@ -1,0 +1,142 @@
+/*-------------------- Contacto --------------------*/
+.contacto {
+	height: 800px;
+	width: 90%;
+	margin: 10px 5% 0 5%;
+}
+.localizacion {
+	height: 90%;
+	width: 50%;
+	float: left;
+	margin: 2% 0 2% 0;
+	border-right: 1px solid #DDDDDD;
+}
+.localizacion p {
+	margin-left: 15%;
+	font-family: 'Calibri';
+	font-weight: 500;
+	font-size: 19px;
+}
+.localizacion p:first-child {
+	margin-top: 6%;
+}
+.localizacion p span {
+	margin-right: 5px;
+	color: #2447B2;
+	font-family: 'Calibri';
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.localizacion .googleMap {
+	height: 55%;
+	width: 80%;
+	margin: 10% 0 0 10%;
+}
+.localizacion .googleMap iframe {
+	height: 100%;
+	width: 100%;
+	border: 1px solid #C3C3C3;
+}
+.mail {
+	height: 90%;
+	width: 50%;
+	float: right;
+	margin: 2% 0 2% 0;
+}
+.mail form {
+	width: 85%;
+	margin: 5% 7% 0 7%;
+}
+.mail form fieldset legend {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 40px;
+	padding: 10px;
+	line-height: 100%;
+}
+form input[type="text"] {
+	margin: 0 0 8px 26%;
+}
+form textarea {
+   	resize: none;
+   	margin: 0 0 15px 26%;
+}
+form input[type="button"] {
+	margin-left: 45%;
+}
+@media only screen and (max-width : 1500px) {
+	form input[type="button"] {
+		margin-left: 42%;
+	}
+}
+@media only screen and (max-width : 1199px) {
+	.contacto {
+		height: 1300px;
+	}
+	.localizacion {
+		height: 50%;
+		width: 90%;
+		border: 0;
+	}
+	.localizacion p {
+		margin-left: 22%;
+	}
+	.localizacion .googleMap {
+		margin: 10% 0 0 16%;
+	}
+	.mail {
+		height: 42%;
+		width: 90%;
+	}
+	.mail form {
+		margin: 3% 0 0 2%;
+	}
+	form input[type="text"] {
+		margin: 0 0 8px 0;
+	}
+	form textarea {
+	   	margin: 0 0 15px 0;
+	}
+	form input[type="button"] {
+		margin-left: 45%;
+	}
+}
+@media only screen and (max-width : 1000px) {
+	.localizacion p {
+		margin-left: 18%;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width : 800px) {
+	.localizacion p {
+		margin-left: 20%
+	}
+	form input[type="button"] {
+		margin-left: 42%;
+	}
+}
+@media only screen and (max-width : 650px) {
+	.localizacion p {
+		margin-left: 16%
+	}
+	form input[type="button"] {
+		margin-left: 42%;
+	}
+}
+@media only screen and (max-width : 550px) {
+	.localizacion p {
+		font-size: 16px;
+	}
+	form input[type="button"] {
+		margin-left: 40%;
+	}
+}
+@media only screen and (max-width : 450px) {
+	form input[type="button"] {
+		margin-left: 38%;
+	}
+}
