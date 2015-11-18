@@ -6,11 +6,6 @@ $config['navigation'] = array(
                 'title'  => 'Home',
                 'link'   => ''
             ),*/
-            'directores' => array(
-                'id'     => 'directores',
-                'title'  => 'Directores',
-                'link'   => '../director/listarDirector'
-            ),
             'cartelera' => array(
                 'id'     => 'cartelera',
                 'title'  => 'Cartelera',
@@ -19,6 +14,16 @@ $config['navigation'] = array(
             'actores' => array(
                 'title'  => 'Actores',
                 'link'   => '../actor/listaActor'
-            )
+            ),
+			'directores' => array(
+					'id'     => 'directores',
+					'title'  => 'Directores',
+					'link'   => '../director/listarDirector'
+			),
+			'genero' => array(
+					'id'     => 'genero',
+					'title'  => 'Género',
+					'link'   => '../genero/listarGenero'
+			)
         );
 

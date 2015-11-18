@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
 
     $('.glyphicon-menu-hamburger').on('click', function() {
 		if($('.menu').css('display') == 'none') {
