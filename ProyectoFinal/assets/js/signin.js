@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     $(function() {
-
-		$('#datetimepicker').datetimepicker();
+    	
+		$('#datetimepickerNacimiento').datetimepicker();
 
 	    $('.glyphicon-menu-hamburger').on('click', function() {
 			if($('.menu').css('display') == 'none') {
@@ -36,7 +36,7 @@ $(document).ready(function() {
 						}
 					}
 				},
-				ape: {
+				apellidos: {
 					validators: {
 						notEmpty: {
 							message: 'Los apellidos son requeridos.'
@@ -51,7 +51,7 @@ $(document).ready(function() {
 						}
 					}
 				},
-				nick: {
+				nickname: {
 					validators: {
 						notEmpty: {
 							message: 'El nick es requerido.'
@@ -62,7 +62,7 @@ $(document).ready(function() {
 						}
 					}
 				},
-				pass: {
+				password: {
 					validators: {
 						notEmpty: {
 							message: 'El password es requerido y no puede ser vacío.'
@@ -72,12 +72,12 @@ $(document).ready(function() {
 							message: 'El password debe contener al menos 8 caracteres.'
 						},
 						identical: {
-							field: 'pass2',
+							field: 'password2',
 							message: 'El password no coincide.'
 						}
 					}
 				},
-				pass2: {
+				password2: {
 					validators: {
 						notEmpty: {
 							message: 'El password es requerido y no puede ser vacío.'
@@ -87,12 +87,12 @@ $(document).ready(function() {
 							message: 'El password debe contener al menos 8 caracteres.'
 						},
 						identical: {
-							field: 'pass',
+							field: 'password',
 							message: 'El password no coincide.'
 						}
 					}
 				},
-				mail: {
+				correo: {
 					validators: {
 						notEmpty: {
 							message: 'El correo es requerido y no puede ser vacío.'
@@ -102,7 +102,7 @@ $(document).ready(function() {
 						}
 					}
 				},
-				datetimepicker: {
+				datetimepickerNacimiento: {
 					validators: {
 						notEmpty: {
 							message: 'La fecha de nacimiento es requerida y no puede ser vacía.'
@@ -125,6 +125,7 @@ function condicionesUso() {
 	if(!document.querySelector('input[type="checkbox"]').checked) {
 		$('.alert').css('display', 'block');
 	} else {
+		document.registro.submit();
 		document.registro.reset();
 		$('.alert').css('display', 'none');
 	}

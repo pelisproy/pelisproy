@@ -1,4 +1,51 @@
 /*-------------------- quienesSomos --------------------*/
 .quienesSomos {
-	border: 1px solid black;
+	font-family: 'Calibri';
+	font-size: 1.1em;
+	margin-bottom: 6%;
+	padding: 4% 10% 5% 10%;
+}
+.quienesSomos > span {
+	font-family: 'Calibri';
+	font-size: 1.8em;
+	color: #2447B2;
+}
+.quienesSomos p span {
+	font-weight: bold;
+}
+.quienesSomos div {
+	position: absolute;
+	height: 80px;
+	width: 30%; 
+	left: 50%;
+	margin-left:-15%;
+	text-align: center;
+}
+.quienesSomos div button {
+	height: 35px;
+	width: 100px;
+	font-weight: bold;
+	border-radius: 5px;
+	color: white;
+	background-color: #2447B2;
+}
+.quienesSomos div button:hover {
+	background-color: #19327D;
+	color: #FFFF00;	
+}
+@media only screen and (max-width : 900px) {
+	.quienesSomos {
+		margin-bottom: 10%;
+	}
+}
+@media only screen and (max-width : 860px) {
+	.quienesSomos div {
+		width: 60%;
+		margin-left:-30%;
+	}
+}
+@media only screen and (max-width : 700px) {
+	.quienesSomos {
+		margin-bottom: 15%;
+	}
 }

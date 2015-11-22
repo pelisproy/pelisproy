@@ -1,48 +1,51 @@
 /*-------------------- CreaciónPeli --------------------*/
-form {
+.crearPeli form {
 	height: 460px;
 	width: 90%;
 	margin: 25px 5% 28px 5%;
 }
-form fieldset legend {
+.crearPeli form fieldset {
+	width: 100%;
+}
+.crearPeli form fieldset legend {
 	text-align: center;
 	text-transform: uppercase;
 	font-family: 'Calibri';
 	font-size: 150%;
 	font-weight: bold;
 }
-form fieldset legend strong {
+.crearPeli form fieldset legend strong {
 	font-size: 50%;
 	text-transform: initial;
 }
-.left {
+.crearPeli .left {
 	height: 330px;
 	width: 49.9%;
 	float: left;
 	border-right: 1px solid #CBCBCB;
 	padding-left: 3%;
 }
-.formResponsive {
+.crearPeli .left .formResponsive {
 	display: none;
 }
-.right {
+.crearPeli .right {
 	height: 330px;
 	width: 49.9%;
 	float: right;
 	padding-left: 3%;
 }
-textarea {
+.crearPeli textarea {
 	resize: none;
 }
-.actores, #actores {
+.crearPeli .actores, #actores {
 	height: 140px;
 }
-.actores div:nth-child(4), #actores div:nth-child(4) {
+.crearPeli .actores div:nth-child(4), #actores div:nth-child(4) {
 	float: right;
 	margin-top: 10px;
 	margin-right: 8%;
 }
-.actores input[type="button"], #actores input[type="button"] {
+.crearPeli .actores input[type="button"], #actores input[type="button"] {
 	height: 34px;
 	width: 80%;
 	position: absolute;
@@ -59,16 +62,16 @@ textarea {
 	background-color: #19327D;
 	color: #FFFF00;
 }
-.file {
+.crearPeli .file {
 	height: 34px;
 	width: 100%;
 }
-.file div:last-child {
+.crearPeli .file div:last-child {
 	float: left;
 	height: 34px;
 	width: 200px;
 }
-.file div button {
+.crearPeli .file div button {
 	height: 34px;
 	width: 55%;
 	float: left;
@@ -80,88 +83,100 @@ textarea {
 	border-radius: 5px;
 	text-align: center;
 }
-.file div button:hover {
+.crearPeli .file div button:hover {
 	background-color: #19327D;
 	color: #FFFF00;
 }
-.file div input[type="file"] {
+.crearPeli .file div input[type="file"] {
 	display: none;
 }
-.button { 
+.crearPeli .button { 
 	text-align: center;
 }
-.button input {
+.crearPeli fieldset .button input {
 	margin-top: 1.5%;
 }
-input[type="button"] {
+.crearPeli input[type="button"] {
 	font-weight: bold;
 }
-.obligatorio {
+.crearPeli .obligatorio {
 	color: red;
 }
+.loading {
+	height: auto;
+	width: 100%;
+	display: none;
+}
+.loading img {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: -40px;
+}
 @media only screen and (max-width: 992px) {
-	form {
+	.crearPeli form {
 		height: 500px;
 	}
-	.left {
+	.crearPeli .left {
 		height: 390px;
 	}
-	.right {
+	.crearPeli .right {
 		height: 390px;
 	}
-	form fieldset .file button {
+	.crearPeli form fieldset .file button {
 		width: 65%;
 		left: 36%;
 	}
-	.actores div:nth-child(4), #actores div:nth-child(4) {
+	.crearPeli .actores div:nth-child(4), #actores div:nth-child(4) {
 		float: left;
 		margin-top: 10px;
 	}
-	.file {
+	.crearPeli .file {
 		float: left;
 		width: 100%;
 		margin-top: 15px;
 	}
-	.file div:last-child {
+	.crearPeli .file div:last-child {
 		float: left;
 	}
 }
 @media only screen and (max-width: 768px) {
-	form {
+	.crearPeli form {
 		height: 880px;
 	}
-	form fieldset legend {
+	.crearPeli form fieldset legend {
 		text-align: left;
 	}
-	.left {
+	.crearPeli .left {
 		width: 100%;
 		border: 0;
 	}
-	.formResponsive {
+	.crearPeli .left .formResponsive {
 		display: block;
 	}
-	.right {
+	.crearPeli .right {
 		display: none;
 	}
-	#actores div:nth-child(4) {
+	.crearPeli #actores div:nth-child(4) {
 		width: 100%;
 	}
-	.button {
+	.crearPeli .button {
 		display: inline-block;
 		margin-top: 370px;
 		margin-left: 41%;
 	}
 }
 @media only screen and (max-width: 550px) {
-	.button {
+	.crearPeli .button {
 		margin-left: 40%;
 	}
 }
 @media only screen and (max-width: 410px) {
-	.file div:first-child {
+	.crearPeli .file div:first-child {
 		width: 35%;
 	}
-	.button {
+	.crearPeli .button {
 		margin-left: 32%;
 	}
 }

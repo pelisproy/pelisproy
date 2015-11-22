@@ -1,21 +1,23 @@
 /*-------------------- Registro --------------------*/
-form {
+#registro {
 	width: 87%;
 	margin: 25px 5% 28px 5%;
 }
-form fieldset {
+#registro fieldset {
 	padding-left: 3%;
 }
-form fieldset legend {
+#registro fieldset legend {
 	text-transform: uppercase;
 	font-family: 'Calibri';
 	font-size: 150%;
 	font-weight: bold;
 }
-label {
+#registro label {
 	float: left;
 }
-input[type="button"] {
+#registro input[type="button"] {
+	float: left;
+	margin-left: 15%;
 	font-weight: bold;
 }
 .correct {
@@ -42,24 +44,24 @@ input[type="button"] {
 	font-weight: bold;
 	text-align: center;
 }
-.obligatorio {
+#registro .obligatorio {
 	color: red;
 }
-.alert {
+#registro .alert {
 	display: none;
 }
 @media only screen and (min-width: 992px) {
-	.alert {
+	#registro .alert {
 		width: 75%;
 	}
 }
 @media only screen and (max-width: 992px) {
-	form fieldset div.button {
+	#registro fieldset div.button {
 		text-align: center;
 	}
 }
 @media only screen and (min-width: 1200px) {
-	.alert {
+	#registro .alert {
 		width: 60%;
 	}
 }

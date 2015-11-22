@@ -58,14 +58,14 @@
 	padding: 10px;
 	line-height: 100%;
 }
-form input[type="text"] {
+.contacto .mail form fieldset input[type="text"] {
 	margin: 0 0 8px 26%;
 }
-form textarea {
+#contactar textarea {
    	resize: none;
    	margin: 0 0 15px 26%;
 }
-form input[type="button"] {
+.contacto form input[type="button"] {
 	margin-left: 45%;
 }
 @media only screen and (max-width : 1500px) {

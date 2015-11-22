@@ -1,0 +1,92 @@
+/*-------------------- Perfil --------------------*/
+.perfil {
+	height: 800px;
+	width: 70%;
+	margin: 35px 15% 35px 15%;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: #262626;
+}
+.perfil .cabecera {
+	height: 200px;
+	width: 100%;
+	border-bottom: 1px solid #808080;
+	border-radius: 10px;
+}
+.perfil .cabecera img {
+	height: 150px;
+	width: 140px;
+	float: left;
+	margin: 1.8% 0 1.6% 2.5%;
+}
+.perfil .cabecera .nick {
+	float: left;
+	color: white;
+	text-align: center;	
+	letter-spacing: 1px;
+	font-family: "Calibri";
+	font-weight: bold;
+	font-size: 2.4em;
+	margin: 5.5% 0 0 3%;
+}
+.infoPersonal {
+	float: right;
+	height: 100%;
+	width: 30%;
+	padding: 2.5% 0 2.5% 2%;
+	border-left: 1px solid #808080;
+}
+.infoPersonal p {
+	float: left;
+	color: white;
+	font-family: "Calibri";
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.infoPersonal p span {
+	font-weight: normal;
+	font-size: 0.9em;
+}
+.restoPerfil {
+	height: 600px;
+	width: 100%;
+}
+.restoPerfil div {
+	border-radius: 10px;
+}
+.restoPerfil .comentarios {
+	height: 100%;
+	width: 50%;
+	float: right;
+	padding: 1.5%;
+	border-left: 1px solid #808080;
+}
+.restoPerfil .biografia {
+	height: 40%;
+	width: 50%;
+	float: left;
+	padding: 1.5%;
+	border-bottom: 1px solid #808080;
+}
+.restoPerfil .biografia div p {
+	color: white;
+	font-family: "Calibri";
+	font-size: 1.1em;
+	margin-top: 2.5%;
+}
+.restoPerfil .pelisAgregadas {
+	height: 60%;
+	width: 50%;
+	float: left;
+	padding: 1.5%;
+}
+.restoPerfil .title {
+	color: white;	
+	font-family: "Calibri";
+	font-size: 1.4em;
+}
+.restoPerfil .comentarios:hover,
+.restoPerfil .biografia:hover,
+.restoPerfil .pelisAgregadas:hover {
+	background-color: #404040;
+}

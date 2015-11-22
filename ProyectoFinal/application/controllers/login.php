@@ -7,13 +7,13 @@ public function __construct()
 {
 	
 		parent::__construct();
-		
 	}
 	public function index()
 	{
+		
 //si la session no existe userdata ya nos develve false
 	if ($this->session->userdata('username')){
-		redirect('welcome');
+		redirect('home');
 		
 	}
 		
@@ -28,12 +28,12 @@ public function __construct()
 			//echo $this->usuario_model->login($_POST['username'],$_POST['password']);
 			$this->session->set_userdata('tipoUsuario', $variableUsuario);
 			$this->session->set_userdata('idUsuario', $this->usuario_model->idUsuario($_POST['username']));
-			redirect('welcome');
+			redirect('home');
 		}else{
 			redirect('login');
 		}
 	}
-		$this->load->view('templates/formularios/login.php');
+		
 			
 	}
 	public function logout()
@@ -41,8 +41,8 @@ public function __construct()
 	{
 
 		$this->session->sess_destroy();
-		redirect('welcome');
+		redirect('home');
 	}
 	}
-
+?>
 	

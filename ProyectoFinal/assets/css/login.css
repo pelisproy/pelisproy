@@ -1,14 +1,14 @@
 /*-------------------- Login --------------------*/
-.container {
+#login {
 	float: left;
 	width: 70%;
 }
-.row {
+#login .row {
 	margin: 1%;
 }
-label {
+#login label {
 	float: left;
 }
-button[type="submit"] {
+#login button[type="submit"] {
 	font-weight: bold;
 }

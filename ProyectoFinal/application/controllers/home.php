@@ -9,7 +9,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 	}
 	function nuevoUsuario(){
-		$this->load->view('templates/headers/headerForm.php');
+		$this->load->view('templates/headers/headerPrin.php');
 		$this->load->view('templates/formularios/signin.php');
-	}		
+	}
+	public function login(){
+		$this->load->view('templates/headers/headerPrin.php');
+		$this->load->view('templates/formularios/login.php');
+	}
 }
+?>

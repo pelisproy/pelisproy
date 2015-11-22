@@ -15,15 +15,34 @@
        	<script type="text/javascript" src="<?= base_url(); ?>/assets/js/jquery-latest.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+		
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+		<!-- Bootstrap Datepicker -->
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrapValidator.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrapValidator.min.css">
+		<!-- Bootstrap Validator -->
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap-datetimepicker.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrap-datetimepicker.min.css">
 		
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/menuResponsive.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/buscadorSelect.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/usuarioInvitado.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/crearPeli.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/signin.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrap-datetimepicker.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraInvitado.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/usuarioInvitado.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/contacto.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/footer.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/crearPeli.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/login.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/signin.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/quienesSomos.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/perfilUsuarios.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/condicionesUso.css">
 	</head>
 	<body>
 		<div class="container">
@@ -43,8 +62,8 @@
 					<!-- Fin de ejemplo -->
 					
 					<?php else:?>
-					<a href="<?= base_url(); ?>/login"><button class="identificarse">Identifícate</button></a>
-					<a href="<?= base_url(); ?>/Welcome/nuevoUsuario"><button class="registrarse">Regístrate</button></a> 
+					<a href="<?= base_url(); ?>home/login"><button class="identificarse">Identifícate</button></a>
+					<a href="<?= base_url(); ?>home/nuevoUsuario"><button class="registrarse">Regístrate</button></a> 
 					<?php endif;?>
 				</div>
 			</div>

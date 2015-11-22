@@ -21,3 +21,4 @@ public function __construct(){
 		$this->load->view('buscar/buscar.php', $data);
 	}
 }
+?>

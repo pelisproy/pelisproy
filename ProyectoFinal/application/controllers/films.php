@@ -76,3 +76,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->films_model->borrarFicha($id);
 		}
 	}
+?>

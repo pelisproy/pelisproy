@@ -97,14 +97,14 @@ function validar() {
 
 	var nombre = document.getElementById('nombre').value.trim();
 	var estreno = document.getElementById('datetimepicker').value.trim();
-	var genero = document.getElementById('genero').value.trim();
+	var genero = document.getElementById('generoPeli').value.trim();
 	var sinopsis = document.getElementById('sinopsis').value.trim();
 	var caratula = document.getElementById('caratula').value.trim();
 
 	var correcto = true;
 
 	var regExNombre = /^[A-Za-z0-9áéíóúñ&$:,\s!]{3,}$/;
-	var regExEstreno = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
+	var regExEstreno = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 	var regExGenero = /^[A-Za-záéíóúñ\s]{3,}$/;
 	var regExSinopsis = /^[\wáéíóúñ.:,\s!]{100,}$/;
 	var regExDirector = /^[A-Za-záéíóúñ\s]{3,}$/;
@@ -134,15 +134,15 @@ function validar() {
 	}
 
 	if(!regExGenero.test(genero)) {
-		document.getElementById('genero').style.backgroundColor = '#FFADAD';
-		document.getElementById('genero').style.borderColor = '#A10000';
+		document.getElementById('generoPeli').style.backgroundColor = '#FFADAD';
+		document.getElementById('generoPeli').style.borderColor = '#A10000';
 		if(correcto) {
-			document.getElementById('genero').focus();
+			document.getElementById('generoPeli').focus();
 		}
 		correcto = false;
 	} else {
-		document.getElementById('genero').style.backgroundColor = '';
-		document.getElementById('genero').style.borderColor = '';
+		document.getElementById('generoPeli').style.backgroundColor = '';
+		document.getElementById('generoPeli').style.borderColor = '';
 	}
 
 	if(!regExSinopsis.test(sinopsis)) {
@@ -157,32 +157,28 @@ function validar() {
 		document.getElementById('sinopsis').style.borderColor = '';
 	}
 
-	if(trailer != '') {
-		if(validarUrl(trailer) == false) {
-			document.getElementById('trailer').style.backgroundColor = '#FFADAD';
-			document.getElementById('trailer').style.borderColor = '#A10000';
-			if(correcto) {
-				document.getElementById('trailer').focus();
-			}
-			correcto = false;
-		} else {
-			document.getElementById('trailer').style.backgroundColor = '';
-			document.getElementById('trailer').style.borderColor = '';
+	if(validarUrl(trailer) == false) {
+		document.getElementById('trailer').style.backgroundColor = '#FFADAD';
+		document.getElementById('trailer').style.borderColor = '#A10000';
+		if(correcto) {
+			document.getElementById('trailer').focus();
 		}
+		correcto = false;
+	} else {
+		document.getElementById('trailer').style.backgroundColor = '';
+		document.getElementById('trailer').style.borderColor = '';
 	}
-
-	if(director != '') {
-		if(!regExDirector.test(director)) {
-			document.getElementById('director').style.backgroundColor = '#FFADAD';
-			document.getElementById('director').style.borderColor = '#A10000';
-			if(correcto) {
-				document.getElementById('director').focus();
-			}
-			correcto = false;
-		} else {
-			document.getElementById('director').style.backgroundColor = '';
-			document.getElementById('director').style.borderColor = '';
+	
+	if(!regExDirector.test(director)) {
+		document.getElementById('director').style.backgroundColor = '#FFADAD';
+		document.getElementById('director').style.borderColor = '#A10000';
+		if(correcto) {
+			document.getElementById('director').focus();
 		}
+		correcto = false;
+	} else {
+		document.getElementById('director').style.backgroundColor = '';
+		document.getElementById('director').style.borderColor = '';
 	}
 
 	if(correcto) {
@@ -201,7 +197,7 @@ function validar() {
 function colorOriginal() {
 	document.getElementById('nombre').backgroundColor = '';
 	document.getElementById('datetimepicker').backgroundColor = '';
-	document.getElementById('genero').backgroundColor = '';
+	document.getElementById('generoPeli').backgroundColor = '';
 	document.getElementById('sinopsis').backgroundColor = '';
 	document.getElementById('trailer').backgroundColor = '';
 	document.getElementById('director').backgroundColor = '';
@@ -210,7 +206,7 @@ function colorOriginal() {
 
 	document.getElementById('nombre').borderColor = '';
 	document.getElementById('datetimepicker').borderColor = '';
-	document.getElementById('genero').borderColor = '';
+	document.getElementById('generoPeli').borderColor = '';
 	document.getElementById('sinopsis').borderColor = '';
 	document.getElementById('trailer').borderColor = '';
 	document.getElementById('director').borderColor = '';

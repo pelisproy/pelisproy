@@ -1,0 +1,28 @@
+/*-------------------- CondicionesUso --------------------*/
+.condicionesUso {
+	font-family: 'Calibri';
+	font-size: 1.1em;
+	margin-bottom: 6%;
+	padding: 4% 10% 5% 10%;
+}
+.condicionesUso > span {
+	font-family: 'Calibri';
+	font-size: 1.8em;
+	color: #2447B2;
+}
+@media only screen and (max-width : 900px) {
+	.condicionesUso {
+		margin-bottom: 10%;
+	}
+}
+@media only screen and (max-width : 860px) {
+	.condicionesUso div {
+		width: 60%;
+		margin-left:-30%;
+	}
+}
+@media only screen and (max-width : 700px) {
+	.condicionesUso {
+		margin-bottom: 15%;
+	}
+}
