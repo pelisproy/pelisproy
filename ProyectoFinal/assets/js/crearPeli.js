@@ -7,15 +7,13 @@ $(document).ready(function() {
 		$('#datetimepicker').datetimepicker();
 
 	    $('.glyphicon-menu-hamburger').on('click', function() {
+	    	$('#creacionPeli fieldset .left .formResponsive div:first-child div:last-child').css('z-index', '1');
 			if($('.menu').css('display') == 'none') {
 	    		$('.menu').css('display', 'block');
-	    		$('fieldset .left div:first-child div:first-child').css('z-index', '-1');
-	    		$('fieldset .left div:first-child div:last-child').css('z-index', '-1');
-	    		$('.formResponsive div:first-child div:last-child').css('z-index', '1');
+	    		$('#creacionPeli fieldset .left div:first-child').css('z-index', '1');
 	    	} else {
 	    		$('.menu').css('display', 'none');
-	            $('fieldset .left div:first-child div:first-child').css('z-index', '1');
-	            $('fieldset .left div:first-child div:last-child').css('z-index', '1');
+	            $('#creacionPeli fieldset .left div:first-child').css('z-index', '-1');
 	    	}
 	    });
 
@@ -42,15 +40,6 @@ function agregarActor(actor) {
 	document.querySelector('.actores div input[type="text"]').value = '';
 }
 
-function agregarActorResponsive(actor) {
-	var textarea = document.querySelector('#actores div textarea');
-
-	var element = document.createTextNode(actor + '\n');
-
-	textarea.appendChild(element);
-	document.querySelector('#actores div input[type="text"]').value = '';
-}
-
 function validarActor() {
 	document.querySelector('.actores div input[type="text"]').style.backgroundColor = '';
 	document.querySelector('.actores div input[type="text"]').style.borderColor = '';
@@ -66,39 +55,15 @@ function validarActor() {
 	}
 }
 
-function validarActorResponsive() {
-	document.querySelector('#actores div input[type="text"]').style.backgroundColor = '';
-	document.querySelector('#actores div input[type="text"]').style.borderColor = '';
-
-	var actor = document.querySelector('#actores div input[type="text"]').value.trim();
-	var regEx = /^[A-Za-záéíóúñ\s]{3,}$/;
-
-	if(regEx.test(actor)) {
-		agregarActorResponsive(actor);
-	} else {
-		document.querySelector('#actores div input[type="text"]').style.backgroundColor = '#FFADAD';
-		document.querySelector('#actores div input[type="text"]').style.borderColor = '#A10000';
-	}
-}
-
 function validar() {
 	colorOriginal();
-
-	var trailer;
-	var director;
-
-	if(window.innerWidth > 768) {
-		trailer = document.getElementById('trailer').value.trim();
-		director = document.getElementById('director').value.trim();
-	} else {
-		trailer = document.getElementById('trailerResponsive').value.trim();
-		director = document.getElementById('directorResponsive').value.trim();
-	}
 
 	var nombre = document.getElementById('nombre').value.trim();
 	var estreno = document.getElementById('datetimepicker').value.trim();
 	var genero = document.getElementById('generoPeli').value.trim();
 	var sinopsis = document.getElementById('sinopsis').value.trim();
+	var trailer = document.getElementById('trailer').value.trim();
+	var director = document.getElementById('director').value.trim();
 	var caratula = document.getElementById('caratula').value.trim();
 
 	var correcto = true;
@@ -185,7 +150,7 @@ function validar() {
 		if(comprobarExtension('creacionPeli', caratula)) {
 			document.querySelector('.loading').style.display = 'block';
 			document.querySelector('.container').style.opacity = '0.1';
-			document.querySelector('.footer').style.opacity = '0.1';
+			/*document.querySelector('.footer').style.opacity = '0.1';	DESCOMENTAR CUANDO EL CONTROLADOR LLAME AL FOOTER*/
 			document.querySelector('body').style.overflow = 'hidden';
 			setTimeout(function() {
 				document.creacionPeli.submit();
@@ -202,7 +167,6 @@ function colorOriginal() {
 	document.getElementById('trailer').backgroundColor = '';
 	document.getElementById('director').backgroundColor = '';
 	document.querySelector('.actores div input[type="text"]').backgroundColor = '';
-	document.querySelector('#actores div input[type="text"]').backgroundColor = '';
 
 	document.getElementById('nombre').borderColor = '';
 	document.getElementById('datetimepicker').borderColor = '';
@@ -211,7 +175,6 @@ function colorOriginal() {
 	document.getElementById('trailer').borderColor = '';
 	document.getElementById('director').borderColor = '';
 	document.querySelector('.actores div input[type="text"]').borderColor = '';
-	document.querySelector('#actores div input[type="text"]').borderColor = '';
 }
 
 function validarUrl(url) {

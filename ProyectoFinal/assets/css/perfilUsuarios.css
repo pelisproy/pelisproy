@@ -17,7 +17,7 @@
 	height: 150px;
 	width: 140px;
 	float: left;
-	margin: 1.8% 0 1.6% 2.5%;
+	margin: 1.8% 0 1.6% 2%;
 }
 .perfil .cabecera .nick {
 	float: left;
@@ -37,15 +37,19 @@
 	border-left: 1px solid #808080;
 }
 .infoPersonal p {
-	float: left;
 	color: white;
 	font-family: "Calibri";
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1.1em;
+	margin-bottom: 5%;
+}
+.infoPersonal p b {
+	float: left;
 }
 .infoPersonal p span {
 	font-weight: normal;
 	font-size: 0.9em;
+	margin-left: 1%;
 }
 .restoPerfil {
 	height: 600px;
@@ -60,33 +64,171 @@
 	float: right;
 	padding: 1.5%;
 	border-left: 1px solid #808080;
+	overflow-y: scroll;
+}
+.restoPerfil .comentarios > span {
+	text-align: center;
+}
+.restoPerfil .comentarios div {
+	width: 100%;
+	color: white;
+	font-family: "Calibri";
+	border-bottom: 1px solid #808080;
+	border-radius: initial;
+}
+.restoPerfil .comentarios div p:first-child {
+	margin-top: 2.5%;
+}
+.restoPerfil .comentarios div p:first-child a:hover {
+	color: #33BDFF;
+	text-decoration: none;
+}
+.restoPerfil .comentarios div p:nth-child(2) {
+	margin-left: 3%;
 }
 .restoPerfil .biografia {
-	height: 40%;
+	height: 45%;
 	width: 50%;
 	float: left;
 	padding: 1.5%;
 	border-bottom: 1px solid #808080;
 }
+.restoPerfil .biografia textarea {
+	resize: none;
+}
 .restoPerfil .biografia div p {
 	color: white;
 	font-family: "Calibri";
-	font-size: 1.1em;
 	margin-top: 2.5%;
 }
 .restoPerfil .pelisAgregadas {
-	height: 60%;
+	height: 55%;
 	width: 50%;
 	float: left;
 	padding: 1.5%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+.restoPerfil .pelisAgregadas div {
+	height: 85%;
+	width: 32.9%;
+	display: inline-block;
+	color: white;
+	font-family: "Calibri";
+	margin-top: 3%;
+	padding: 10% 0 0 8%;
+	border-right: 1px solid #808080;
+	border-radius: initial;
+}
+.restoPerfil .pelisAgregadas div:last-child {
+	border-right: none;
+}
+.restoPerfil .pelisAgregadas div img {
+	margin-bottom: 8%;
+}
+.restoPerfil .pelisAgregadas div a:hover {
+	color: #33BDFF;
+	text-decoration: none;
 }
 .restoPerfil .title {
 	color: white;	
 	font-family: "Calibri";
-	font-size: 1.4em;
+	font-size: 1.3em;
 }
 .restoPerfil .comentarios:hover,
 .restoPerfil .biografia:hover,
 .restoPerfil .pelisAgregadas:hover {
 	background-color: #404040;
+}
+.perfil .glyphicon-pencil {
+	margin-left: 3%;
+}
+.perfil .glyphicon-remove {
+	margin-left: 5%;
+}
+@media only screen and (max-width: 1600px) {
+	.perfil .cabecera img {
+		margin-top: 2.8%;
+	}
+	.perfil .cabecera .nick {
+		margin-top: 7.5%;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	.perfil .cabecera img {
+		margin-top: 3%;
+	}
+	.perfil .cabecera .nick {
+		margin-top: 9%;
+	}
+	.infoPersonal {
+		padding-top: 3.4%;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.perfil {
+		width: 90%;
+		margin: 35px 5% 35px 5%;
+	}
+	.perfil .cabecera img {
+		margin-top: 2.4%;
+	}
+	.perfil .cabecera .nick {
+		margin-top: 7%;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.perfil {
+		height: 1140px;
+	}
+	.perfil .cabecera {
+		width: 100%;
+
+	}
+	.perfil .cabecera img {
+		margin: 3% 0 0 25%;
+	}
+	.perfil .cabecera .nick {
+		margin-top: 9%;
+	}
+	.perfil .cabecera .infoPersonal {
+		height: 200px;
+		width: 100%;
+		display: block;
+		margin-top: 2.5%;
+		padding-top: 4.5%;
+		border-left: none;
+		border-bottom: 1px solid #808080;
+		border-radius: 10px;
+	}
+	.perfil .cabecera .infoPersonal p {
+		margin-left: 24%;
+	}
+	.restoPerfil .biografia {
+		height: 250px;
+		width: 100%;
+		display: block;
+		padding-top: 3%;
+	}
+	.restoPerfil .comentarios {
+		height: 250px;
+		width: 100%;
+		padding-top: 3%;
+		border-left: none;
+		border-bottom: 1px solid #808080;
+	}
+	.restoPerfil .comentarios > div {
+		border-bottom: 1px solid #333;
+	}
+	.restoPerfil .pelisAgregadas {
+		height: 250px;
+		width: 100%;
+		padding-top: 3%;
+	}
+	.restoPerfil .comentarios:hover,
+	.restoPerfil .biografia:hover,
+	.restoPerfil .pelisAgregadas:hover {
+		background-color: initial;
+	}
 }

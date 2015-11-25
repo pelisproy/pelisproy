@@ -32,6 +32,7 @@
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/usuarioInvitado.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/crearPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/signin.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/perfilUsuarios.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrap-datetimepicker.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraInvitado.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/usuarioInvitado.css">
@@ -43,8 +44,13 @@
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/quienesSomos.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/perfilUsuarios.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/condicionesUso.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/loading.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/iconosAdministracion.css">
 	</head>
 	<body>
+		<div class="loading">
+			<img src="<?= base_url(); ?>/assets/images/loading.gif" height="80" width="80" display="none"/>
+		</div>
 		<div class="container">
 			<div class="header">
 				<div class="logo">
@@ -83,6 +89,7 @@
                          	<option value="pelicula"> Película </option>
                         	<option value="actor"> Actor </option>
                         	<option value="director"> Director </option>
+                        	<option value="usuario"> Usuario </option>
                     	</select>
 						<button class="glyphicon glyphicon-search"> Buscar </button>
 					</div>

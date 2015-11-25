@@ -10,7 +10,7 @@
                             <div class="col-md-3">
                                 <label class="control-label"> Nombre <span class="obligatorio">*</span></label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="nombre" name="nombre" type="text" placeholder="Nombre" maxlength="20">
                             </div>
                         </div>
@@ -18,7 +18,7 @@
                         	<div class="col-md-3">
                            		<label class="control-label"> Apellidos <span class="obligatorio">*</span></label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="apellidos" name="apellidos" type="text" placeholder="Apellidos" maxlength="40">
                             </div>
                         </div>
@@ -26,17 +26,17 @@
                         	<div class="col-md-3">
                            		<label class="control-label"> Nick <span class="obligatorio">*</span></label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="nickname" name="nickname" type="text" placeholder="Nick" maxlength="20">
                             </div>
                             <span class="incorrect" hidden="hidden"> Nick existente </span>
-                            <span class="correct" hidden="hidden"> Nick v�lido </span>
+                            <span class="correct" hidden="hidden"> Nick válido </span>
                         </div>
                         <div class="form-group">
                         	<div class="col-md-3">
                            		<label class="control-label"> Contraseña <span class="obligatorio">*</span></label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="password" name="password" type="password" placeholder="Contraseña" maxlength="20">
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         	<div class="col-md-3">
                            		<label class="control-label"> Rep contraseña <span class="obligatorio">*</span></label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="password2" name="password2" type="password" placeholder="Repetir contraseña" maxlength="20">
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                         	<div class="col-md-3">
                            		<label class="control-label"> E-Mail <span class="obligatorio">*</span></label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="correo" name="correo" type="text" placeholder="E-Mail" maxlength="40">
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                         	<div class="col-md-3">
                            		<label class="control-label"> Fecha nacimiento </label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="datetimepickerNacimiento" name="datetimepickerNacimiento" type="text" placeholder="Fecha de nacimiento (Año-Mes-Día)" maxlength="10" data-date-format="YYYY-MM-DD"/>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                         	<div class="col-md-3">
                            		<label class="control-label"> Nacionalidad </label>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-5 col-lg-4">
                                 <select class="form-control" name="nacionalidad">
 									<option value="">Seleccione</option> 
 									<option value="Argentina">Argentina</option> 
@@ -285,6 +285,7 @@
                                 <label><input type="radio" name="sexo" id="opcion_2" value="m"> Mujer </label>
                             </div>
                         </div>
+                        <br/>
                         <div class="checkbox">
     						<label><input type="checkbox"> He leido y acepto las <a href="<?=base_url();?>condicionesUso/">Condiciones de Uso</a> </label>
                        	</div>

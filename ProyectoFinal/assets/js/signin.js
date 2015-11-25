@@ -7,10 +7,10 @@ $(document).ready(function() {
 	    $('.glyphicon-menu-hamburger').on('click', function() {
 			if($('.menu').css('display') == 'none') {
 	    		$('.menu').css('display', 'block');
-	            $('fieldset div:nth-child(3)').css('z-index', '-1');
+	            $('#registro fieldset div:nth-child(3)').css('z-index', '-1');
 	    	} else {
 	    		$('.menu').css('display', 'none');
-	            $('fieldset div:nth-child(3)').css('z-index', '1');
+	            $('#registro fieldset div:nth-child(3)').css('z-index', '1');
 	    	}
 	    });
 

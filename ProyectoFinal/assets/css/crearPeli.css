@@ -25,9 +25,6 @@
 	border-right: 1px solid #CBCBCB;
 	padding-left: 3%;
 }
-.crearPeli .left .formResponsive {
-	display: none;
-}
 .crearPeli .right {
 	height: 330px;
 	width: 49.9%;
@@ -37,15 +34,15 @@
 .crearPeli textarea {
 	resize: none;
 }
-.crearPeli .actores, #actores {
+.crearPeli .actores {
 	height: 140px;
 }
-.crearPeli .actores div:nth-child(4), #actores div:nth-child(4) {
+#creacionPeli .right .actores div:nth-child(4) {
 	float: right;
 	margin-top: 10px;
-	margin-right: 8%;
+	margin-right: 16.6%;
 }
-.crearPeli .actores input[type="button"], #actores input[type="button"] {
+.crearPeli .actores input[type="button"] {
 	height: 34px;
 	width: 80%;
 	position: absolute;
@@ -58,7 +55,7 @@
 	border-radius: 5px;
 	text-align: center;
 }
-.actores input[type="button"]:hover, #actores input[type="button"]:hover {
+.actores input[type="button"]:hover {
 	background-color: #19327D;
 	color: #FFFF00;
 }
@@ -102,81 +99,75 @@
 .crearPeli .obligatorio {
 	color: red;
 }
-.loading {
-	height: auto;
-	width: 100%;
-	display: none;
-}
-.loading img {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -40px;
-	margin-left: -40px;
-}
-@media only screen and (max-width: 992px) {
-	.crearPeli form {
-		height: 500px;
+@media only screen and (max-width: 1200px) {
+	#creacionPeli {
+		height: auto;
 	}
-	.crearPeli .left {
-		height: 390px;
-	}
-	.crearPeli .right {
-		height: 390px;
-	}
-	.crearPeli form fieldset .file button {
-		width: 65%;
-		left: 36%;
-	}
-	.crearPeli .actores div:nth-child(4), #actores div:nth-child(4) {
-		float: left;
-		margin-top: 10px;
-	}
-	.crearPeli .file {
-		float: left;
+	#creacionPeli .left {
+		height: 280px;
 		width: 100%;
-		margin-top: 15px;
+		border-right: none;
 	}
-	.crearPeli .file div:last-child {
-		float: left;
-	}
-}
-@media only screen and (max-width: 768px) {
-	.crearPeli form {
-		height: 880px;
-	}
-	.crearPeli form fieldset legend {
-		text-align: left;
-	}
-	.crearPeli .left {
+	#creacionPeli .right {
 		width: 100%;
-		border: 0;
-	}
-	.crearPeli .left .formResponsive {
 		display: block;
 	}
-	.crearPeli .right {
-		display: none;
+	#creacionPeli .right .actores div:nth-child(4) {
+		margin-right: 0;
 	}
-	.crearPeli #actores div:nth-child(4) {
-		width: 100%;
+	#creacionPeli .seleccionImg {
+		margin-left: 60%;
 	}
-	.crearPeli .button {
-		display: inline-block;
-		margin-top: 370px;
-		margin-left: 41%;
+	#creacionPeli .button input[type="button"] {
+		margin-bottom: 3%;
 	}
 }
-@media only screen and (max-width: 550px) {
-	.crearPeli .button {
-		margin-left: 40%;
+@media only screen and (max-width: 1100px) {
+	#creacionPeli .seleccionImg {
+		margin-left: 52%;
 	}
 }
-@media only screen and (max-width: 410px) {
-	.crearPeli .file div:first-child {
-		width: 35%;
+@media only screen and (max-width: 1000px) {
+	#creacionPeli .seleccionImg {
+		margin-left: 46%;
 	}
-	.crearPeli .button {
-		margin-left: 32%;
+}
+@media only screen and (max-width: 900px) {
+	#creacionPeli .seleccionImg {
+		margin-left: 38%;
+	}
+}
+@media only screen and (max-width: 800px) {
+	#creacionPeli .seleccionImg {
+		margin-left: 34%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	#creacionPeli .left {
+		height: 380px;
+	}
+	#creacionPeli .actores div:nth-child(4) {
+		margin-bottom: 2%;
+	}
+	#creacionPeli .file button {
+		margin-left: 0;
+	}
+	#creacionPeli .button input[type="button"] {
+		margin-top: 10%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	#creacionPeli .button input[type="button"] {
+		margin-left: 3%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	#creacionPeli .button input[type="button"] {
+		margin-left: 5%;
+	}
+}
+@media only screen and (max-width: 500px) {
+	#creacionPeli .button input[type="button"] {
+		margin-left: 9%;
 	}
 }

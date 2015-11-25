@@ -14,6 +14,9 @@ $( document ).ready(function() {
 	    else if(opcion == 'director') {
 	        $('#campoBusqueda').attr('placeholder', 'Buscar director...').blur();
 	    }
+	    else if(opcion == 'usuario') {
+            $('#campoBusqueda').attr('placeholder', 'Buscar usuario...').blur();
+        }
 	});
 	
 });
