@@ -1,5 +1,5 @@
 <div class="container">
-<form class="form-horizontal" action="<?=base_url();?>/login" method="post" id="login">
+<form class="form-horizontal" action="<?=base_url();?>login" method="post" id="login">
             	<div class="row">
                     <fieldset>
                         <legend> Indentifícate </legend>

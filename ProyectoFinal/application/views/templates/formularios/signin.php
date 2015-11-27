@@ -1,5 +1,37 @@
+<script type="text/javascript">
+$(document).ready(function(){               
+      var datos;
+      $("#nick").keyup(function(e){
+             datos=$("#nick").val();
+             //$("#resultado").delay(1000).queue(function(){
+                        $.ajax({
+                              type: "POST",
+                              url: "<?=base_url('registro/buscaNick');?>",
+                              data: "nickname="+datos,
+                             // dataType: "html",
+                        error: function(datos){
+                        	$('#resultado').html('<p>Error en la petición ajax</p>');
+                        },
+						success:function(datos){
+						e.preventDefault();
+							if(null){
+								$('#resultado').html('<span> Nada </span>');
+							}
+							else if(true){
+								$('#resultado').html('<span class="correct"> Nick válido </span>');
+							}
+							else{
+								$('#resultado').html('<span class="incorrect"> Nick existente </span>');
+							}
+						}
+                  }); 
+           //  });            
+      });
+                          
+});
+</script>
 <div class="container">
-			<form class="form-horizontal" action="<?=base_url()?>/registro/registro_usuario" method="post" id="registro" name="registro">
+			<form class="form-horizontal" action="<?=base_url()?>registro/registro_usuario" method="post" id="registro" name="registro">
             	<div class="row">
                     <fieldset>
                         <legend> Regístrate </legend>

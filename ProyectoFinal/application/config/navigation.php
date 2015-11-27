@@ -1,29 +1,25 @@
 <?php
-
+$CI = & get_instance ();
+$CI->load->helper ( 'url' );
 $config['navigation'] = array(
-           /* 'home' => array(
-                'id'     => 'home',
-                'title'  => 'Home',
-                'link'   => ''
-            ),*/
-            'cartelera' => array(
-                'id'     => 'cartelera',
-                'title'  => 'Cartelera',
-                'link'   => 'films/listarPelis'
-            ),
-            'actores' => array(
-                'title'  => 'Actores',
-                'link'   => '../actor/listaActor'
-            ),
-			'directores' => array(
-					'id'     => 'directores',
-					'title'  => 'Directores',
-					'link'   => '../director/listarDirector'
-			),
-			'genero' => array(
-					'id'     => 'genero',
-					'title'  => 'Género',
-					'link'   => '../genero/listarGenero'
-			)
-        );
-
+		'home' => array(
+				'id'     => 'home',
+				'title'  => 'Home',
+				'link'   => base_url('home')
+		),
+		'directores' => array(
+				'id'     => 'directores',
+				'title'  => 'Directores',
+				'link'   => base_url('director/listarDirector')
+		),
+		'cartelera' => array(
+				'id'     => 'cartelera',
+				'title'  => 'Cartelera',
+				'link'   => base_url('films/listarPelis')
+		),
+		'genero' => array(
+				'title'  => 'Genero',
+				'link'   => base_url('genero/listarPorGenero')
+		)
+);
+?>

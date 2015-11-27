@@ -3,21 +3,21 @@ class sign_model extends CI_Model{
 	function __construct(){
 		$this->load->database();
 	}
-	function registro_usuario($nombre, $apellidos, $nickname, $password, $mail, $dia, $mes, $anyo, $nacionalidad, $sexo){
+	function registro_usuario($nombre, $apellidos, $nickname, $password, $mail, $fechaNacimiento, $nacionalidad, $sexo, $fechaReg){
 		$data=array(
 				'nombre'=>$nombre,
 				'apellidos'=>$apellidos,
 				'nickname'=>$nickname,
 				'password'=>$password,
 				'correo'=>$mail,
-				'fechaNacimiento'=>"$anyo.-.$mes.-.$dia",
+				'fechaNacimiento'=>$fechaNacimiento,
 				'avatar'=>base_url('/assets/images/mr_x.gif'),
 				'sexo'=>$sexo,
 				'nacionalidad'=>$nacionalidad,
-				'tipoUsuario'=>'usuario'
+				'fechaReg'=>$fechaReg,
+				'tipoUsuario'=>1
 		);
 		return $this->db->insert('usuario', $data);
-		if($data['error'] = $this->db->_error_message());
-		return $data;
 	}
+	
 }

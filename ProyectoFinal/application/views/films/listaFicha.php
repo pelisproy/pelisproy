@@ -6,18 +6,20 @@
 
 
 <?php
-//echo print_r($contenido);
 if($contenido!=null){
 foreach ($contenido as $pelicula):?>
 <table border="0">
 <tr>
 <td>
 <?php 
-echo $pelicula['nombre'];
-echo $pelicula['sinopsis'];
-echo $pelicula['anyo'];
+echo "<b>Título</b><br/>";
+echo $pelicula['nombre']."<br/>";
+echo "<b>Sinopsis</b><br/>";
+echo $pelicula['sinopsis']."<br/>";
+echo "<b>Fecha de estreno</b><br/>";
+echo $pelicula['fechaEstreno']."<br/>";
 ?>
-<img src="<?=base_url("../assets/images/films/".$pelicula['caratula']);?>"/>;
+<img src="<?=base_url("assets/images/films/".$pelicula['caratula']);?>"/>;
 </td>
 </tr>
 </table>

@@ -3,33 +3,34 @@ class Films_model extends CI_Model{
 	public function __construct(){
 		$this->load->database();
 	}
-	public function crearFicha($nombre, $sinopsis, $caratula, $anyo, $director){
+public function crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $registro, $trailer, $director, $idUsuario, $genero){
 		$data=array(
 			'nombre'=>$nombre,
 			'sinopsis'=>$sinopsis,
 			'caratula'=>$caratula,
-			'anyo'=>$anyo,
-			'director'=>$director
+			'fechaEstreno'=>$fechaEstreno,
+			'fechaAgregado'=>$registro,
+			'trailer'=>$trailer,
+			'director'=>$director,
+			'idUsuario'=>$idUsuario,
+			'idGenero'=>$genero
 		);
 		return $this->db->insert('pelicula', $data);
-		if($data['error'] = $this->db->_error_message());
-		return $data;
 	}
-	public function modificarFicha($id, $nombre, $sinopsis, $caratula, $anyo, $director){
-		$data = array(
-            'nombre'=>$nombre,
+	public function modificarFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $trailer, $director, $idUsuario, $genero){
+		$data=array(
+			'nombre'=>$nombre,
 			'sinopsis'=>$sinopsis,
 			'caratula'=>$caratula,
-			'anyo'=>$anyo,
-			'director'=>$director
-            );
-
+			'fechaEstreno'=>$fechaEstreno,
+			'trailer'=>$trailer,
+			'director'=>$director,
+			'idUsuario'=>$idUsuario,
+			'idGenero'=>$genero
+		);
+		return $this->db->insert('pelicula', $data);
 		$this->db->where('id', $id);
-		//$this->db->update('pelicula', $data);
-		if (!$this->db->update('pelicula', $data))
-		{
-			//return mysqli_errno($this->db->update('pelicula', $data));
-			//return mysqli_error($this->db->update('pelicula', $data));
+		if (!$this->db->update('pelicula', $data)){
 			return false;
 		}
 		return $data;
@@ -37,17 +38,52 @@ class Films_model extends CI_Model{
 	public function borrarFicha($id){
 		$this->db->where('id', $id);
 		return $this->db->delete('pelicula');
-		/*if($data['error'] = $this->db->_error_message());
-		return $data;*/
 	}
 	public function mostrarTodasPeliculas(){
 		$query=$this->db->get('pelicula');
 		return $query->result_array();
 	}
+	
 	public function mostrarPeliculaEspecifica($id){
-	//CAMBIAR ID POR LO QUE SE VEA CONVENIENTE (TITULO, ACTOR, ETC) MIRAR SI SE PUEDE HACER EN UNA SOLA FUNCIÓN O EN VARIAS
-		$this->db->select('id, titulo, descripcion, prioridad');
-		$this->db->from('pelicula');
-		$this->db->where('id', $id);
+		$sentencia="SELECT nombre, sinopsis, caratula, fechaestreno, trailer, director
+		FROM PELICULA
+		WHERE id=$id";
+		$query=$this->db->query($sentencia);
+		return $query->result_array();
+	}
+	
+	public function mostrarComentarios($idPelicula, $idUsuario){
+		$sentencia="SELECT C.texto, U.nombre, U.avatar, c.idPelicula
+		FROM USUARIO U, COMENTARIO C
+		WHERE C.IDPELICULA=$idPelicula AND U.ID=C.idUsuario
+		ORDER BY C.fechaComentario";
+		$query=$this->db->query($sentencia);
+		return $query->result_array();
+	}
+	
+	public function nuevoComentario($mensaje, $dia, $idPeli, $idUser){
+		$data=array(
+				'texto'=>$mensaje,
+				'fechaComentario'=>$dia,
+				'idPelicula'=>$idPeli,
+				'idUsuario'=>$idUser
+		);
+		$this->db->where('idPelicula', $idPeli);
+		$this->db->where('idUsuario', $idUser);
+		return $this->db->insert('comentario', $data);
+	}
+	public function listaNuevos(){
+		$sentencia="SELECT nombre, caratula, id
+		FROM pelicula
+		ORDER BY fechaAgregado ASC LIMIT 5";
+			$query=$this->db->query($sentencia);
+			return $query->result_array();
+	}
+	public function listaEstrenos(){
+		$sentencia="SELECT nombre, caratula, id
+		FROM pelicula
+		ORDER BY fechaEstreno DESC LIMIT 5";
+			$query=$this->db->query($sentencia);
+			return $query->result_array();
 	}
 }

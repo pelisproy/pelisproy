@@ -1,19 +1,37 @@
 	<div class="carrusel">
 		<img src="<?= base_url(); ?>/assets/images/carrusel/1.jpg" alt="Film Project - Tu Web de Películas" height="600px" width="100%"/>
 	</div>
-	<div class="listas">
+	<div class="lista">
+		<h3>Damos la bienvenida a estos nuevos usuarios</h3>
+		<?php
+					foreach ($nuevosUsu as $usuarios):?>	
+		<?=$usuarios['nickname']?></a>
+							<img src="<?=base_url("assets/images/users/".$usuarios['avatar']);?>"/><br/>
+						<?php 
+						endforeach;
+						?>
+		</div>
+		<div class="lista">
+		<h3>Peliculas recientemente añadidas</h3>
+					<?php
+					foreach ($nuevosPeli as $pelicula):?>	
+		<a href="<?=base_url("/films/verPeli/".$pelicula['id']);?>"><?=$pelicula['nombre']?></a>
+							<img src="<?=base_url("assets/images/films/".$pelicula['caratula']);?>"/><br/>
+						<?php 
+					endforeach;
+					?>
+					</div>	
 		<div class="populares">
-			
-		</div>
-		<div class="estrenos">
-			
-		</div>
-		<div class="futurosEstrenos">
-			
-		</div>
-	</div>
+		<h3>Próximos estrenos</h3>
+					<?php
+					foreach ($estrenos as $pelicula):?>
+							<a href="<?=base_url("films/verPeli/".$pelicula['id']);?>"><?=$pelicula['nombre']?></a>
+							<img src="<?=base_url("assets/images/films/".$pelicula['caratula']);?>"/><br/>
+		
+					<?php endforeach;?>
+</div>
 	<div class="bannerPubli">
-		<img src="<?= base_url(); ?>/assets/images/publicidad.jpg" alt="Publicidad"/>
+		<img src="<?= base_url(); ?>assets/images/publicidad.jpg" alt="Publicidad"/>
 	</div>
 </div>
 <script>
