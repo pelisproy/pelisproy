@@ -1,32 +1,27 @@
 <script type="text/javascript">
 $(document).ready(function(){               
-      var datos;
-      $("#nick").keyup(function(e){
-             datos=$("#nick").val();
-             //$("#resultado").delay(1000).queue(function(){
-                        $.ajax({
-                              type: "POST",
-                              url: "<?=base_url('registro/buscaNick');?>",
-                              data: "nickname="+datos,
-                             // dataType: "html",
-                        error: function(datos){
-                        	$('#resultado').html('<p>Error en la petición ajax</p>');
-                        },
-						success:function(datos){
-						e.preventDefault();
-							if(null){
-								$('#resultado').html('<span> Nada </span>');
-							}
-							else if(true){
+    var datos;
+    $("#nickname").blur(function(e){
+           datos=$("#nickname").val();
+                      $.ajax({
+                            type: "POST",
+                            url: "<?=base_url('registro/buscaNick');?>",
+                            data: "nickname="+datos,
+                           // dataType: "html",
+                      error: function(asd){
+                      	$('#resultado').html('<p>Error en la petición ajax</p>');
+                      },
+						success:function(asd){
+							if(asd){
 								$('#resultado').html('<span class="correct"> Nick válido </span>');
 							}
-							else{
+							else if(asd==false){
 								$('#resultado').html('<span class="incorrect"> Nick existente </span>');
 							}
 						}
-                  }); 
-           //  });            
-      });
+                }); 
+         //  });            
+    });
                           
 });
 </script>
@@ -63,6 +58,7 @@ $(document).ready(function(){
                             </div>
                             <span class="incorrect" hidden="hidden"> Nick existente </span>
                             <span class="correct" hidden="hidden"> Nick válido </span>
+                            <div id="resultado"></div>
                         </div>
                         <div class="form-group">
                         	<div class="col-md-3">
