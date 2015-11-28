@@ -35,19 +35,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$config['file_name']=$nombreImagen;
 				$this->load->library('upload', $config);
 				$bien=$this->upload->do_upload('caratula');
-				
 				if($bien){
 					$nombre=$this->input->post('nombre');
 					$sinopsis=$this->input->post('sinopsis');
 					$caratula=$nombreImagen;
-					$fechaEstreno=$this->input->post('fechaEstreno');
+					$fechaEstreno=$this->input->post('datetimepicker');
 					$reg=date("Y-m-d");
 					$trailer=$this->input->post('trailer');
 					$director=$this->input->post('director');
-					echo print_r($this->input->post('genero'));
-					exit();//REVISAR
 					$idGenero=$this->input->post('genero');
-					$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $reg, $trailer, $director, $idUser, $idGenero);
+					$genero;
+					foreach($idGenero as $k=>$v){
+						$genero=$v;
+					}
+					$dato=$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $reg, $trailer, $director, $idUser, $genero);
 				}
 				else{
 					$this->load->view('errors/errorSubirFicha.php');

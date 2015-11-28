@@ -8,7 +8,7 @@
                                 <label class="control-label"> Nick: </label>
                             </div>
                             <div class="col-xs-9 col-sm-5">
-                                <input class="form-control" id="nick" type="text" placeholder="Nick" maxlength="20">
+                                <input class="form-control" id="nick" name="username" type="text" placeholder="Nick" maxlength="20">
                             </div>
                         </div>
                         <div class="form-group">
@@ -16,7 +16,7 @@
                            		<label class="control-label"> Contraseña: </label>
                             </div>
                             <div class=" col-xs-9 col-sm-5">
-                                <input class="form-control" id="contra" type="password" placeholder="Contraseña" maxlength="20">
+                                <input class="form-control" id="contra" name="password" type="password" placeholder="Contraseña" maxlength="20">
                             </div>
                         </div>
                         <br/>

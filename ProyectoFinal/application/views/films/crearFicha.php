@@ -36,7 +36,7 @@
 	                            <label class="control-label"> Sinopsis <span class="obligatorio">*</span></label>
 	                        </div>
 	                        <div class="col-sm-8 col-lg-6">
-	                            <textarea class="form-control" id="sinopsis" placeholder="Sinopsis" rows="5" data-toggle="tooltip" title="Debe tener mínimo 100 caracteres"></textarea>
+	                            <textarea class="form-control" id="sinopsis" name="sinopsis" placeholder="Sinopsis" rows="5" data-toggle="tooltip" title="Debe tener mínimo 100 caracteres"></textarea>
 	                        </div>
 	                    </div>
                     </div>

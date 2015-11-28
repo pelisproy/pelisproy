@@ -1,6 +1,5 @@
-	<?php
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Login extends CI_Controller{
 	
 	public function __construct(){
@@ -8,7 +7,6 @@ class Login extends CI_Controller{
 	}
 	
 	public function index(){
-		
 //si la session no existe userdata ya nos develve false
 	if ($this->session->userdata('username')){
 		redirect('Home');
@@ -17,7 +15,8 @@ class Login extends CI_Controller{
 		if(isset($_POST['password'])){
 			$this->load->model('usuario_model');
 			$variableUsuario = $this->usuario_model->login($_POST['username'],$_POST['password']);
-			if($variableUsuario != null){
+			//if($variableUsuario != null){
+			if($this->usuario_model->login($_POST['username'],$_POST['password'])!= null){
 				$this->session->set_userdata('username', $_POST['username']);
 				// Control para ver que devuelve login
 				//echo $this->usuario_model->login($_POST['username'],$_POST['password']);
@@ -27,7 +26,6 @@ class Login extends CI_Controller{
 			}
 			else{
 				redirect('login');
-				echo "Dentro del else";
 			}
 		}	
 	}
