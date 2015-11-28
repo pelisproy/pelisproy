@@ -47,6 +47,8 @@
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/condicionesUso.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/loading.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/iconosAdministracion.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/style.css" />	
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/script.js"></script>
 	</head>
 	<body>
 		<div class="loading">
@@ -59,21 +61,33 @@
 				</div>
 				<div class="botones">	
 					<?php if ($this->session->userdata('username')):?>
-					 <a href="<?=site_url('login/logout')?>"><button class="identificarse">Desconectarse</button></a> 
-					 <a href="#"><button class="identificarse"><?php echo $this->session->userdata('username')?></button></a> 
-					 <a href="#"><button class="identificarse"><?php echo $this->session->userdata('idUsuario')?></button></a> 
-					<!-- Ejemplo botón sólo visible por un administrador -->
-					<?php if ($this->session->userdata('tipoUsuario') != null && $this->session->userdata('tipoUsuario') == 0):?>
-					<a href="#"><button class="identificarse"><?php echo "Bienvenido Administrador: " . $this->session->userdata('username')?></button></a> 
-					<?php endif;?>
-					<!-- Fin de ejemplo -->
 					
+						<div class="accionUsuario">
+						Bienvenido <?php echo $this->session->userdata('username');?>
+						
+					<div class="boton">
+						<button type="" class="dropdown-toggle" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<span class="glyphicon glyphicon-user"></span>
+						</button>
+						<ul class="dropdown-menu">
+						<?php if ($this->session->userdata('tipoUsuario') != null && $this->session->userdata('tipoUsuario') == 0):?>
+							<li><a href="<?= base_url();?>admin/ad"> Administrar </a></li>
+							<li role="separator" class="divider"></li>
+							<?php endif;?>
+							<li><a href="<?= base_url();?>#"> Editar Perfil </a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="<?=site_url('login/logout')?>"> Desconectar </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 					<?php else:?>
 					<a href="<?= base_url(); ?>home/login"><button class="identificarse">Identifícate</button></a>
 					<a href="<?= base_url(); ?>home/nuevoUsuario"><button class="registrarse">Regístrate</button></a> 
+					
 					<?php endif;?>
 				</div>
-			</div>
 			<div class="navegacion">
 				<div class="menuResponsive">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
