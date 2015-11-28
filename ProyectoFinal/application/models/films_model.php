@@ -75,14 +75,14 @@ public function crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $regist
 	public function listaNuevos(){
 		$sentencia="SELECT nombre, caratula, id
 		FROM pelicula
-		ORDER BY fechaAgregado ASC LIMIT 5";
+		ORDER BY fechaAgregado ASC LIMIT 3";
 			$query=$this->db->query($sentencia);
 			return $query->result_array();
 	}
 	public function listaEstrenos(){
 		$sentencia="SELECT nombre, caratula, id
 		FROM pelicula
-		ORDER BY fechaEstreno DESC LIMIT 5";
+		ORDER BY fechaEstreno DESC LIMIT 3";
 			$query=$this->db->query($sentencia);
 			return $query->result_array();
 	}

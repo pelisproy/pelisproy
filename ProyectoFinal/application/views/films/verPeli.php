@@ -1,4 +1,3 @@
-<script 
 <?php 
 if($contenido!=null){
 foreach ($contenido as $pelicula):?>

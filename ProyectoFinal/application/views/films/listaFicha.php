@@ -11,14 +11,10 @@ foreach ($contenido as $pelicula):?>
 <table border="0">
 <tr>
 <td>
-<?php 
-echo "<b>Título</b><br/>";
-echo $pelicula['nombre']."<br/>";
-echo "<b>Sinopsis</b><br/>";
-echo $pelicula['sinopsis']."<br/>";
-echo "<b>Fecha de estreno</b><br/>";
-echo $pelicula['fechaEstreno']."<br/>";
-?>
+<b>Título</b><br/>
+<a href="<?=base_url('films/verPeli/'.$pelicula['id']);?>"><?=$pelicula['nombre']?></a><br/>
+<b>Fecha de estreno</b><br/>
+<?=$pelicula['fechaEstreno'];?><br/>
 <img src="<?=base_url("assets/images/films/".$pelicula['caratula']);?>"/>;
 </td>
 </tr>

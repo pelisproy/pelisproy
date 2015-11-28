@@ -11,7 +11,7 @@ class sign_model extends CI_Model{
 				'password'=>$password,
 				'correo'=>$mail,
 				'fechaNacimiento'=>$fechaNacimiento,
-				'avatar'=>base_url('/assets/images/mr_x.gif'),
+				'avatar'=>'mr_x.gif',
 				'sexo'=>$sexo,
 				'nacionalidad'=>$nacionalidad,
 				'fechaReg'=>$fechaReg,

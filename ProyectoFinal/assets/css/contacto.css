@@ -20,7 +20,7 @@
 .contacto .localizacion p:first-child {
 	margin-top: 6%;
 }
-.localizacion p span {
+.contacto .localizacion p span {
 	margin-right: 5px;
 	color: #2447B2;
 	font-family: 'Calibri';
@@ -58,12 +58,12 @@
 	padding: 10px;
 	line-height: 100%;
 }
-.contacto .mail form fieldset input[type="text"] {
-	margin-bottom: 8px;
+.contacto form input[type="text"] {
+	margin: 0 0 8px 26%;
 }
-#contactar textarea {
+.contacto form textarea {
    	resize: none;
-   	margin-bottom: 15px;
+   	margin: 0 0 15px 26%;
 }
 .contacto form input[type="button"] {
 	margin-left: 45%;
@@ -106,6 +106,9 @@
 	}
 }
 @media only screen and (max-width : 1000px) {
+	.contacto {
+		height: 1200px;
+	}
 	.contacto .localizacion p {
 		margin-left: 18%;
 		font-size: 18px;
@@ -120,6 +123,9 @@
 	}
 }
 @media only screen and (max-width : 650px) {
+	.contacto {
+		height: 1100px;
+	}
 	.contacto .localizacion p {
 		margin-left: 16%
 	}

@@ -27,6 +27,7 @@
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap-datetimepicker.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrap-datetimepicker.min.css">
 		
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/cargaWeb.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/menuResponsive.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/buscadorSelect.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/usuarioInvitado.js"></script>

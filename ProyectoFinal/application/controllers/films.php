@@ -13,14 +13,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('films/body.php');
 		}
 		public function cargarFormCrearFicha(){
-		if($this->session->userdata('username')){
+		//if($this->session->userdata('username')){
 				$datos['genero']=$this->genero_model->seleccionarGenero();
 				$this->load->view('templates/headers/headerPrin.php', $datos);
-				$this->load->view('/films/creacionPeli.php');
-			}
-			else{
-				$this->load->view('errors/errorCrearFicha.php');
-			}
+				$this->load->view('films/crearFicha.php');
+				$this->load->view('templates/footers/foot.php');
+		//	}
+			//else{
+				//$this->load->view('errors/errorCrearFicha.php');
+			//}
 		}
 		public function crearFicha(){
 			$usuario=$this->session->userdata('username');
@@ -43,6 +44,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$reg=date("Y-m-d");
 					$trailer=$this->input->post('trailer');
 					$director=$this->input->post('director');
+					echo print_r($this->input->post('genero'));
+					exit();//REVISAR
 					$idGenero=$this->input->post('genero');
 					$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $reg, $trailer, $director, $idUser, $idGenero);
 				}

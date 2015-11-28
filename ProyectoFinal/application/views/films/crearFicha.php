@@ -1,5 +1,5 @@
 <div class="crearPeli">
-<form class="form-horizontal" name="creacionPeli" id="creacionPeli" action="<?=base_url('films/crearFicha');?>" method="post">
+<form class="form-horizontal" name="creacionPeli" id="creacionPeli" enctype="multipart/form-data" action="<?=base_url('films/crearFicha');?>" method="post">
                 <fieldset>
                     <legend> Crear película <br/><strong> (<span class="obligatorio">*</span>) Campos obligatorios </strong></legend>
                     <div class="left">
@@ -26,7 +26,7 @@
 	                        <div class="col-sm-8 col-lg-6">
 	                        	<select class="form-control" name="genero[]" id="generoPeli">
 								    <?php foreach ($genero as $gen):?>
-								    <option value="<?php echo $gen['id'];?>"><?php echo $gen['nombreGenero']?></option>
+								    <option value="<?php print_r( $gen['id']);?>"><?php print_r($gen['nombreGenero']);?></option>
 								    <?php endforeach;?>
 								</select>
 	                        </div>

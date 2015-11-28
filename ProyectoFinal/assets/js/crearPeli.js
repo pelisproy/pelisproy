@@ -98,7 +98,7 @@ function validar() {
 		document.getElementById('datetimepicker').style.borderColor = '';
 	}
 
-	if(!regExGenero.test(genero)) {
+	/*if(!regExGenero.test(genero)) {
 		document.getElementById('generoPeli').style.backgroundColor = '#FFADAD';
 		document.getElementById('generoPeli').style.borderColor = '#A10000';
 		if(correcto) {
@@ -108,7 +108,7 @@ function validar() {
 	} else {
 		document.getElementById('generoPeli').style.backgroundColor = '';
 		document.getElementById('generoPeli').style.borderColor = '';
-	}
+	}*/
 
 	if(!regExSinopsis.test(sinopsis)) {
 		document.getElementById('sinopsis').style.backgroundColor = '#FFADAD';
@@ -150,7 +150,7 @@ function validar() {
 		if(comprobarExtension('creacionPeli', caratula)) {
 			document.querySelector('.loading').style.display = 'block';
 			document.querySelector('.container').style.opacity = '0.1';
-			/*document.querySelector('.footer').style.opacity = '0.1';	DESCOMENTAR CUANDO EL CONTROLADOR LLAME AL FOOTER*/
+			document.querySelector('.footer').style.opacity = '0.1';
 			document.querySelector('body').style.overflow = 'hidden';
 			setTimeout(function() {
 				document.creacionPeli.submit();

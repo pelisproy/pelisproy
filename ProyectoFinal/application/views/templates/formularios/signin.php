@@ -2,6 +2,7 @@
 $(document).ready(function(){               
     var datos;
     $("#nickname").blur(function(e){
+        if($("#nickname").val().length > 2) {
            datos=$("#nickname").val();
                       $.ajax({
                             type: "POST",
@@ -9,17 +10,20 @@ $(document).ready(function(){
                             data: "nickname="+datos,
                            // dataType: "html",
                       error: function(asd){
-                      	$('#resultado').html('<p>Error en la petición ajax</p>');
+                      	$('#resultadoNick').html('<p>Error en la petición ajax</p>');
                       },
 						success:function(asd){
 							if(asd){
-								$('#resultado').html('<span class="correct"> Nick válido </span>');
+								$('#resultadoNick').html('<span class="correct"> Válido </span>');
 							}
 							else if(asd==false){
-								$('#resultado').html('<span class="incorrect"> Nick existente </span>');
+								$('#resultadoNick').html('<span class="incorrect"> Existente </span>');
 							}
 						}
                 }); 
+        } else {
+        	$('#resultadoNick').html('');
+        }
          //  });            
     });
                           
@@ -56,9 +60,7 @@ $(document).ready(function(){
                             <div class="col-md-5 col-lg-4">
                                 <input class="form-control" id="nickname" name="nickname" type="text" placeholder="Nick" maxlength="20">
                             </div>
-                            <span class="incorrect" hidden="hidden"> Nick existente </span>
-                            <span class="correct" hidden="hidden"> Nick válido </span>
-                            <div id="resultado"></div>
+							<div id="resultadoNick"></div>
                         </div>
                         <div class="form-group">
                         	<div class="col-md-3">
@@ -325,3 +327,5 @@ $(document).ready(function(){
                         </div>
                     </fieldset>
                 </div>
+               </form>
+               </div>

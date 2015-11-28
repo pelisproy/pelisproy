@@ -33,7 +33,7 @@ class user_model extends CI_Model{
 	public function listaReciente(){
 		$sentencia="SELECT nickname, avatar, id
 				FROM usuario
-				ORDER BY fechaReg DESC";
+				ORDER BY fechaReg DESC LIMIT 3";
 		$query=$this->db->query($sentencia);
 		return $query->result_array();
 	}

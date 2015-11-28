@@ -18,7 +18,7 @@ public function __construct(){
 			$nickname=$this->input->post('nickname');
 			$password=$this->input->post('password');
 			$mail=$this->input->post('correo');
-			$fechaNacimiento=$this->input->post('fechaNacimiento');
+			$fechaNacimiento=$this->input->post('datetimepickerNacimiento');
 			$nacionalidad=$this->input->post('nacionalidad');
 			$sexo=$this->input->post('sexo');
 			$fechaReg=date("Y-m-d");
