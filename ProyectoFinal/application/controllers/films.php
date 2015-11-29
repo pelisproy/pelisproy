@@ -69,6 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('films/verPeli.php', $datos);
 			if(isset($idUser)){
 				$comentarios['contenido']=$this->comentario_model->mostrarComentarios($id, $idUser);
+				$comentarios['idPelicula']=$id;
 				$this->load->view('comentario/verComentarios.php', $comentarios);
 				$this->load->view('templates/footers/foot.php');
 		
@@ -95,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$sinopsis=$this->input->post('sinopsis');
 			$caratula=$this->input->post('caratula');
 // 			$caratula=$config['file_image'];
-			$anyo=$this->input->post('anyo');
+			$fechaEstreno=$this->input->post('datepicker');//Debería ser algo así
 			$director=$this->input->post('director');
 // 			$this->load->view('films/modificarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÃ�A IR A LA CARPETA FORMULARIOS
 			if ($this->films_model->modificarFicha($id, $nombre, $sinopsis, $caratula, $anyo, $director)) {
@@ -112,7 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 	public function borrarFicha(){
 			$id=$this->uri->segment(3);
-			$this->films_model->borrarFicha($id);
+			$bien=$this->films_model->borrarFicha($id);
 		if($bien){
 			$this->load->view('correcto/correctoBorrarFicha.php');
 		}

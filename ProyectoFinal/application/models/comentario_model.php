@@ -4,7 +4,7 @@ class Comentario_model extends CI_Model{
 		$this->load->database();
 	}
 	public function mostrarComentarios($idPelicula, $idUsuario){
-		$sentencia="SELECT C.texto, U.nombre, U.avatar, c.idPelicula, C.id
+		$sentencia="SELECT C.texto, U.nombre, U.avatar, c.idPelicula, C.id, c.idUsuario
 		FROM USUARIO U, COMENTARIO C
 		WHERE C.IDPELICULA=$idPelicula AND U.ID=C.idUsuario
 		ORDER BY C.fechaComentario";

@@ -1,24 +1,25 @@
 <h3>COMENTARIOS</h3>
 <?php
+$idPeli=$idPelicula;
 if($contenido!=null){
 foreach ($contenido as $comentario):?>
 <div id="comentario">
 <?php 
 $idCom=$comentario['id'];
-$idPeli=$comentario['idPelicula'];
 ?>
 	<h6><?php echo $comentario['nombre'];?></h6>
-	<input type="hidden" name="idCom" value="<? echo "$idCom"?>"/>
 	<img src="<?=base_url('/assets/images/users/'.$comentario['avatar']);?>"/>
 	<div id="texto" name="texto">
 		<?php echo $comentario['texto']?>
 	</div>
+	<?php if ($this->session->userdata('tipoUsuario')==0 || $this->session->userdata('idUsuario')==$comentario['idUsuario']):?>
 		<a href="<?=base_url("films/modificarComentario/$idCom");?>" onclick="modificarComentario(<?php echo $idCom ?>)">Modificar</a>
-		<a href="<?=base_url("films/borrarComentario/$idCom");?>">Borrar</a>
+		<a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idCom");?>">Borrar</a>
 		<input type="button" onclick="modificarComentario(<?php echo $idCom ?>)" value="Modificar">
 	</div>
 </div>
 <?php 
+endif;
 endforeach;
 }
 else{

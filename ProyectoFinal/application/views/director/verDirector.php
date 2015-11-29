@@ -10,8 +10,8 @@
 					echo $info['director']."<br/>";
 				?>
 			</h4>
-				<a href="<?=base_url("/films/verPeli/".$info['id']);?>"><?=$info['nombre']?></a>
-				<img src="<?=base_url("/assets/images/films/".$info['caratula']);?>"/><br/>
+				<a href="<?=base_url("/films/verPeli/".$info['id']);?>"><?=$info['nombre']?></a><br/>
+				<img src="<?=base_url("/assets/images/films/".$info['caratula']);?>" height="400" width="280"/><br/>
 			</td>
 			</tr>
 			</table>

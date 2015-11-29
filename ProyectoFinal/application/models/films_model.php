@@ -45,7 +45,7 @@ public function crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $regist
 	}
 	
 	public function mostrarPeliculaEspecifica($id){
-		$sentencia="SELECT nombre, sinopsis, caratula, fechaestreno, trailer, director
+		$sentencia="SELECT nombre, sinopsis, caratula, fechaestreno, trailer, director, idUsuario
 		FROM PELICULA
 		WHERE id=$id";
 		$query=$this->db->query($sentencia);
