@@ -49,10 +49,11 @@
 						<a href="<?=base_url("films/verPeli/".$pelicula['id']);?>"><?=$pelicula['nombre']?></a>
 						</span>
 						</div>
-					</div>
+					
 					<?php 
 					endforeach;
 					?>
+					</div>
 				</div>
 				<div class="estrenos col-md-3">
 					<div>
