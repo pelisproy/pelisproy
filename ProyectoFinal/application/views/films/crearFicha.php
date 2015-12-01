@@ -68,7 +68,7 @@
 	                            <input type="button" onclick="validarActor()" value="Agregar"/>
 	                        </div>
 	                        <div class="col-xs-12 col-sm-8 col-lg-6">
-	                            <textarea class="form-control" id="actoresAgregados" placeholder="Actores agregados" rows="4" disabled="disabled"></textarea>
+	                            <textarea class="form-control" id="actoresAgregados" name="actoresAgregados" placeholder="Actores agregados" rows="4" disabled="disabled"></textarea>
 	                        </div>
 	                    </div>
 	                    <div class="file form-group">

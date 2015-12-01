@@ -81,12 +81,13 @@
 						</ul>
 					</div>
 				</div>
-			</div>
-					<?php else:?>
+				<?php else:?>
 					<a href="<?= base_url(); ?>home/login"><button class="identificarse">Identifícate</button></a>
 					<a href="<?= base_url(); ?>home/nuevoUsuario"><button class="registrarse">Regístrate</button></a> 
 					
 					<?php endif;?>
+			</div>
+					
 				</div>
 			<div class="navegacion">
 				<div class="menuResponsive">

@@ -49,6 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$genero=$v;
 					}
 					$dato=$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $reg, $trailer, $director, $idUser, $genero);
+					if($dato){
+						$this->load->view('correcto/correctoCrearFicha.php');
+					}
 				}
 				else{
 					$this->load->view('errors/errorSubirFicha.php');

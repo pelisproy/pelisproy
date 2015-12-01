@@ -33,8 +33,8 @@
 			<div><img src="../images/carrusel/1.jpg" alt="" height="120" width="120"/><span> Pretty Woman </span></div>
 		</div>
 	</div>
-</div> 
--->
+</div> -->
+
 	<div class="listas">
 				<div class="populares col-md-3">
 					<div>
@@ -86,7 +86,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		
 	<div class="bannerPubli">
 		<img src="<?= base_url(); ?>assets/images/publicidad.jpg" alt="Publicidad"/>
 	</div>
