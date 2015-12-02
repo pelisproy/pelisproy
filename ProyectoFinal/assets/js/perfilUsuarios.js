@@ -1,19 +1,29 @@
 $(function() {
 	
-	$('.perfil .glyphicon-pencil').on('click', function() {
+    $('.perfil .glyphicon-pencil').on('click', function() {
+		var name;
         if($(this).parent().parent().hasClass('infoPersonal')) {
+			if($(this).siblings('b').text() == 'Nombre:') {
+				name = "nombre";
+			} else if($(this).siblings('b').text() == 'Apellidos:') {
+				name = "apellidos";
+			} else if($(this).siblings('b').text() == 'Fecha de nacimiento:') {
+				name = "nacimiento";
+			} else if($(this).siblings('b').text() == 'Sexo:') {
+				name = "sexo";
+			}
             if($(this).siblings('span').is(':hidden')) {
-                $('#infoPersonalEdicion').hide().parent().siblings('span').text($('#infoPersonalEdicion').val()).show();
-                $('#infoPersonalEdicion').parent().remove();
+                $(this).siblings('form').children('.infoPersonalEdicion').hide().parent().siblings('span').text($(this).siblings('form').children('.infoPersonalEdicion').val().trim()).show();
+                $(this).siblings('form').submit().remove();
             } else {
-                $(this).siblings('span').hide().after('<form class="col-xs-5"><input class="form-control input-sm" id="infoPersonalEdicion" value="' + $(this).siblings('span').text() + '"/></form>');
+                $(this).siblings('span').hide().after('<form class="col-xs-5 col-sm-4" action=""><input class="form-control input-sm infoPersonalEdicion" name="' + name + '" value="' + $(this).siblings('span').text() + '"/></form>');
             }
         } else if($(this).parent().parent().hasClass('restoPerfil')) {
             if($(this).siblings('div').has('p').is(':hidden')) {
-                $('#biografiaEdicion').hide().parent().siblings('div').children('p').text($('#biografiaEdicion').val().trim()).parent().show();
-                $('#biografiaEdicion').parent().remove();
+                $('.biografiaEdicion').hide().parent().siblings('div').children('p').text($('.biografiaEdicion').val().trim()).parent().show();
+                $('.biografiaEdicion').parent().submit().remove();
             } else {
-                $(this).siblings('div').has('p').hide().after('<form class="col-xs-12" style="margin-top: 2%"><textarea rows="7" cols="50" class="form-control" id="biografiaEdicion" wrap="off">' + $(this).siblings('div').has('p').text() + '</textarea></form>');
+                $(this).siblings('div').has('p').hide().after('<form class="col-xs-12" style="margin-top: 2%" action=""><textarea rows="7" cols="50" class="form-control biografiaEdicion" name="biografia" wrap="off">' + $(this).siblings('div').has('p').text() + '</textarea></form>');
             }
         }
     });
@@ -46,7 +56,7 @@ $(function() {
                 break;
             } 
         } else {
-            $(this).after('<form style="display: none;" action="" method=""><input type="file"/><input type="submit"/></form>');
+            $(this).after('<form style="display: none;" action=""><input type="file" name="actualizarImg"/><input type="submit"/></form>');
             $('.cabecera input[type="file"]').trigger('click');
         }
     });

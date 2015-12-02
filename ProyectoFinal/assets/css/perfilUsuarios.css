@@ -29,36 +29,36 @@
 	font-size: 2.4em;
 	margin: 5.5% 0 0 3%;
 }
-.infoPersonal {
+.perfil .infoPersonal {
 	float: right;
 	height: 100%;
-	width: 30%;
+	width: 35%;
 	padding: 2.5% 0 2.5% 2%;
 	border-left: 1px solid #808080;
 }
-.infoPersonal p {
+.perfil .infoPersonal p {
 	color: white;
 	font-family: "Calibri";
 	font-weight: bold;
 	font-size: 1.1em;
 	margin-bottom: 5%;
 }
-.infoPersonal p b {
+.perfil .infoPersonal p b {
 	float: left;
 }
-.infoPersonal p span {
+.perfil .infoPersonal p span {
 	font-weight: normal;
 	font-size: 0.9em;
 	margin-left: 1%;
 }
-.restoPerfil {
+.perfil .restoPerfil {
 	height: 600px;
 	width: 100%;
 }
-.restoPerfil div {
+.perfil .restoPerfil div {
 	border-radius: 10px;
 }
-.restoPerfil .comentarios {
+.perfil .restoPerfil .comentarios {
 	height: 100%;
 	width: 50%;
 	float: right;
@@ -66,42 +66,42 @@
 	border-left: 1px solid #808080;
 	overflow-y: scroll;
 }
-.restoPerfil .comentarios > span {
+.perfil .restoPerfil .comentarios > span {
 	text-align: center;
 }
-.restoPerfil .comentarios div {
+.perfil .restoPerfil .comentarios div {
 	width: 100%;
 	color: white;
 	font-family: "Calibri";
 	border-bottom: 1px solid #808080;
 	border-radius: initial;
 }
-.restoPerfil .comentarios div p:first-child {
+.perfil .restoPerfil .comentarios div p:first-child {
 	margin-top: 2.5%;
 }
-.restoPerfil .comentarios div p:first-child a:hover {
+.perfil .restoPerfil .comentarios div p:first-child a:hover {
 	color: #33BDFF;
 	text-decoration: none;
 }
-.restoPerfil .comentarios div p:nth-child(2) {
+.perfil .restoPerfil .comentarios div p:nth-child(2) {
 	margin-left: 3%;
 }
-.restoPerfil .biografia {
+.perfil .restoPerfil .biografia {
 	height: 45%;
 	width: 50%;
 	float: left;
 	padding: 1.5%;
 	border-bottom: 1px solid #808080;
 }
-.restoPerfil .biografia textarea {
+.perfil .restoPerfil .biografia textarea {
 	resize: none;
 }
-.restoPerfil .biografia div p {
+.perfil .restoPerfil .biografia div p {
 	color: white;
 	font-family: "Calibri";
 	margin-top: 2.5%;
 }
-.restoPerfil .pelisAgregadas {
+.perfil .restoPerfil .pelisAgregadas {
 	height: 55%;
 	width: 50%;
 	float: left;
@@ -110,7 +110,7 @@
 	overflow-y: hidden;
 	white-space: nowrap;
 }
-.restoPerfil .pelisAgregadas div {
+.perfil .restoPerfil .pelisAgregadas div {
 	height: 85%;
 	width: 32.9%;
 	display: inline-block;
@@ -121,24 +121,24 @@
 	border-right: 1px solid #808080;
 	border-radius: initial;
 }
-.restoPerfil .pelisAgregadas div:last-child {
+.perfil .restoPerfil .pelisAgregadas div:last-child {
 	border-right: none;
 }
-.restoPerfil .pelisAgregadas div img {
+.perfil .restoPerfil .pelisAgregadas div img {
 	margin-bottom: 8%;
 }
-.restoPerfil .pelisAgregadas div a:hover {
+.perfil .restoPerfil .pelisAgregadas div a:hover {
 	color: #33BDFF;
 	text-decoration: none;
 }
-.restoPerfil .title {
+.perfil .restoPerfil .title {
 	color: white;	
 	font-family: "Calibri";
 	font-size: 1.3em;
 }
-.restoPerfil .comentarios:hover,
-.restoPerfil .biografia:hover,
-.restoPerfil .pelisAgregadas:hover {
+.perfil .restoPerfil .comentarios:hover,
+.perfil .restoPerfil .biografia:hover,
+.perfil .restoPerfil .pelisAgregadas:hover {
 	background-color: #404040;
 }
 .perfil .glyphicon-pencil {
@@ -146,6 +146,14 @@
 }
 .perfil .glyphicon-remove {
 	margin-left: 5%;
+}
+.glyphicon-pencil {
+	color: #B5E7FF;
+	cursor: pointer;
+} 
+.glyphicon-remove {
+	color: #FF3333;
+	cursor: pointer;
 }
 @media only screen and (max-width: 1600px) {
 	.perfil .cabecera img {
@@ -162,8 +170,12 @@
 	.perfil .cabecera .nick {
 		margin-top: 9%;
 	}
-	.infoPersonal {
-		padding-top: 3.4%;
+	.perfil .infoPersonal {
+		width: 38%;
+		padding-top: 3.6%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 5%;
 	}
 }
 @media only screen and (max-width: 1200px) {
@@ -176,6 +188,14 @@
 	}
 	.perfil .cabecera .nick {
 		margin-top: 7%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 6%;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 5%;
 	}
 }
 @media only screen and (max-width: 1000px) {
@@ -196,39 +216,165 @@
 		height: 200px;
 		width: 100%;
 		display: block;
-		margin-top: 2.5%;
-		padding-top: 4.5%;
+		padding-top: 5%;
 		border-left: none;
 		border-bottom: 1px solid #808080;
 		border-radius: 10px;
 	}
 	.perfil .cabecera .infoPersonal p {
-		margin-left: 24%;
+		margin: 0 0 2% 35%;
 	}
-	.restoPerfil .biografia {
+	.perfil .restoPerfil .biografia {
 		height: 250px;
 		width: 100%;
 		display: block;
 		padding-top: 3%;
 	}
-	.restoPerfil .comentarios {
+	.perfil .restoPerfil .comentarios {
 		height: 250px;
 		width: 100%;
 		padding-top: 3%;
 		border-left: none;
 		border-bottom: 1px solid #808080;
 	}
-	.restoPerfil .comentarios > div {
+	.perfil .restoPerfil .comentarios > div {
 		border-bottom: 1px solid #333;
 	}
-	.restoPerfil .pelisAgregadas {
+	.perfil .restoPerfil .pelisAgregadas {
 		height: 250px;
 		width: 100%;
 		padding-top: 3%;
 	}
-	.restoPerfil .comentarios:hover,
-	.restoPerfil .biografia:hover,
-	.restoPerfil .pelisAgregadas:hover {
-		background-color: initial;
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding: 1% 0 0 11%;
+	}
+	.perfil .glyphicon-pencil {
+		margin-left: 1.5%;
+	}
+	.perfil .glyphicon-remove {
+		margin-left: 2%;
+	}
+}
+@media only screen and (max-width: 950px) {
+	.perfil .cabecera .infoPersonal {
+		padding-top: 6%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 10%;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.perfil .cabecera img {
+		margin: 3.5% 0 0 23%;
+	}
+	.perfil .cabecera .nick {
+		margin-top: 11%;
+	}
+	.perfil .cabecera .infoPersonal {
+		padding-top: 6.5%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 9.4%;
+	}
+	.perfil .cabecera .infoPersonal p {
+		margin-bottom: 2.5%;
+	}
+}
+@media only screen and (max-width: 750px) {
+	.perfil .cabecera img {
+		margin: 4% 0 0 21%;
+	}
+	.perfil .cabecera .nick {
+		margin-top: 12%;
+	}
+	.perfil .cabecera .infoPersonal {
+		padding-top: 8%;
+	}
+	.perfil .cabecera .infoPersonal p {
+		margin-left: 31%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding: 3% 0 0 9%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.perfil .cabecera img {
+		margin: 4.5% 0 0 18%;
+	}
+	.perfil .cabecera .nick {
+		margin-top: 13%;
+	}
+	.perfil .cabecera .infoPersonal {
+		padding-top: 8.5%;
+	}
+	.perfil .cabecera .infoPersonal p {
+		margin-left: 28%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 8%;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.perfil .cabecera img {
+		margin-left: 16%;
+	}
+	.perfil .cabecera .infoPersonal {
+		padding-top: 7.5%;
+	}
+	.perfil .cabecera .infoPersonal p {
+		margin-bottom: 3.5%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 7.5%;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.perfil .cabecera img {
+		margin: 5% 0 0 5%;
+	}
+	.perfil .cabecera .nick {
+		margin: 15% 0 0 9%;
+	}
+	.perfil .cabecera .infoPersonal {
+		padding-top: 9%;
+	}
+	.perfil .cabecera .infoPersonal p {
+		margin-left: 5%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 6.5%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.perfil .cabecera .infoPersonal {
+		padding-top: 10%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 6%;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.perfil .cabecera .nick {
+		margin-left: 6%;
+	}
+	.perfil .cabecera .infoPersonal {
+		padding-top: 11%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding-left: 5.5%;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.perfil .cabecera img {
+		margin-top: 6%;
+	}
+	.perfil .cabecera .nick {
+		margin: 17% 0 0 4.5%;
+	}
+	.perfil .cabecera .infoPersonal {
+		padding-top: 12%;
+	}
+	.perfil .restoPerfil .pelisAgregadas div {
+		padding: 5% 0 0 5%;
 	}
 }

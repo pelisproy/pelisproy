@@ -223,7 +223,6 @@ a > img {
 		display: inline;
 		height: 100%;
 		width: 80px;
-		border: 1px solid black;
 		border-radius: 5px;
 		float: right;
 		text-align: center;

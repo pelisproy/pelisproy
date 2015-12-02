@@ -1,4 +1,4 @@
-<div class="perfil">
+			<div class="perfil">
 				<div class="cabecera">
 					<img src="../images/twitter.png" alt="Avatar del usuario"/>
 					<span class="nick">NickDelUsuario</span>

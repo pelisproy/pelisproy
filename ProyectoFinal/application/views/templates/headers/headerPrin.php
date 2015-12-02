@@ -16,14 +16,13 @@
 		<!-- Bootstrap JavaScript -->
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
 		
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-		
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-		<!-- Bootstrap Datepicker -->
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrapCSS/css/bootstrap.css"/>
+		<!-- Bootstrap Validator -->
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrapValidator.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrapValidator.min.css">
-		<!-- Bootstrap Validator -->
+		<!-- Bootstrap DateTimePicker -->
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/moment.min.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap-datetimepicker.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrap-datetimepicker.min.css">
 		
@@ -34,8 +33,8 @@
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/crearPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/signin.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/perfilUsuarios.js"></script>
-		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/bootstrap-datetimepicker.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraInvitado.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraUsuario.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/usuarioInvitado.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/contacto.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/footer.css">
@@ -47,8 +46,6 @@
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/condicionesUso.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/loading.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/iconosAdministracion.css">
-		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/style.css" />	
-		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/script.js"></script>
 	</head>
 	<body>
 		<div class="loading">
@@ -59,11 +56,11 @@
 				<div class="logo">
 					<a href="<?=base_url('/home/');?>"><img src="<?= base_url(); ?>/assets/images/logo.png" alt="Film Project - Tu Web de Películas"></a>
 				</div>
-				<div class="botones">	
-					<?php if ($this->session->userdata('username')):?>
+				
+				<?php if ($this->session->userdata('username')):?>
 					
-						<div class="accionUsuario">
-						Bienvenido <?php echo $this->session->userdata('username');?>
+				<div class="accionUsuario">
+						<p class="bienvenida">Bienvenido <span><?php echo $this->session->userdata('username');?></span></p>
 						
 					<div class="boton">
 						<button type="" class="dropdown-toggle" data-toggle="dropdown"
@@ -82,11 +79,12 @@
 					</div>
 				</div>
 				<?php else:?>
+				<div class="botones">
 					<a href="<?= base_url(); ?>home/login"><button class="identificarse">Identifícate</button></a>
 					<a href="<?= base_url(); ?>home/nuevoUsuario"><button class="registrarse">Regístrate</button></a> 
-					
-					<?php endif;?>
-			</div>
+				</div>	
+				<?php endif;?>
+			
 					
 				</div>
 			<div class="navegacion">
@@ -111,3 +109,4 @@
 					</div>
 				</form>
 			</div>
+			

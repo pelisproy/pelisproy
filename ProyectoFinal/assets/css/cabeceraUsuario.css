@@ -1,33 +1,22 @@
-/*-------------------- General --------------------*/
-body {
-	margin: 0;
-	padding: 0;
-}
-/*-------------------- Header --------------------*/
-.header {
-	height: 150px;
-	width: 100%;
-	border-bottom: 2px solid #2447B2;
-	background-color: #B5E7FF;
-}
-.logo {
-	float: left;
-	width: 50%;
-	height: 100%;
-	margin: 1% 0 0 30px;
-}
-.logo a img {
-	height: 120px;
-	width: 400px;
-}
 .accionUsuario {
 	float: right;
 	width: 20%;
 	height: 100%;
 }
+.accionUsuario .bienvenida {
+	font-family: 'Calibri';
+	font-size: 14px;
+	color: #2447B2;
+	margin: 10% 0 0 29%;
+}
+.accionUsuario .bienvenida span {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FF3333;
+}
 .accionUsuario .boton {
 	position: relative;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	width: 45px;
 	height: 45px;
@@ -67,190 +56,58 @@ body {
 	top: 20%;
 	left: -120%;
 }
-@media only screen and (max-width: 750px) {
-	.logo a img {
-		width: 90%;
+@media only screen and (max-width: 1200px) {
+	.accionUsuario .bienvenida {
+		margin-left: 26%;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.accionUsuario .bienvenida {
+		margin-left: 24%;
 	}
 }
 @media only screen and (max-width: 1000px) {
+	.accionUsuario .bienvenida {
+		margin-left: 22%;
+	}
 	.accionUsuario .dropdown-menu {
 		top: -60%;
 		left: -380%;
 	}
 }
+@media only screen and (max-width: 900px) {
+	.accionUsuario .bienvenida {
+		margin-left: 18%;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.accionUsuario .bienvenida {
+		margin: 13% 0 0 7%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.accionUsuario .bienvenida {
+		font-size: 12px;
+		margin: 15% 0 0 2%;
+	}
+	.accionUsuario .bienvenida span {
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.accionUsuario .bienvenida {
+		margin-left: -15%;
+	}
+}
 @media only screen and (max-width: 500px) {
+	.accionUsuario .bienvenida {
+		margin: 18% 0 0 10%;
+	}
+	.accionUsuario .boton {
+		top: 20%;
+	}
 	.accionUsuario .dropdown-menu {
 		top: 20%;
 		left: -300%;
-	}
-}
-/*-------------------- Navegación --------------------*/
-.navegacion {
-	height: 60px;
-	width: 90%;
-	margin: 10px 5% 0 5%;
-	padding-top: 5px;
-	padding-bottom: 12px;
-}
-a > img {
-	cursor: pointer;
-}
-.menu {
-    float: left;
-    list-style: none;
-	overflow: hidden;
-	display: block;
-	position: relative;
-	height: 100%;
-	width: 50%;
-	line-height: 100%;
-	background-color: #2447B2;
-	border-radius: 5px;
-	border: 1px solid #122459;
-}
-.menu ul {
-	height: 100%;
-	width: 100%;
-	margin: auto;
-	padding: 0;
-}
-.menu ul li {
-	float: left;
-	height: 100%;
-	width: 25%;
-	display: inline-block;
-	padding-top: 12px;
-	text-align: center;
-}
-.menu ul li:first-child, .menu ul li:nth-child(2), .menu ul li:nth-child(3) {
-	border-right: 1px solid #122459;
-}
-.menu ul li a {
-	color: white;
-	text-decoration: none;
-	text-align: center;	
-	font-family: "Calibri";
-	font-weight: bold;
-	font-size: 16px;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-	vertical-align: top;
-}
-.menu ul li:hover {
-	background-color: #19327D;
-	cursor: pointer; 
-}
-.menu ul li:hover a {
-	color: #FFFF00; 
-}
-.menuResponsive {
-	display: none;
-	height: 100%;
-	width: 50%;
-	float: left;
-	background-color: #2447B2;
-	color: white;
-	border-radius: 5px;
-	border: 1px solid #122459;
-	padding: 1%;
-}
-.menuResponsive a {
-	float: right;
-}
-.menuResponsive a img {
-	height: 30px;
-	width: 80px;
-}
-.glyphicon-menu-hamburger {
-	margin-top:6px;
-	margin-left: 15px;
-	cursor: pointer;
-}
-.buscador {
-	width: 50%;
-	float: right;
-	display: inline;
-}
-.buscador * {
-	margin: 3px;
-	float: right;	
-}
-.buscador select {
-	height: 40px;
-	width: 100px;
-	margin-bottom: 10px;	
-}
-.buscador input[type="text"] {
-	height: 100%;
-	padding: 8px;	
-	margin-top: 4px;
-	margin-bottom: 10px;
-}
-.buscador button {
-	height: 40px;
-	width: 100px;
-	top: 0;
-	font-weight: bold;
-	border-radius: 5px;
-	color: white;
-	background-color: #2447B2;
-	padding-bottom: 5px;
-}
-.buscador button:hover {
-	background-color: #19327D;
-	color: #FFFF00;	
-}
-#campoBusqueda {
-	height: 100%;
-	width: 250px;
-	border-radius: 2px;
-}
-@media only screen and (max-width : 1100px) {
-	.glyphicon-search {
-		display: inline;
-		height: 100%;
-		width: 80px;
-		border: 1px solid black;
-		border-radius: 5px;
-		float: right;
-		text-align: center;
-	}
-	.buscador select, .buscador input[type="text"] {
-		display: none;	
-	}
-}
-@media only screen and (max-width: 900px) {
-	.menuResponsive {
-		display: inline;
-		border-radius: 0;
-	}
-	.menu {
-		height: 160px;
-		width: 45%;
-	    float: left;
-	    list-style: none;
-		overflow: hidden;
-		display: none;
-		position: absolute;
-		top: 206px;
-		background-color: #2447B2;
-		border: 1px solid #122459; 
-		border-radius: 0;
-	}
-	.menu ul {
-		height: 160px;
-		width: 100%;
-		margin: 0 auto;
-		padding: 0;
-	}
-	.menu ul li {
-		height: 25%;
-		width: 100%;
-		display: block;
-		text-align: center;
-		border-bottom: 1px solid black;
-	}
-	.menu ul li:last-child {
-		border: none;
 	}
 }
