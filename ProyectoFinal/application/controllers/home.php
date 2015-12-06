@@ -25,5 +25,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$this->load->view('templates/formularios/login.php');
 		$this->load->view('templates/footers/foot.php');
 	}
+	public function condicionesUso(){
+		$this->load->view('templates/headers/headerPrin.php');
+		$this->load->view('condicionesUso/body.php');
+		$this->load->view('templates/footers/foot.php');
+	}
 }
 ?>

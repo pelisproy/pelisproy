@@ -1,3 +1,25 @@
+<div class="busquedaDirector">
+				<div class="directorNombre">
+					<span> Martin Scorsese <i class="glyphicon glyphicon-chevron-down"></i></span>
+				</div>
+				<div class="resultados" onclick="">
+					<img src="<?= base_url(); ?>/assets/images/carrusel/3.jpg" alt="NombrePelícula"/>
+					<form action="" method=""><i class="glyphicon glyphicon-remove"></i></form><a href=""><span> Película 1 </span></a>
+				</div>
+				<div class="resultados" onclick="">
+					<img src="<?= base_url(); ?>/assets/images/carrusel/2.jpg" alt="NombrePelícula"/>
+					<form action="" method=""><i class="glyphicon glyphicon-remove"></i></form><a href=""><span> Película 2 </span></a>
+				</div>
+            </div>
+            <br/>
+            
+            
+            
+            
+            
+            <!-- 
+            
+            
 <h3>Directores</h3>
 <?php
 	if($directores!=null){
@@ -20,3 +42,5 @@
 else{
 	echo "<h2>No hay directores que mostrar</h2>";
 }
+    ?>        
+             -->

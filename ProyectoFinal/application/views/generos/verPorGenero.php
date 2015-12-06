@@ -1,4 +1,24 @@
+<div class="busquedaGenero">
+				<div class="generoNombre">
+					<span> Suspense <i class="glyphicon glyphicon-chevron-down"></i></span>
+				</div>
+				<div class="resultados" onclick="">
+					<img src="<?= base_url(); ?>/assets/images/carrusel/3.jpg" alt="NombrePelícula"/>
+					<form action="" method=""><i class="glyphicon glyphicon-remove"></i></form><a href=""><span> Película 1 </span></a>
+				</div>
+				<div class="resultados" onclick="">
+					<img src="<?= base_url(); ?>/assets/images/carrusel/2.jpg" alt="NombrePelícula"/>
+					<form action="" method=""><i class="glyphicon glyphicon-remove"></i></form><a href=""><span> Película 2 </span></a>
+				</div>
+            </div>
+            <br/>
+
+
+            
+<!-- 
+
 <h3>Listado por género</h3>
+
 <?php
 if($genero!=null){
 		foreach ($genero as $info):?>
@@ -17,3 +37,6 @@ if($genero!=null){
 			</table>
 	<?php endforeach;
 	}
+?> 
+
+-->

@@ -1,15 +1,15 @@
-/*-------------------- Resultados --------------------*/
-.resultadoBusqueda {
+/*-------------------- busquedaPeli --------------------*/
+.busquedaPeli {
 	height: 400px;
 	width: 90%;
 	width: 90%;
 	margin: 15px 5% 15px 5%;
 }
-.resultadoBusqueda .contador {
+.busquedaPeli .contador {
 	height: 40px;
 	border-bottom: 1px solid #CBCBCB;
 }
-.resultadoBusqueda .contador span {
+.busquedaPeli .contador span {
 	float: left;
 	text-align: center;
 	text-transform: uppercase;
@@ -18,22 +18,22 @@
 	font-weight: bold;
 	line-height: 40px;
 }
-.resultadoBusqueda .resultados {
+.busquedaPeli .resultados {
 	height: 140px;
 	width: 80%;
 	margin: auto;
 	border-bottom: 1px solid #CBCBCB;
 	cursor: pointer;
 }
-.resultadoBusqueda .resultados:hover {
+.busquedaPeli .resultados:hover {
 	background-color: #F3F3F3;
 }
-.resultadoBusqueda .resultados img {
+.busquedaPeli .resultados img {
 	float: left;
 	margin: 10px 0 10px 5%;
 	border: 1px solid black;
 }
-.resultadoBusqueda .resultados span {
+.busquedaPeli .resultados span {
 	float: right;
 	margin: 55px 5% 55px 0;
 	text-align: center;
@@ -43,74 +43,74 @@
 	color: #2447B2;
 }
 @media only screen and (max-width : 650px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 17% 0 17%;
 	}
-	.resultadoBusqueda .resultados {
+	.busquedaPeli .resultados {
 		width: 100%;
 	}
-	.resultadoBusqueda .resultados img {
+	.busquedaPeli .resultados img {
 		float: left;
 		margin: 10px 0 10px 2%;
 		border: 1px solid black;
 	}
-	.resultadoBusqueda .resultados span {
+	.busquedaPeli .resultados span {
 		margin: 55px 2% 55px 0;
 		font-size: 100%;
 	}
 }
 @media only screen and (max-width: 580px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 16% 0 16%;
 	}
 }
 @media only screen and (max-width: 565px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 15% 0 15%;
 	}
 }
 @media only screen and (max-width: 545px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 13% 0 13%;
 	}
 }
 @media only screen and (max-width: 520px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 12% 0 12%;
 	}
 }
 @media only screen and (max-width: 505px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 11% 0 11%;
 	}
 }
 @media only screen and (max-width: 490px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 10% 0 10%;
 	}
 }
 @media only screen and (max-width: 480px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 9% 0 9%;
 	}
 }
 @media only screen and (max-width: 470px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 8% 0 8%;
 	}
 }
 @media only screen and (max-width: 460px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 7% 0 7%;
 	}
 }
 @media only screen and (max-width: 450px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 6% 0 6%;
 	}
 }
 @media only screen and (max-width: 440px) {
-	.resultadoBusqueda .contador span {
+	.busquedaPeli .contador span {
 		margin: 0 4% 0 4%;
 	}
 }

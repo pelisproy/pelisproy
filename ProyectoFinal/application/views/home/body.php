@@ -11,9 +11,7 @@
 					foreach ($nuevosPeli as $pelicula):?>	
 						<div>
 						<img src="<?=base_url("assets/images/films/".$pelicula['caratula']);?>" alt=""/>
-						<span>
-						<a href="<?=base_url("films/verPeli/".$pelicula['id']);?>"><?=$pelicula['nombre']?></a>
-						</span>
+						<a href="<?=base_url("films/verPeli/".$pelicula['id']);?>"><span><?=$pelicula['nombre']?></span></a>
 						</div>
 					
 					<?php 
@@ -30,9 +28,7 @@
 					foreach ($estrenos as $pelicula):?>
 						<div>
 						<img src="<?=base_url("assets/images/films/".$pelicula['caratula']);?>" alt=""/>
-						<span>
-						<a href="<?=base_url("films/verPeli/".$pelicula['id']);?>"><?=$pelicula['nombre']?></a>
-						</span>
+						<a href="<?=base_url("films/verPeli/".$pelicula['id']);?>"><span><?=$pelicula['nombre']?></span></a>
 						</div>
 					<?php endforeach;?>
 					</div>
@@ -46,7 +42,7 @@
 					foreach ($nuevosUsu as $usuarios):?>	
 						<div>
 						<img src="<?=base_url("assets/images/users/".$usuarios['avatar']);?>" alt=""/>
-						<span><?=$usuarios['nickname']?></span>
+						<a href=""><span><?=$usuarios['nickname']?></span></a>
 						</div>
 					<?php endforeach;?>
 					</div>

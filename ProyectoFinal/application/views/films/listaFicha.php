@@ -1,4 +1,22 @@
-
+<div class="busquedaPeli">
+			<div class="contador">
+				<span> Se han encontrado X resultados </span>
+			</div>
+			<div class="resultados" onclick="">
+				<img src="<?= base_url(); ?>/assets/images/carrusel/3.jpg" alt="" height="120" width="120"/>
+				<span> Torrente 2: Misión en Marbella </span>
+			</div>
+			<div class="resultados" onclick="">
+					<img src="<?= base_url(); ?>/assets/images/carrusel/2.jpg" alt="" height="120" width="120"/>
+					<span> Torrente: El brazo tonto de la ley </span>
+				</div>
+            </div>
+            
+            
+            
+            
+            
+<!-- 
 
 <?php if ($this->session->userdata('username')):?>
 <p>Si quieres añadir una nueva película a la base de datos, haz click <a href="<?=base_url();?>films/cargarFormCrearFicha">aquí</a>
@@ -33,4 +51,6 @@ foreach ($contenido as $pelicula):?>
 else{
 	echo "Aún no hay ninguna película en la base de datos";
 }
-?>
+?> 
+
+-->

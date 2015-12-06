@@ -1,0 +1,419 @@
+/*-------------------- fichaPelícula --------------------*/
+.fichaPelicula {
+	height: 680px;
+	width: 90%;
+	margin: 3% 5% 1% 5%;
+	border-bottom: 1px solid #CBCBCB;
+}
+.fichaPelicula .datosSuperiores {
+	height: 220px;
+	border-bottom: 1px solid #CBCBCB;
+}
+.fichaPelicula .datosSuperiores .imagenPelicula {
+	height: 100%;
+	width: 50%;
+	float: left;
+	padding: 10px 80px 10px 0;
+}
+.fichaPelicula .datosSuperiores .imagenPelicula img {
+	height: 200px;
+	width: 220px; 
+	float: right;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.fichaPelicula .datosSuperiores .principalInfo {
+	height: 100%;
+	width: 50%;
+	float: right;
+	padding: 1% 100px 10px 0;
+}
+.fichaPelicula .datosSuperiores .principalInfo p {
+	margin-bottom: 4%;
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 130%;
+	font-weight: bold;
+	line-height: 40px;
+}
+.fichaPelicula .datosSuperiores .principalInfo p b {
+	float: left;
+}
+.fichaPelicula .datosSuperiores .principalInfo p span {
+	font-weight: normal;
+	font-size: 0.9em;
+	margin: 0 2% 0 1.2%;
+}
+.fichaPelicula .datosSuperiores .principalInfo p:first-child span {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.fichaPelicula div > span {
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 130%;
+	font-weight: bold;
+	margin-bottom: 5%;
+}
+.fichaPelicula .reparto {
+	height: 460px;
+	padding: 1.5%;
+	border-right: 1px solid #CBCBCB;
+}
+.fichaPelicula .reparto ul {
+	margin-top: 4%;
+	font-family: 'Calibri';
+	list-style: none; 
+}
+.fichaPelicula .reparto ul b {
+	font-size: 130%;
+	font-weight: bold;
+}
+.fichaPelicula .reparto ul li {
+	margin-left: 4%;
+}
+.fichaPelicula .reparto ul li:first-child, .fichaPelicula .reparto ul li:nth-child(4) {
+	margin-left: 0;
+}
+.fichaPelicula .reparto ul li .pelisDirector {
+	font-size: 0.9em;
+}
+.fichaPelicula .sinopsis {
+	height: 460px;
+	padding: 1.5%;
+	border-right: 1px solid #CBCBCB;
+}
+.fichaPelicula .sinopsis textarea {
+	resize: none;
+}
+.fichaPelicula .sinopsis p {
+	font-family: 'Calibri';
+	margin: 4%;
+}
+.fichaPelicula .trailer {
+	height: 460px;
+	padding: 1.5%;
+}
+.fichaPelicula .trailer span {
+	float: left;
+	margin-bottom: 0;
+}
+.fichaPelicula .trailer iframe {
+	height: 320px;
+	width: 450px;
+	margin: 4% 0 0 4%;
+}
+.comentariosPelicula {
+	width: 90%;
+	margin: 1% 5% 3% 5%;
+}
+.comentariosPelicula .titulo {
+	height: 50px;
+	width: 70%;
+	margin: 0 15% 0 15%;
+	border-bottom: 1px solid #CBCBCB;
+	text-align: center;
+}
+.comentariosPelicula .titulo span {
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 170%;
+	font-weight: bold;
+	margin-left: 1%;
+}
+.comentariosPelicula .comentario {
+	height: auto;
+	width: 70%;
+	margin: 0 15% 0 15%;
+	padding: 2% 5% 2% 5%;
+	border-bottom: 1px solid #CBCBCB;
+}
+.comentariosPelicula .comentario p {
+	position: relative;
+	left: -3%;
+}
+.comentariosPelicula .comentar form {
+	height: auto;
+	width: 30%;
+	margin: 2% 0 0 35%;
+}
+.comentariosPelicula .comentar form textarea {
+	height: 200px;
+	width: 100%;
+	padding: 2.5%;
+	border-radius: 5px;
+	resize: none;
+}
+.comentariosPelicula .comentar form input[type="button"] {
+	height: 40px;
+	width: 100px;
+	top: 0;
+	font-weight: bold;
+	border-radius: 5px;
+	color: white;
+	background-color: #2447B2;
+	display: block;
+	margin: 4% 0 0 40%;
+}
+.comentariosPelicula .comentar form input[type="button"]:hover {
+	background-color: #19327D;
+	color: #FFFF00;	
+}
+.comentariosPelicula .comentar form .error {
+	height: 60px;
+	width: 100%;
+	display: none;
+	margin-top: 5%;
+	padding-top: 3.5%;
+	font-size: 14px;
+	text-align: center;
+	background-color: #F2DEDE;
+	color: #A94442;
+	border: 1px solid #EBCCD1;
+	border-radius: 5px;
+}
+.fichaPelicula .reparto .glyphicon-pencil {
+	margin-left: 3%;	
+}
+.fichaPelicula .sinopsis .glyphicon-pencil {
+	margin-left: 3%;
+}
+.fichaPelicula .trailer .glyphicon-pencil {
+	margin-left: 3%;
+}
+.comentariosPelicula .comentario .glyphicon-remove {
+	position: relative;
+	top: -20px;
+	right: 0;
+	left: 7%;
+	float: right;
+}
+.glyphicon-pencil {
+	color: #B5E7FF;
+	cursor: pointer;
+} 
+.glyphicon-remove {
+	color: #FF3333;
+	cursor: pointer;
+}
+@media only screen and (max-width: 1700px) {
+	.comentariosPelicula .comentar form input[type="button"] {
+		margin-left: 38%;
+	}
+}
+@media only screen and (max-width: 1650px) {
+	.fichaPelicula .datosSuperiores .principalInfo {
+		padding-top: 2%;
+	}
+}
+@media only screen and (max-width: 1600px) {
+	.fichaPelicula .trailer iframe {
+		width: 400px;
+	}
+	.comentariosPelicula .comentar form .error {
+		padding-top: 4.5%;
+	}
+}
+@media only screen and (max-width: 1500px) {
+	.fichaPelicula .datosSuperiores .principalInfo p {
+		margin-bottom: 4%;
+	}
+	.fichaPelicula .trailer iframe {
+		width: 360px;
+		margin-top: 10%;
+	}
+	.comentariosPelicula .titulo {
+		width: 100%;
+		margin: 0;
+	}
+	.comentariosPelicula .comentario .glyphicon-remove {
+		top: -15px;
+	}
+	.comentariosPelicula .comentar form input[type="button"] {
+		margin-left: 36%;
+	}
+}
+@media only screen and (max-width: 1450px) {
+	.fichaPelicula .datosSuperiores .principalInfo p {
+		margin-bottom: 4.5%;
+	}
+}
+@media only screen and (max-width: 1400px) {
+	.comentariosPelicula .comentar form {
+		width: 40%;
+		margin-left: 31%;
+	}
+	.comentariosPelicula .comentar form input[type="button"] {
+		margin-left: 39%;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	.fichaPelicula .datosSuperiores .principalInfo {
+		padding-top: 2.5%;
+	}
+	.fichaPelicula .datosSuperiores .principalInfo p {
+		margin-bottom: 5%;
+	}
+	.fichaPelicula .trailer iframe {
+		width: 320px;
+	}
+	.comentariosPelicula .comentar form input[type="button"] {
+		margin-left: 37%;
+	}
+	.comentariosPelicula .comentario .glyphicon-remove {
+		top: -10px;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.fichaPelicula {
+		height: 640px;
+	}
+	.fichaPelicula .datosSuperiores .principalInfo p {
+		margin-bottom: 5.5%;
+	}
+	.fichaPelicula .datosSuperiores .imagenPelicula {
+		width: 49%;
+	}
+	.fichaPelicula .datosSuperiores .principalInfo {
+		width: 51%;
+	}
+	.fichaPelicula .reparto, .fichaPelicula .sinopsis {
+		height: 420px;
+	}
+	.fichaPelicula .trailer {
+		display: inline-block;
+		padding-bottom: 1%;
+		border-bottom: 1px solid #CBCBCB;
+	}
+	.fichaPelicula .trailer iframe {
+		height: 85%;
+		width: 80%;
+		margin: 4% 6% 0 3%;
+	}
+	.comentariosPelicula {
+		display: inline-block;
+	}
+	.fichaPelicula .trailer .glyphicon-pencil {
+		display: block;
+		margin-left: 13%;
+	}
+	.comentariosPelicula .comentario {
+		width: 100%;
+		margin: 0;
+		padding: 2% 5% 2% 5%;
+		border-bottom: 1px solid #CBCBCB;
+	}
+	.comentariosPelicula .comentario p {
+		margin: 0;
+	}
+	.comentariosPelicula .comentario .glyphicon-remove {
+		left: 5%;
+	}
+}
+@media only screen and (max-width: 1199px) {
+	.fichaPelicula .sinopsis {
+		border-right: none;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.fichaPelicula .datosSuperiores .principalInfo p {
+		margin-bottom: 6%;
+	}
+	.fichaPelicula .datosSuperiores .imagenPelicula {
+		width: 48%;
+	}
+	.fichaPelicula .datosSuperiores .principalInfo {
+		width: 52%;
+	}
+	.comentariosPelicula .comentar form input[type="button"] {
+		margin-left: 35%;
+	}
+	.comentariosPelicula .comentar form .error {
+		padding-top: 5%;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.fichaPelicula .datosSuperiores .imagenPelicula {
+		width: 30%;
+	}
+	.fichaPelicula .datosSuperiores .imagenPelicula img {
+		float: left;
+	}
+	.fichaPelicula .datosSuperiores .principalInfo {
+		width: 70%;
+		float: left;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.fichaPelicula .datosSuperiores .principalInfo {
+		padding: 3% 0 0 3%;
+	}
+	.fichaPelicula .trailer iframe {
+		height: 85%;
+		width: 100%;
+		margin: 3% 0 0 0;
+	}
+	.comentariosPelicula .comentar form {
+		width: 100%;
+		margin: 4% 0 0 0;
+	}
+	.comentariosPelicula .comentar form input[type="button"] {
+		margin: 2% 0 0 42.2%;
+	}
+	.comentariosPelicula .comentar form .error {
+		padding-top: 2.5%;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.fichaPelicula .datosSuperiores .principalInfo {
+		padding: 4% 0 0 6%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.fichaPelicula {
+		height: 1335px;
+		border-bottom: none;
+	}
+	.fichaPelicula .datosSuperiores .imagenPelicula {
+		width: 100%;
+		padding: 0;
+	} 
+	.fichaPelicula .datosSuperiores .imagenPelicula img {
+		height: 95%;
+		width: 100%;
+	} 
+	.fichaPelicula .datosSuperiores .principalInfo {
+		width: 100%;
+		border-bottom: 1px solid #CBCBCB;
+		padding-top: 2.5%;
+	}
+	.fichaPelicula .reparto {
+		height: auto;
+		width: 100%;
+		margin: 0;
+		padding-left: 5%;
+		border-right: none;
+		border-bottom: 1px solid #CBCBCB;
+	}
+	.fichaPelicula .sinopsis {
+		height: auto;
+		width: 100%;
+		margin: 0;
+		padding-left: 5%;
+		border-bottom: 1px solid #CBCBCB;
+	}
+	.comentariosPelicula .comentar form .error {
+		padding-top: 3%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.comentariosPelicula .comentario .glyphicon-remove {
+		top: -5px;
+	}
+	.comentariosPelicula .comentar form input[type="button"] {
+		margin-left: 39%;
+	}
+	.comentariosPelicula .comentar form .error {
+		padding-top: 4%;
+	}
+}

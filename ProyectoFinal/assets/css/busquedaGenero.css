@@ -1,0 +1,188 @@
+/*-------------------- Resultados --------------------*/
+.busquedaGenero {
+	height: auto;
+	width: 90%;
+	margin: 15px 5% 15px 5%;
+}
+.busquedaGenero .generoNombre {
+	height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #CBCBCB;
+}
+.busquedaGenero .generoNombre span {
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 150%;
+	font-weight: bold;
+	line-height: 40px;
+	cursor: pointer;
+}
+.busquedaGenero .resultados {
+	height: 140px;
+	width: 80%;
+	display: none;
+	margin: auto;
+	border-bottom: 1px solid #CBCBCB;
+	cursor: pointer;
+}
+.busquedaGenero .resultados:hover {
+	background-color: #F3F3F3;
+}
+.busquedaGenero .resultados img {
+	height: 120px;
+	width: 120px; 
+	float: left;
+	margin: 10px 0 10px 5%;
+	border: 1px solid black;
+}
+.busquedaGenero .resultados span {
+	float: right;
+	margin: 55px 0 55px 0;
+	text-align: center;
+	font-family: 'Calibri';
+	font-size: 120%;
+	font-weight: bold;
+	color: #2447B2;
+}
+.glyphicon-chevron-up {
+	font-size: 12px;
+	margin-bottom: 2px;
+}
+.glyphicon-chevron-down {
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+.busquedaGenero .resultados .glyphicon-remove {
+	float: right;
+	margin: 4.2% 5% 0 1%;
+	/*color: #FF3333;
+	cursor: pointer;*/
+}
+@media only screen and (max-width: 1850px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 4.4% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1650px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 5% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1500px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 5.5% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1350px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 6% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1250px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 6.5% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1150px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 7% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1050px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 7.8% 5% 0 2.5%;
+	}
+}
+@media only screen and (max-width: 950px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 8.8% 5% 0 2.5%;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 10% 5% 0 3%;
+	}
+}
+@media only screen and (max-width: 750px) {
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 11.2% 5% 0 3%;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 17% 0 17%;
+	}
+	.busquedaGenero .resultados {
+		width: 100%;
+	}
+	.busquedaGenero .resultados img {
+		float: left;
+		margin: 10px 0 10px 2%;
+		border: 1px solid black;
+	}
+	.busquedaGenero .resultados span {
+		margin: 55px 2% 55px 0;
+		font-size: 100%;
+	}
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 10.5% 5% 0 2.5%;
+	}
+}
+@media only screen and (max-width: 580px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 16% 0 16%;
+	}
+}
+@media only screen and (max-width: 565px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 15% 0 15%;
+	}
+}
+@media only screen and (max-width: 545px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 13% 0 13%;
+	}
+	.busquedaGenero .resultados .glyphicon-remove {
+		margin: 12.2% 5% 0 2.5%;
+	}
+}
+@media only screen and (max-width: 520px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 12% 0 12%;
+	}
+}
+@media only screen and (max-width: 505px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 11% 0 11%;
+	}
+}
+@media only screen and (max-width: 490px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 10% 0 10%;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 9% 0 9%;
+	}
+}
+@media only screen and (max-width: 470px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 8% 0 8%;
+	}
+}
+@media only screen and (max-width: 460px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 7% 0 7%;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 6% 0 6%;
+	}
+}
+@media only screen and (max-width: 440px) {
+	.busquedaGenero .generoNombre span {
+		margin: 0 4% 0 4%;
+	}
+}

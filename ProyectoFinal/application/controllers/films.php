@@ -74,12 +74,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$comentarios['contenido']=$this->comentario_model->mostrarComentarios($id, $idUser);
 				$comentarios['idPelicula']=$id;
 				$this->load->view('comentario/verComentarios.php', $comentarios);
-				$this->load->view('templates/footers/foot.php');
-		
 			}
 			else{
 				$this->load->view('errors/errorNoUsuario.php');
 			}
+			$this->load->view('templates/footers/foot.php');
 		}
 		public function cargarFormModFicha(){
 			if($this->session->userdata('username')){

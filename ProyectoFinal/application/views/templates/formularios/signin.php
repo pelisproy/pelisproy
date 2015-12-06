@@ -317,7 +317,7 @@ $(document).ready(function(){
                         </div>
                         <br/>
                         <div class="checkbox">
-    						<label><input type="checkbox"> He leido y acepto las <a href="<?=base_url();?>condicionesUso/">Condiciones de Uso</a> </label>
+    						<label><input type="checkbox"> He leido y acepto las <a href="<?=base_url();?>home/condicionesUso">Condiciones de Uso</a> </label>
                        	</div>
                         <br>
                         <span> (<span class="obligatorio">*</span>) Campos obligatorios </span>
