@@ -2,10 +2,10 @@
 $CI = & get_instance ();
 $CI->load->helper ( 'url' );
 $config['navigation'] = array(
-		'home' => array(
-				'id'     => 'home',
-				'title'  => 'Home',
-				'link'   => base_url('home')
+		'actores' => array(
+				'id'     => 'actores',
+				'title'  => 'Actores',
+				'link'   => base_url('actor/listarPorActor')
 		),
 		'directores' => array(
 				'id'     => 'directores',

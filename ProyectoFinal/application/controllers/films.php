@@ -82,8 +82,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 		public function cargarFormModFicha(){
 			if($this->session->userdata('username')){
+				$id=$_GET['id'];
 				$this->load->view('templates/headers/headerPrin.php');
-				$datos['contenido']=$this->films_model->mostrarTodasPeliculas();
+				$datos['contenido']=$this->films_model->mostrarPeliculaEspecifica($id);
 				$this->load->view('films/modificarFicha.php', $datos);
 				$this->load->view('templates/footers/foot.php');
 			}
@@ -122,16 +123,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 	
 	public function nuevoComentario(){
+		$this->load->library('form_validation');
+		$this->load->helper('Malsonante_helper');
 		$idPeli=$this->input->post('idPeli');
-		$idUser=$this->session->userdata('idUsuario');
+		$idUser=$this->input->post('idUser');
 		$mensaje=$this->input->post('texto');
 		$dia=date("Y-m-d");
+		
+		$this->form_validation->set_rules('texto', 'Texto', 'required|min_length[5]|max_length[1000]');
+		$this->form_validation->set_message('required', '%s: es requerido');
+		$this->form_validation->set_message('min_length', '%s: debe tener al menos %s carácteres');
+		$this->form_validation->set_message('max_length', '%s: debe tener al menos %s carácteres');
 		$bien=$this->comentario_model->nuevoComentario($mensaje, $dia, $idPeli, $idUser);
-		if($bien){
-			$this->load->view('correcto/correctoComentario');
+		if($this->form_validation->run()==TRUE){
+			$mensajeReg=comprobar($mensaje);
+			$bien=$this->comentario_model->nuevoComentario($mensajeReg, $dia, $idPeli, $idUser);
+			if($bien){
+				$this->load->view('correcto/correctoComentario');
+			}
 		}
 		else{
-			$this->load->view('errorComentario');
+			$this->load->view('errors/errorComentario.php');
 		}
 	}
 	

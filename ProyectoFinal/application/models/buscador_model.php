@@ -4,7 +4,7 @@ class buscador_model extends CI_model{
 		parent::__construct();
 
 	}
-	public function buscar($bus){
+	/*public function buscar($bus){
 		$this->db->like('id',$bus);
 		$this->db->or_like('nombre',$bus);
 		$this->db->or_like('apellidos',$bus);
@@ -27,5 +27,20 @@ class buscador_model extends CI_model{
 				return FALSE;
 			}
 		}
+	}*/
+	public function buscarPeli($dato){
+		$this->db->like('nombre', $dato);
+		$query=$this->db->get('pelicula');
+		return $query->result_array();
+	}
+	public function buscarDirector($dato){
+		$this->db->like('director', $dato);
+		$query=$this->db->get('pelicula');
+		return $query->result_array();
+	}
+	public function buscarActor($dato){
+		$this->db->like('actor', $dato);
+		$query=$this->db->get('pelicula');
+		return $query->result_array();
 	}
 }
