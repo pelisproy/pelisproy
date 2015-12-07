@@ -37,14 +37,14 @@ $(function () {
         }
     });
 
-    $('.comentario .glyphicon-remove').on('click', function() {
+    /*$('.comentario .glyphicon-remove').on('click', function() {
         if(confirm('¿Desea eliminar el comentario?')) {
             //LOADING 3s
             //EL SIGUIENTE ALERT 1.5s
             alert('Comentario eliminado con éxito');
             //RECARGAR LA PÁGINA Y QUE NO APAREZCA YA EL COMENTARIO
         }
-    });
+    });*/
 
     $('.imagenPelicula > img').on('mouseover', function() {
         $(this).css({'opacity': '0.2', 'cursor': 'pointer'});

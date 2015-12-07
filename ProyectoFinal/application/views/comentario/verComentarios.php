@@ -6,6 +6,7 @@ $idPeli=$idPelicula;
 <?php
 if($contenido!=null){
 foreach ($contenido as $comentario):?>
+<?php $idCom=$comentario['id']; ?>
                 <div class="comentario">
                 <?php if ($this->session->userdata('tipoUsuario')==0 || $this->session->userdata('idUsuario')==$comentario['idUsuario']):?>
                     <a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idCom");?>">
@@ -16,7 +17,7 @@ foreach ($contenido as $comentario):?>
                     <?php echo $comentario['texto']?>
                 </div>
 <?php 
-$idCom=$comentario['id'];
+
 endforeach;
 }
 else{

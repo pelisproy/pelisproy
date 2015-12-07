@@ -44,6 +44,9 @@
 	font-weight: bold;
 	color: #2447B2;
 }
+.busquedaDirector .glyphicon-chevron-up, .busquedaDirector .glyphicon-chevron-down {
+	margin-left: 0.5%;
+}
 .glyphicon-chevron-up {
 	font-size: 12px;
 	margin-bottom: 2px;

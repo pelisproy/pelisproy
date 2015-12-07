@@ -15,11 +15,63 @@
 #login label {
 	float: left;
 }
+#login .error {
+	height: 50px;
+	width: 100%;
+	display: none;
+	margin-top: 5%;
+	padding-top: 2%;
+	font-size: 14px;
+	text-align: center;
+	background-color: #F2DEDE;
+	color: #A94442;
+	border: 1px solid #EBCCD1;
+	border-radius: 5px;
+}
 #login button[type="submit"] {
 	font-weight: bold;
+}
+@media only screen and (max-width : 1150px) {
+	#login .error {
+		padding-top: 2.2%;
+	}
+}
+@media only screen and (max-width : 1000px) {
+	#login .error {
+		padding-top: 2.6%;
+	}
+}
+@media only screen and (max-width : 900px) {
+	#login .error {
+		padding-top: 3%;
+	}
+}
+@media only screen and (max-width : 800px) {
+	#login .error {
+		padding-top: 3.2%;
+	}
 }
 @media only screen and (max-width : 767px) {
 	#login {
 		width: 90%;
+	}
+	#login .error {
+		padding-top: 2.2%;
+	}
+}
+@media only screen and (max-width : 700px) {
+	#login .error {
+		padding-top: 2.6%;
+	}
+}
+@media only screen and (max-width : 600px) {
+	#login .error {
+		padding-top: 3%;
+	}
+}
+@media only screen and (max-width : 500px) {
+	#login .error {
+		padding: 3.8% 0 0 5%;
+		text-align: left;
 	}
 }

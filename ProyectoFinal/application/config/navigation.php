@@ -2,23 +2,23 @@
 $CI = & get_instance ();
 $CI->load->helper ( 'url' );
 $config['navigation'] = array(
-		'actores' => array(
-				'id'     => 'actores',
-				'title'  => 'Actores',
-				'link'   => base_url('actor/listarPorActor')
+		'peliculas' => array(
+				'id'     => 'peliculas',
+				'title'  => 'Películas',
+				'link'   => base_url('films/listarPelis')
 		),
 		'directores' => array(
 				'id'     => 'directores',
 				'title'  => 'Directores',
 				'link'   => base_url('director/listarDirector')
 		),
-		'cartelera' => array(
-				'id'     => 'cartelera',
-				'title'  => 'Cartelera',
-				'link'   => base_url('films/listarPelis')
+		'actores' => array(
+				'id'     => 'actores',
+				'title'  => 'Actores',
+				'link'   => base_url('actor/listarPorActor')
 		),
 		'genero' => array(
-				'title'  => 'Genero',
+				'title'  => 'Género',
 				'link'   => base_url('genero/listarPorGenero')
 		)
 );

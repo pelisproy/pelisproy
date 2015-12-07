@@ -27,11 +27,11 @@ class Login extends CI_Controller {
 // 				$this->session->set_userdata ( 'biografia', $this->usuario_model->biografia ( $_POST ['username'] ) );
 				redirect ( 'Home' );
 			} else {
-				redirect ( 'login' );
+				redirect ( 'home/login' );
 			}
-		} else {
-			echo "usuario o contraseña incorrecto";
-		}
+		} /*else {
+			
+		}*/
 	}
 	public function logout() {
 		$this->session->sess_destroy ();

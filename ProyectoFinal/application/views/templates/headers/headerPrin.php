@@ -29,10 +29,12 @@
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/cargaWeb.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/menuResponsive.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/buscadorSelect.js"></script>
-		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/usuarioInvitado.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/crearPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/signin.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/perfilUsuarios.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/fichaPeli.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/busquedaDirector.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/busquedaGenero.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraInvitado.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraUsuario.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/usuarioInvitado.css">
@@ -46,6 +48,10 @@
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/condicionesUso.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/loading.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/iconosAdministracion.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/fichaPeli.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaPeli.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaDirector.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaGenero.css">
 	</head>
 	<body>
 		<div class="loading">
