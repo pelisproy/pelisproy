@@ -32,10 +32,7 @@
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/usuarioInvitado.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/crearPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/signin.js"></script>
-		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/fichaPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/perfilUsuarios.js"></script>
-		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/busquedaDirector.js"></script>
-		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/busquedaGenero.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraInvitado.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/cabeceraUsuario.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/usuarioInvitado.css">
@@ -44,11 +41,7 @@
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/crearPeli.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/login.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/signin.css">
-		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/fichaPeli.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/quienesSomos.css">
-		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaPeli.css">
-		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaDirector.css">
-		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaGenero.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/perfilUsuarios.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/condicionesUso.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/loading.css">
@@ -79,7 +72,7 @@
 							<li><a href="<?= base_url();?>admin/ad"> Administrar </a></li>
 							<li role="separator" class="divider"></li>
 							<?php endif;?>
-							<li><a href="<?= base_url();?>#"> Editar Perfil </a></li>
+							<li><a href="<?= base_url();?>perfil"> Editar Perfil </a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="<?=site_url('login/logout')?>"> Desconectar </a></li>
 						</ul>

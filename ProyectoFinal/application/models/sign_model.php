@@ -8,7 +8,7 @@ class sign_model extends CI_Model{
 				'nombre'=>$nombre,
 				'apellidos'=>$apellidos,
 				'nickname'=>$nickname,
-				'password'=>$password,
+				'password'=>md5($password),
 				'correo'=>$mail,
 				'fechaNacimiento'=>$fechaNacimiento,
 				'avatar'=>'defecto.gif',
