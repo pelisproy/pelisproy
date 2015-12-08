@@ -1,9 +1,8 @@
 /*-------------------- busquedaPeli --------------------*/
 .busquedaPeli {
-	height: 400px;
+	height: auto;
 	width: 90%;
-	width: 90%;
-	margin: 15px 5% 15px 5%;
+	margin: 2.5% 5% 3% 5%;
 }
 .busquedaPeli .contador {
 	height: 40px;
@@ -31,7 +30,7 @@
 .busquedaPeli .resultados img {
 	float: left;
 	margin: 10px 0 10px 5%;
-	border: 1px solid black;
+	border-radius: 10px;
 }
 .busquedaPeli .resultados span {
 	float: right;
@@ -52,7 +51,7 @@
 	.busquedaPeli .resultados img {
 		float: left;
 		margin: 10px 0 10px 2%;
-		border: 1px solid black;
+		border-radius: 10px;
 	}
 	.busquedaPeli .resultados span {
 		margin: 55px 2% 55px 0;

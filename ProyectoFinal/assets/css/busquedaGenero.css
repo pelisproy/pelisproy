@@ -33,7 +33,7 @@
 	width: 120px; 
 	float: left;
 	margin: 10px 0 10px 5%;
-	border: 1px solid black;
+	border-radius: 10px;
 }
 .busquedaGenero .resultados span {
 	float: right;
@@ -121,7 +121,7 @@
 	.busquedaGenero .resultados img {
 		float: left;
 		margin: 10px 0 10px 2%;
-		border: 1px solid black;
+		border-radius: 10px;
 	}
 	.busquedaGenero .resultados span {
 		margin: 55px 2% 55px 0;

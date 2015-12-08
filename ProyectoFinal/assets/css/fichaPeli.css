@@ -82,6 +82,7 @@
 	height: 460px;
 	padding: 1.5%;
 	border-right: 1px solid #CBCBCB;
+	overflow: scroll;
 }
 .fichaPelicula .sinopsis textarea {
 	resize: none;
@@ -373,6 +374,9 @@
 	.fichaPelicula {
 		height: 1335px;
 		border-bottom: none;
+	}
+	.fichaPelicula .datosSuperiores {
+		height: 300px;
 	}
 	.fichaPelicula .datosSuperiores .imagenPelicula {
 		width: 100%;

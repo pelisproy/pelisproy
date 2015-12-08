@@ -16,10 +16,11 @@
 .footer {
 	height: 160px;
 	width: 100%;
-	background-color: #383838;
+	bottom: 0;
 	text-align: center;
+	font-family: 'Calibri';
+	background-color: #383838;
 	color: white;
-	font-size: 90%;
 }
 .footer > a {
 	float: left;
@@ -39,6 +40,7 @@
 }
 .footer .copyright {
 	height: 80%;
+	font-family: 'Calibri';
 }
 .footer .extraInfo > a {
 	float: left;
@@ -120,5 +122,25 @@
 	}
 	.footer .extraInfo > a {
 		margin-right: 5%;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.footer .extraInfo {
+		width: 70%;
+	}
+	.footer .extraInfo .icons {
+		width: 22%;
+	}
+	.footer .copyright {
+		width: 74%;
+		font-size: 80%;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.footer .extraInfo {
+		width: 72%;
+	}
+	.footer .copyright {
+		width: 77%;
 	}
 }

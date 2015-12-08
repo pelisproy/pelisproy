@@ -4,10 +4,12 @@
 			</div>-->
 <?php if($contenido!=null){
 foreach ($contenido as $pelicula):?>
+			<a href="<?=base_url('films/verPeli/'.$pelicula['id'])?>">
 			<div class="resultados">
 				<img src="<?=base_url("assets/images/films/".$pelicula['caratula'])?>" alt="" height="120" width="120"/>
-				<span><a href="<?=base_url('films/verPeli/'.$pelicula['id'])?>"><?=$pelicula['nombre']?></a></span>
+				<span><?=$pelicula['nombre']?></span>
 			</div>
+			</a>
 <?php endforeach;}?> 
 </div>      
 </div>

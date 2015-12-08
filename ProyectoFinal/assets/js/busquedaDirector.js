@@ -10,11 +10,11 @@ $(function () {
     });
 
     $('.directorNombre').on('click', function() {
-        if($(this).siblings('.resultados').css('display') == 'none') {
-            $(this).siblings('.resultados').slideDown();
+        if($(this).siblings('a').children('.resultados').css('display') == 'none') {
+            $(this).siblings('a').children('.resultados').slideDown();
             $(this).find('.glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
     	} else {
-            $(this).siblings('.resultados').slideUp();
+            $(this).siblings('a').children('.resultados').slideUp();
             $(this).find('.glyphicon').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
         }
     });

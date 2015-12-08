@@ -24,7 +24,7 @@ $(function () {
             $(this).siblings('form').children('.sinopsisEdicion').hide().parent().siblings('p').text($(this).siblings('form').children('.sinopsisEdicion').val().trim()).show();
             $(this).siblings('form').remove();
         } else {
-            $(this).siblings('p').hide().after('<form class="col-xs-12" style="margin-top: 3%" action=""><textarea rows="16" cols="50" class="form-control sinopsisEdicion" name="sinopsis" wrap="off">' + $(this).siblings('p').text() + '</textarea></form>');
+            $(this).siblings('p').hide().after('<form class="col-xs-12" style="margin-top: 3%" action=""><textarea rows="16" cols="50" class="form-control sinopsisEdicion" name="sinopsis">' + $(this).siblings('p').text() + '</textarea></form>');
         }
     });
 
