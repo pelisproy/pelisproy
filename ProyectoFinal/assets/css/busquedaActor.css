@@ -1,15 +1,15 @@
-/*-------------------- busquedaDirector --------------------*/
-.busquedaDirector {
+/*-------------------- busquedaActor --------------------*/
+.busquedaActor {
 	height: auto;
 	width: 90%;
 	margin: 15px 5% 15px 5%;
 }
-.busquedaDirector .directorNombre {
+.busquedaActor .actorNombre {
 	height: 40px;
 	text-align: center;
 	border-bottom: 1px solid #CBCBCB;
 }
-.busquedaDirector .directorNombre span {
+.busquedaActor .actorNombre span {
 	text-transform: uppercase;
 	font-family: 'Calibri';
 	font-size: 150%;
@@ -17,7 +17,7 @@
 	line-height: 40px;
 	cursor: pointer;
 }
-.busquedaDirector .resultados {
+.busquedaActor .resultados {
 	height: 140px;
 	width: 80%;
 	display: none;
@@ -25,17 +25,17 @@
 	border-bottom: 1px solid #CBCBCB;
 	cursor: pointer;
 }
-.busquedaDirector .resultados:hover {
+.busquedaActor .resultados:hover {
 	background-color: #F3F3F3;
 }
-.busquedaDirector .resultados img {
+.busquedaActor .resultados img {
 	height: 120px;
 	width: 120px; 
 	float: left;
 	margin: 10px 0 10px 5%;
 	border-radius: 10px;
 }
-.busquedaDirector .resultados span {
+.busquedaActor .resultados span {
 	float: right;
 	margin: 55px 0 55px 0;
 	text-align: center;
@@ -44,7 +44,7 @@
 	font-weight: bold;
 	color: #2447B2;
 }
-.busquedaDirector .glyphicon-chevron-up, .busquedaDirector .glyphicon-chevron-down {
+.busquedaActor .glyphicon-chevron-up, .busquedaActor .glyphicon-chevron-down {
 	margin-left: 0.5%;
 }
 .glyphicon-chevron-up {
@@ -55,135 +55,135 @@
 	font-size: 12px;
 	padding-bottom: 5px;
 }
-.busquedaDirector .resultados .glyphicon-remove {
+.busquedaActor .resultados .glyphicon-remove {
 	float: right;
 	margin: 4.2% 5% 0 1%;
 }
 @media only screen and (max-width: 1850px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 4.4% 5% 0 1%;
 	}
 }
 @media only screen and (max-width: 1650px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 5% 5% 0 1%;
 	}
 }
 @media only screen and (max-width: 1500px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 5.5% 5% 0 1%;
 	}
 }
 @media only screen and (max-width: 1350px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 6% 5% 0 1%;
 	}
 }
 @media only screen and (max-width: 1250px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 6.5% 5% 0 1%;
 	}
 }
 @media only screen and (max-width: 1150px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 7% 5% 0 1%;
 	}
 }
 @media only screen and (max-width: 1050px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 7.8% 5% 0 2.5%;
 	}
 }
 @media only screen and (max-width: 950px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 8.8% 5% 0 2.5%;
 	}
 }
 @media only screen and (max-width: 850px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 10% 5% 0 3%;
 	}
 }
 @media only screen and (max-width: 750px) {
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 11.2% 5% 0 3%;
 	}
 }
 @media only screen and (max-width: 650px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 17% 0 17%;
 	}
-	.busquedaDirector .resultados {
+	.busquedaActor .resultados {
 		width: 100%;
 	}
-	.busquedaDirector .resultados img {
+	.busquedaActor .resultados img {
 		float: left;
 		margin: 10px 0 10px 2%;
 		border-radius: 10px;
 	}
-	.busquedaDirector .resultados span {
+	.busquedaActor .resultados span {
 		margin: 55px 2% 55px 0;
 		font-size: 100%;
 	}
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 10.5% 5% 0 2.5%;
 	}
 }
 @media only screen and (max-width: 580px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 16% 0 16%;
 	}
 }
 @media only screen and (max-width: 565px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 15% 0 15%;
 	}
 }
 @media only screen and (max-width: 545px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 13% 0 13%;
 	}
-	.busquedaDirector .resultados .glyphicon-remove {
+	.busquedaActor .resultados .glyphicon-remove {
 		margin: 12.2% 5% 0 2.5%;
 	}
 }
 @media only screen and (max-width: 520px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 12% 0 12%;
 	}
 }
 @media only screen and (max-width: 505px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 11% 0 11%;
 	}
 }
 @media only screen and (max-width: 490px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 10% 0 10%;
 	}
 }
 @media only screen and (max-width: 480px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 9% 0 9%;
 	}
 }
 @media only screen and (max-width: 470px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 8% 0 8%;
 	}
 }
 @media only screen and (max-width: 460px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 7% 0 7%;
 	}
 }
 @media only screen and (max-width: 450px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 6% 0 6%;
 	}
 }
 @media only screen and (max-width: 440px) {
-	.busquedaDirector .directorNombre span {
+	.busquedaActor .actorNombre span {
 		margin: 0 4% 0 4%;
 	}
 }

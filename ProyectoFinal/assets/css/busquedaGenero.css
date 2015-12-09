@@ -58,8 +58,6 @@
 .busquedaGenero .resultados .glyphicon-remove {
 	float: right;
 	margin: 4.2% 5% 0 1%;
-	/*color: #FF3333;
-	cursor: pointer;*/
 }
 @media only screen and (max-width: 1850px) {
 	.busquedaGenero .resultados .glyphicon-remove {

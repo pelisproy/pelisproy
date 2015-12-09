@@ -5,7 +5,7 @@ $(function () {
             //LOADING 3s
             //EL SIGUIENTE ALERT 1.5s
             alert('Película eliminada con éxito');
-            //RECARGAR LA PÁGINA Y QUE NO APAREZCA YA EL USUARIO
+            //RECARGAR LA PÁGINA Y QUE NO APAREZCA YA LA PELÍCULA
         }
     });
 

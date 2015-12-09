@@ -34,12 +34,66 @@
 }
 .busquedaPeli .resultados span {
 	float: right;
-	margin: 55px 5% 55px 0;
+	margin: 55px 0 55px 0;
 	text-align: center;
 	font-family: 'Calibri';
 	font-size: 120%;
 	font-weight: bold;
 	color: #2447B2;
+}
+.busquedaPeli .resultados .glyphicon-remove {
+	float: right;
+	margin: 4.2% 5% 0 1%;
+}
+@media only screen and (max-width: 1850px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 4.4% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1650px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 5% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1500px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 5.5% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1350px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 6% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1250px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 6.5% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1150px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 7% 5% 0 1%;
+	}
+}
+@media only screen and (max-width: 1050px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 7.8% 5% 0 2.5%;
+	}
+}
+@media only screen and (max-width: 950px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 8.8% 5% 0 2.5%;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 10% 5% 0 3%;
+	}
+}
+@media only screen and (max-width: 750px) {
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 11.2% 5% 0 3%;
+	}
 }
 @media only screen and (max-width : 650px) {
 	.busquedaPeli .contador span {
@@ -57,6 +111,9 @@
 		margin: 55px 2% 55px 0;
 		font-size: 100%;
 	}
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 10.5% 5% 0 2.5%;
+	}
 }
 @media only screen and (max-width: 580px) {
 	.busquedaPeli .contador span {
@@ -71,6 +128,9 @@
 @media only screen and (max-width: 545px) {
 	.busquedaPeli .contador span {
 		margin: 0 13% 0 13%;
+	}
+	.busquedaPeli .resultados .glyphicon-remove {
+		margin: 12.2% 5% 0 2.5%;
 	}
 }
 @media only screen and (max-width: 520px) {
