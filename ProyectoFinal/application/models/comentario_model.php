@@ -3,7 +3,7 @@ class Comentario_model extends CI_Model{
 	public function __construct(){
 		$this->load->database();
 	}
-	public function mostrarComentarios($idPelicula, $idUsuario){
+public function mostrarComentarios($idPelicula, $idUsuario){
 		$sentencia="SELECT C.texto, c.idPelicula, C.fechaComentario, C.id, c.idUsuario, u.nickname
 		FROM USUARIO U, COMENTARIO C
 		WHERE C.IDPELICULA=$idPelicula AND U.ID=C.idUsuario
@@ -11,8 +11,9 @@ class Comentario_model extends CI_Model{
 		$query=$this->db->query($sentencia);
 		return $query->result_array();
 	}
+	
 	public function nuevoComentario($mensaje, $dia, $idPeli, $idUser){
-	$data=array(
+		$data=array(
 				'texto'=>$mensaje,
 				'fechaComentario'=>$dia,
 				'idPelicula'=>$idPeli,

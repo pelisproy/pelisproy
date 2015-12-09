@@ -11,10 +11,28 @@ $(function () {
                 name = "genero";
             }
             if($(this).siblings('span').is(':hidden')) {
-                $(this).siblings('form').children('.principalInfoEdicion').hide().parent().siblings('span').text($(this).siblings('form').children('.principalInfoEdicion').val().trim()).show();
-                $(this).siblings('form').remove();
+                $(this)
+	                .siblings('form')
+	                .children('.principalInfoEdicion')
+	                .hide()
+	                .parent()
+	                .siblings('span')
+	                .text(
+	                		$(this).siblings('form')
+	                		.children('.principalInfoEdicion')
+	                		.val()
+	                		.trim())
+	                		.show();
+                $(this).siblings('form').submit().remove();
             } else {
-                $(this).siblings('span').hide().after('<form class="col-xs-5 col-sm-4" action=""><input class="form-control input-sm principalInfoEdicion" name="' + name + '" value="' + $(this).siblings('span').text() + '"/></form>');
+                $(this).siblings('span')
+                .hide()
+                .after(
+                		'<form class="col-xs-5 col-sm-4" action="" method="POST"><input class="form-control input-sm principalInfoEdicion" name="' 
+                		+ name + '" value="'
+                		+ $(this).siblings(
+                				'span').text()
+                				+ '"/></form>');
             }
         }
     });
@@ -22,18 +40,18 @@ $(function () {
     $('.sinopsis .glyphicon-pencil').on('click', function(){
         if($(this).siblings('p').is(':hidden')) {
             $(this).siblings('form').children('.sinopsisEdicion').hide().parent().siblings('p').text($(this).siblings('form').children('.sinopsisEdicion').val().trim()).show();
-            $(this).siblings('form').remove();
+            $(this).siblings('form').submit().remove();
         } else {
-            $(this).siblings('p').hide().after('<form class="col-xs-12" style="margin-top: 3%" action=""><textarea rows="16" cols="50" class="form-control sinopsisEdicion" name="sinopsis">' + $(this).siblings('p').text() + '</textarea></form>');
+            $(this).siblings('p').hide().after('<form class="col-xs-12" style="margin-top: 3%" action="" method="POST"><textarea rows="16" cols="50" class="form-control sinopsisEdicion" name="sinopsis">' + $(this).siblings('p').text() + '</textarea></form>');
         }
     });
 
     $('.trailer .glyphicon-pencil').on('click', function() {
         if($('.trailer iframe').is(':hidden')) {
             $(this).css({'display':'block', 'margin-left':'13%'}).siblings('form').children('.trailerEdicion').hide().parent().siblings('iframe').removeAttr('src').attr('src', $(this).siblings('form').children('.trailerEdicion').val().trim().replace("watch?v=", "v/")).show();
-            $(this).siblings('form').remove();
+            $(this).siblings('form').submit().remove();
         } else {
-            $(this).css({'display':'inline-block', 'margin-left':'0'}).siblings('iframe').hide().after('<form class="col-xs-5 col-sm-4" action=""><input class="form-control input-sm trailerEdicion" name="trailer" value="' + $(this).siblings('iframe').attr('src') + '"/></form>');
+            $(this).css({'display':'inline-block', 'margin-left':'0'}).siblings('iframe').hide().after('<form class="col-xs-5 col-sm-4" action="" method="POST"><input class="form-control input-sm trailerEdicion" name="trailer" value="' + $(this).siblings('iframe').attr('src') + '"/></form>');
         }
     });
 
@@ -70,7 +88,7 @@ $(function () {
                 break;
             } 
         } else {
-            $(this).after('<form style="display: none;" action="" method=""><input type="file"/><input type="submit"/></form>');
+            $(this).after('<form style="display: none;" action="" method="POST" enctype="multipart/form-data"><input type="file"/><input type="submit"/></form>');
             $('.imagenPelicula input[type="file"]').trigger('click');
         }
     });

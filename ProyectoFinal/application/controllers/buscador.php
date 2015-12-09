@@ -4,22 +4,9 @@ public function __construct(){
 		parent::__construct();
 		$this->load->helper('form');
 		$this->load->model('buscador_model');
+		$this->load->model('admin_model');
 	}
 
-	/*public function index(){
-			$this->load->view('templates/headers/headerPrin.php');
-			$this->load->view('films/body.php');
-		if ($this->input->post('busqueda')){
-			$buscar=$this->input->post('busqueda');
-			
-		}
-		else{
-			$buscar='';
-			
-		}
-		$data['actor']= $this->buscador_model->buscar($buscar);
-		$this->load->view('buscar/buscar.php', $data);
-	}*/
 	public function index(){
 		$this->load->view('templates/headers/headerPrin.php');
 		$buscar=$this->input->post('busqueda');
@@ -37,6 +24,10 @@ public function __construct(){
 			else if($eleccion=="director"){
 				$datos['buscadorDirector']=$this->buscador_model->buscarDirector($busqueda);
 				$this->load->view('buscar/buscarDirector.php', $datos);
+			}
+			else if($eleccion=="usuario"){
+				$datos['user'] = $this->admin_model->buscar($busqueda);
+				$this->load->view('admin/admin.php',$datos);
 			}
 		}
 		else{

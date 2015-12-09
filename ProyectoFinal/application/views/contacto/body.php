@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-lg-8">
-                            <textarea class="form-control" id="contenido" placeholder="Cuéntanos" rows="10"></textarea>
+                            <textarea class="form-control" id="contenido" name="contenido" placeholder="Cuéntanos" rows="10"></textarea>
                         </div>
                     </div>
                     <div class="button">

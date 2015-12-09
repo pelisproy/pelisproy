@@ -104,12 +104,14 @@
 				<form action="<?= base_url(); ?>buscador" method="post">
 					<div class="buscador">
 						<input type="text" class="form-control" id="campoBusqueda" placeholder="Buscar..."/>
-                		<select class="form-control">
+                		<select class="form-control" name="eleccion">
                     		<option value="defecto" selected="selected"> Buscar por... </option>
                          	<option value="pelicula"> Película </option>
                         	<option value="actor"> Actor </option>
                         	<option value="director"> Director </option>
+                        	<?php if ($this->session->userdata('tipoUsuario') != null && $this->session->userdata('tipoUsuario') == 0):?>
                         	<option value="usuario"> Usuario </option>
+                        	<?php endif;?>
                     	</select>
 						<button class="glyphicon glyphicon-search"> Buscar </button>
 					</div>
