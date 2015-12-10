@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="button">
-                        <input type="button" class="btn btn-success" onclick="" value="Enviar"/>
+                        <input type="button" class="btn btn-success" onclick="validarMsg()" value="Enviar"/>
                     </div>
                 </fieldset>
             </form>

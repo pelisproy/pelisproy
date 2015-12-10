@@ -31,6 +31,7 @@
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/buscadorSelect.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/crearPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/signin.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/contacto.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/perfilUsuarios.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/fichaPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/busquedaDirector.js"></script>
