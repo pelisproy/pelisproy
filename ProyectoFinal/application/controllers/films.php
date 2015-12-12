@@ -112,6 +112,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$nombreCampo = $_POST['trailer'];
 				$this->films_model->actualizarDatosPeli($idPeli, $nombre, $nombreCampo);
 			}
+			if(isset($_POST['caratula'])){
+				$idPeli=$this->uri->segment(3);
+				$nombre='caratula';
+				$nombreCampo = $_POST['caratula'];
+				$nombreImagen=$_FILES['caratula']['name'];
+				$config['max_size']=1024;
+				$config['quality']='90%';
+				$config['upload_path']='./assets/images/films/';
+				$config['allowed_types']='gif|jpg|png';
+				$config['file_name']=$nombreImagen;
+				$this->load->library('upload', $config);
+				$bien=$this->upload->do_upload('caratula');
+				if($bien){
+					$this->films_model->actualizarDatosPeli($idPeli, $nombre, $nombreCampo);
+				}
+			}
 		}
 		
 	public function borrarFicha(){

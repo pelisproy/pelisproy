@@ -88,7 +88,7 @@ $(function () {
                 break;
             } 
         } else {
-            $(this).after('<form style="display: none;" action="" method="POST" enctype="multipart/form-data"><input type="file"/><input type="submit"/></form>');
+            $(this).after('<form style="display: none;" action="" method="POST" enctype="multipart/form-data"><input type="file" name="caratula"/><input type="submit"/></form>');
             $('.imagenPelicula input[type="file"]').trigger('click');
         }
     });

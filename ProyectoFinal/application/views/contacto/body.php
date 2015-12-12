@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="mail">
-			<form class="form-horizontal" name="contactar" id="contactar" action="">
+			<form class="form-horizontal" name="contactar" id="contactar" action="<?=base_url('contacto/enviarCorreo');?>" method="post">
                 <fieldset>
                     <legend> Contacta con nosotros </legend>
                     <div class="form-group">
