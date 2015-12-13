@@ -1,7 +1,9 @@
 <?php
 if($this->session->userdata('idUsuario')):
 ?>
-<a href="<?php base_url();?>cargarFormCrearFicha">Crear Ficha</a>
+<div class="agregarPelicula">
+	<a href="<?php base_url();?>cargarFormCrearFicha"><button>Crear Película</button></a>
+</div>
 <?php endif;?>
 <div class="busquedaPeli">
 			<!-- <div class="contador">

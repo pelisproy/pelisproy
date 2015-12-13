@@ -31,39 +31,16 @@ $(document).ready(function() {
 
 });
 
-function agregarActor(actor) {
-	var textarea = document.querySelector('.actores div textarea');
-
-	var element = document.createTextNode(actor + '\n');
-
-	textarea.appendChild(element);
-	document.querySelector('.actores div input[type="text"]').value = '';
-}
-
-function validarActor() {
-	document.querySelector('.actores div input[type="text"]').style.backgroundColor = '';
-	document.querySelector('.actores div input[type="text"]').style.borderColor = '';
-
-	var actor = document.querySelector('.actores div input[type="text"]').value.trim();
-	var regEx = /^[A-Za-záéíóúñ\s]{3,}$/;
-
-	if(regEx.test(actor)) {
-		agregarActor(actor);
-	} else {
-		document.querySelector('.actores div input[type="text"]').style.backgroundColor = '#FFADAD';
-		document.querySelector('.actores div input[type="text"]').style.borderColor = '#A10000';
-	}
-}
-
 function validar() {
 	colorOriginal();
 
 	var nombre = document.getElementById('nombre').value.trim();
 	var estreno = document.getElementById('datetimepicker').value.trim();
-	var genero = document.getElementById('generoPeli').value.trim();
+	var genero = document.getElementById('genero').value.trim();
 	var sinopsis = document.getElementById('sinopsis').value.trim();
 	var trailer = document.getElementById('trailer').value.trim();
 	var director = document.getElementById('director').value.trim();
+	var actor = document.getElementById('actor').value.trim();
 	var caratula = document.getElementById('caratula').value.trim();
 
 	var correcto = true;
@@ -72,7 +49,7 @@ function validar() {
 	var regExEstreno = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 	var regExGenero = /^[A-Za-záéíóúñ\s]{3,}$/;
 	var regExSinopsis = /^[\wáéíóúñ.:,\s!]{100,}$/;
-	var regExDirector = /^[A-Za-záéíóúñ\s]{3,}$/;
+	var regExDirectorActor = /^[A-Za-záéíóúñ\s]{3,}$/;
 
 	if(!regExNombre.test(nombre)) {
 		document.getElementById('nombre').style.backgroundColor = '#FFADAD';
@@ -98,17 +75,17 @@ function validar() {
 		document.getElementById('datetimepicker').style.borderColor = '';
 	}
 
-	/*if(!regExGenero.test(genero)) {
-		document.getElementById('generoPeli').style.backgroundColor = '#FFADAD';
-		document.getElementById('generoPeli').style.borderColor = '#A10000';
+	if(!regExGenero.test(genero)) {
+		document.getElementById('genero').style.backgroundColor = '#FFADAD';
+		document.getElementById('genero').style.borderColor = '#A10000';
 		if(correcto) {
-			document.getElementById('generoPeli').focus();
+			document.getElementById('genero').focus();
 		}
 		correcto = false;
 	} else {
-		document.getElementById('generoPeli').style.backgroundColor = '';
-		document.getElementById('generoPeli').style.borderColor = '';
-	}*/
+		document.getElementById('genero').style.backgroundColor = '';
+		document.getElementById('genero').style.borderColor = '';
+	}
 
 	if(!regExSinopsis.test(sinopsis)) {
 		document.getElementById('sinopsis').style.backgroundColor = '#FFADAD';
@@ -133,8 +110,8 @@ function validar() {
 		document.getElementById('trailer').style.backgroundColor = '';
 		document.getElementById('trailer').style.borderColor = '';
 	}
-	
-	if(!regExDirector.test(director)) {
+
+	if(!regExDirectorActor.test(director)) {
 		document.getElementById('director').style.backgroundColor = '#FFADAD';
 		document.getElementById('director').style.borderColor = '#A10000';
 		if(correcto) {
@@ -144,6 +121,18 @@ function validar() {
 	} else {
 		document.getElementById('director').style.backgroundColor = '';
 		document.getElementById('director').style.borderColor = '';
+	}
+
+	if(!regExDirectorActor.test(actor)) {
+		document.getElementById('actor').style.backgroundColor = '#FFADAD';
+		document.getElementById('actor').style.borderColor = '#A10000';
+		if(correcto) {
+			document.getElementById('actor').focus();
+		}
+		correcto = false;
+	} else {
+		document.getElementById('actor').style.backgroundColor = '';
+		document.getElementById('actor').style.borderColor = '';
 	}
 
 	if(correcto) {
@@ -162,19 +151,19 @@ function validar() {
 function colorOriginal() {
 	document.getElementById('nombre').backgroundColor = '';
 	document.getElementById('datetimepicker').backgroundColor = '';
-	document.getElementById('generoPeli').backgroundColor = '';
+	document.getElementById('genero').backgroundColor = '';
 	document.getElementById('sinopsis').backgroundColor = '';
 	document.getElementById('trailer').backgroundColor = '';
 	document.getElementById('director').backgroundColor = '';
-	document.querySelector('.actores div input[type="text"]').backgroundColor = '';
+	document.getElementById('actor').backgroundColor = '';
 
 	document.getElementById('nombre').borderColor = '';
 	document.getElementById('datetimepicker').borderColor = '';
-	document.getElementById('generoPeli').borderColor = '';
+	document.getElementById('genero').borderColor = '';
 	document.getElementById('sinopsis').borderColor = '';
 	document.getElementById('trailer').borderColor = '';
 	document.getElementById('director').borderColor = '';
-	document.querySelector('.actores div input[type="text"]').borderColor = '';
+	document.getElementById('actor').borderColor = '';
 }
 
 function validarUrl(url) {

@@ -8,9 +8,8 @@ $(document).ready(function(){
                             type: "POST",
                             url: "<?=base_url('registro/buscaNick');?>",
                             data: "nickname="+datos,
-                           // dataType: "html",
-                      error: function(asd){
-                      	$('#resultadoNick').html('<p>Error en la petición ajax</p>');
+                      	error: function(asd){
+                      		$('#resultadoNick').html('<p>Error en la petición ajax</p>');
                       },
 						success:function(asd){
 							if(asd){
@@ -23,8 +22,7 @@ $(document).ready(function(){
                 }); 
         } else {
         	$('#resultadoNick').html('');
-        }
-         //  });            
+        }          
     });
                           
 });
@@ -99,7 +97,7 @@ $(document).ready(function(){
                            		<label class="control-label"> Nacionalidad </label>
                             </div>
                             <div class="col-md-5 col-lg-4">
-                                <select class="form-control" name="nacionalidad">
+                                <select class="form-control" name="nacionalidad" id="nacionalidad">
 									<option value="">Seleccione</option> 
 									<option value="Argentina">Argentina</option> 
 									<option value="Afganistán">Afganistán</option> 
@@ -309,7 +307,7 @@ $(document).ready(function(){
                            		<label class="control-label"> Sexo </label>
                             </div>
                             <div class="radio col-xs-4 col-sm-4 col-md-3 col-lg-1">
-                                <label><input type="radio" name="sexo" id="opcion_1" value="h"> Hombre </label>
+                                <label><input type="radio" name="sexo" id="opcion_1" value="h" checked="checked"> Hombre </label>
                             </div>
                             <div class="radio col-xs-4 col-sm-4 col-md-3 col-lg-1">
                                 <label><input type="radio" name="sexo" id="opcion_2" value="m"> Mujer </label>
@@ -323,7 +321,7 @@ $(document).ready(function(){
                         <span> (<span class="obligatorio">*</span>) Campos obligatorios </span>
                         <br></br>
                         <div class="button">
-                            <input type="button" class="btn btn-success" onclick="condicionesUso()" value="Ingresar"/>
+                            <input type="button" class="btn btn-success" onclick="alertRegistro()" value="Ingresar"/>
                         </div>
                     </fieldset>
                 </div>

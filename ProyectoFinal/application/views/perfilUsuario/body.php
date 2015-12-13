@@ -1,8 +1,7 @@
-
 <div class="perfil">
 	<div class="cabecera">
 					<?php foreach ($contenido as $datosPerfil):?>
-		<img src="assets/images/users/<?=$datosPerfil['avatar']?>"
+		<img src="<?= base_url(); ?>assets/images/users/<?=$datosPerfil['avatar']?>"
 			alt="Avatar del usuario" /> <span class="nick">
 			
 			

@@ -57,20 +57,14 @@
 	                            <input class="form-control" id="director" name="director" type="text" placeholder="Director" maxlength="70" data-toggle="tooltip" title="Debe tener al menos 3 letras"/>
 	                        </div>
 	                    </div>
-	                    <div class="actores form-group">
-	                        <div class="col-sm-4">
-	                            <label class="control-label"> Actores <span class="obligatorio">*</span></label>
-	                        </div>
-	                        <div class="col-xs-8 col-sm-5 col-md-6 col-lg-4">
-	                            <input class="form-control" name="actor" type="text" placeholder="Actor" maxlength="70" data-toggle="tooltip" title="Debe tener al menos 3 letras"/>
-	                        </div>
-	                        <div class="col-xs-4 col-sm-3 col-md-2">
-	                            <input type="button" onclick="validarActor()" value="Agregar"/>
-	                        </div>
-	                        <div class="col-xs-12 col-sm-8 col-lg-6">
-	                            <textarea class="form-control" id="actoresAgregados" name="actoresAgregados" placeholder="Actores agregados" rows="4" disabled="disabled"></textarea>
-	                        </div>
-	                    </div>
+	                    <div class="form-group">
+					        <div class="col-sm-4">
+					            <label class="control-label"> Actor principal <span class="obligatorio">*</span></label>
+					        </div>
+					        <div class="col-sm-8 col-lg-6">
+					            <input class="form-control" id="actor" name="actor" type="text" placeholder="Actor principal" maxlength="70" data-toggle="tooltip" title="Debe tener al menos 3 letras"/>
+					        </div>
+					    </div>
 	                    <div class="file form-group">
 	                        <div class="col-xs-5 col-sm-4">
 	                            <label class="control-label"> Carátula </label>

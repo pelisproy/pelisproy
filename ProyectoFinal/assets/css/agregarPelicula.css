@@ -1,0 +1,19 @@
+/*-------------------- agregarPelicula --------------------*/
+.agregarPelicula {
+	height: auto;
+	width: 90%;
+	margin: 15px 5% 15px 5%;
+}
+.agregarPelicula button {
+	height: 40px;
+	width: 120px;
+	top: 0;
+	font-weight: bold;
+	border-radius: 5px;
+	color: white;
+	background-color: #2447B2;
+}
+.agregarPelicula button:hover {
+	background-color: #19327D;
+	color: #FFFF00;
+}

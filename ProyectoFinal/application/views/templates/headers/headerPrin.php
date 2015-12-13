@@ -28,7 +28,7 @@
 		
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/cargaWeb.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/menuResponsive.js"></script>
-		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/buscadorSelect.js"></script>
+		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/buscador.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/crearPeli.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/signin.js"></script>
 		<script type="text/javascript" src="<?= base_url(); ?>/assets/js/contacto.js"></script>
@@ -55,6 +55,7 @@
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaDirector.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaActor.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaGenero.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/agregarPelicula.css">
 	</head>
 	<body>
 		<div class="loading">
@@ -106,16 +107,19 @@
 				</div>
 				<form action="<?= base_url(); ?>buscador" method="post">
 					<div class="buscador">
-						<input type="text" class="form-control" id="campoBusqueda" placeholder="Buscar..."/>
-                		<select class="form-control" name="eleccion">
-                    		<option value="defecto" selected="selected"> Buscar por... </option>
-                         	<option value="pelicula"> Película </option>
-                        	<option value="actor"> Actor </option>
-                        	<option value="director"> Director </option>
-                        	<?php if ($this->session->userdata('tipoUsuario') != null && $this->session->userdata('tipoUsuario') == 0):?>
-                        	<option value="usuario"> Usuario </option>
-                        	<?php endif;?>
-                    	</select>
+						<div>
+							<input type="text" class="form-control" id="campoBusqueda" placeholder="Buscar..."/>
+				        	<select class="form-control">
+				            	<option value="defecto" selected="selected"> Buscar por... </option>
+				                <option value="pelicula"> Película </option>
+				                <option value="actor"> Actor </option>
+				                <option value="director"> Director </option>
+				                <?php if ($this->session->userdata('tipoUsuario') != null && $this->session->userdata('tipoUsuario') == 0):?>
+				                <option value="usuario"> Usuario </option>
+				                <?php endif;?>
+				            </select>
+				            <button class="btn btn-success"> Buscar </button>
+				        </div>
 						<button class="glyphicon glyphicon-search"> Buscar </button>
 					</div>
 				</form>

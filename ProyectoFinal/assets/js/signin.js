@@ -120,7 +120,7 @@ $(document).ready(function() {
 
 });
 
-function condicionesUso() {
+/*function condicionesUso() {
 
 	if(!document.querySelector('input[type="checkbox"]').checked) {
 		$('.alert').css('display', 'block');
@@ -130,6 +130,41 @@ function condicionesUso() {
 		$('.alert').css('display', 'none');
 	}
 
+}*/
+
+function alertRegistro() {
+	
+	var nombre = document.getElementById('nombre').value.trim();
+	var apellidos = document.getElementById('apellidos').value.trim();
+	var nick = document.getElementById('nickname').value.trim();
+	var pass = document.getElementById('password').value.trim();
+	var repPass = document.getElementById('password2').value.trim();
+	var mail = document.getElementById('correo').value.trim();
+	var nacimiento = document.getElementById('datetimepickerNacimiento').value.trim();
+	var nacionalidad = document.getElementById('nacionalidad');
+	
+	var seleccion = nacionalidad.options[nacionalidad.selectedIndex].text;
+	
+	if(nombre == ''||apellidos == ''||nick == ''||pass == ''||repPass == ''||mail == ''||nacimiento == '') {
+		document.querySelector('.alert').style.display = 'block';
+		document.querySelector('.alert').innerHTML = "No puede haber <strong> campos vacíos </strong>";
+	} else if(!document.querySelector('input[type="checkbox"]').checked) {
+		document.querySelector('.alert').style.display = 'block';
+		document.querySelector('.alert').innerHTML = "Para continuar debes aceptar las <strong> Condiciones de Uso </strong>";
+	} else if (seleccion == 'Seleccione') {
+		document.querySelector('.alert').style.display = 'block';
+		document.querySelector('.alert').innerHTML = "Debe seleccionar una <strong> nacionalidad </strong>";
+	} else {
+		document.querySelector('.loading').style.display = 'block';
+		document.querySelector('.container').style.opacity = '0.1';
+		document.querySelector('.footer').style.opacity = '0.1';
+		document.querySelector('body').style.overflow = 'hidden';
+		setTimeout(function() {
+			document.registro.submit();
+			document.registro.reset();
+			document.querySelector('.alert').style.display = 'none';
+		}, 2000);
+	}
 }
 
 

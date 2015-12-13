@@ -37,19 +37,20 @@
 	border-left: 1px solid #808080;
 }
 .perfil .infoPersonal p {
-	color: white;
 	font-family: "Calibri";
 	font-weight: bold;
 	font-size: 1.1em;
 	margin-bottom: 5%;
 }
-.perfil .infoPersonal p b {
+.perfil .infoPersonal p > b {
 	float: left;
+	color: white;
 }
-.perfil .infoPersonal p span {
+.perfil .infoPersonal p > span {
 	font-weight: normal;
 	font-size: 0.9em;
 	margin-left: 1%;
+	color: white;
 }
 .perfil .restoPerfil {
 	height: 600px;
