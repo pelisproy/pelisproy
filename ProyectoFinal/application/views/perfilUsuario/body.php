@@ -3,19 +3,52 @@
 	<div class="cabecera">
 					<?php foreach ($contenido as $datosPerfil):?>
 		<img src="assets/images/users/<?=$datosPerfil['avatar']?>"
-			alt="Avatar del usuario" /> <span class="nick"><?php echo $this->session->userdata('username');?></span>
+			alt="Avatar del usuario" /> <span class="nick">
+			
+			
+			<?php
+        if (!isset($nick)) {
+        	echo $this->session->userdata('username');
+     
+        }else{ echo $nick; }
+      ?>
+			
+			
+			</span>
 		<div class="infoPersonal">
 			<p>
-				<b>Nombre:</b><span><?=$datosPerfil['nombre']?></span><i
-					class="glyphicon glyphicon-pencil"></i>
+				<b>Nombre:</b><span><?=$datosPerfil['nombre']?></span>
+				
+		<?php
+        if (!isset($nick)) {
+             
+      ?>
+          <i class="glyphicon glyphicon-pencil"></i>
+      <?php 
+        }
+      ?>
 			</p>
 			<p>
-				<b>Apellidos:</b><span><?=$datosPerfil['apellidos']?></span><i
-					class="glyphicon glyphicon-pencil"></i>
+				<b>Apellidos:</b><span><?=$datosPerfil['apellidos']?></span>
+					<?php
+        if (!isset($nick)) {
+             
+      ?>
+          <i class="glyphicon glyphicon-pencil"></i>
+      <?php 
+        }
+      ?>
 			</p>
 			<p>
-				<b>Fecha de nacimiento:</b><span><?=$datosPerfil['fechaNacimiento']?></span><i
-					class="glyphicon glyphicon-pencil"></i>
+				<b>Fecha de nacimiento:</b><span><?=$datosPerfil['fechaNacimiento']?></span>
+					<?php
+        if (!isset($nick)) {
+             
+      ?>
+          <i class="glyphicon glyphicon-pencil"></i>
+      <?php 
+        }
+      ?>
 			</p>
 			<p>
 				<b>Sexo:</b><span>
@@ -28,7 +61,15 @@
 						} else {
 							echo "Hay un error en tu sexo";
 						}
-						?></span><i class="glyphicon glyphicon-pencil"></i>
+						?></span>
+							<?php
+        if (!isset($nick)) {
+             
+      ?>
+          <i class="glyphicon glyphicon-pencil"></i>
+      <?php 
+        }
+      ?>
 			</p>
 		</div>
 
@@ -36,16 +77,41 @@
 	</div>
 	<div class="restoPerfil">
 		<div class="biografia">
-			<span class="title">Acerca de <?php echo $this->session->userdata('username');?></span><i
-				class="glyphicon glyphicon-remove"></i><i
-				class="glyphicon glyphicon-pencil"></i>
+			<span class="title">Acerca de 	<?php
+        if (!isset($nick)) {
+        	echo $this->session->userdata('username');
+     
+        }else{ echo $nick; }
+      ?>
+			
+			
+			</span>
+				<?php
+        if (!isset($nick)) {
+             
+      ?>
+          <i class="glyphicon glyphicon-pencil"></i>
+          <i
+				class="glyphicon glyphicon-remove"></i>
+      <?php 
+        }
+      ?>
+			
+			
+
 			<div>
 				<p><?=$datosPerfil['biografia']?></p>
 			</div>
 		</div>
 		<?php endforeach;?>
 		<div class="comentarios">
-		<span class="title">Últimos comentarios de <?php echo $this->session->userdata('username');?></span>
+		<span class="title">Últimos comentarios de 	<?php
+        if (!isset($nick)) {
+        	echo $this->session->userdata('username');
+     
+        }else{ echo $nick; }
+      ?>
+			</span>
 			
 		<?php foreach ($comentario as $datosComen):?>
 			<div>
@@ -57,7 +123,13 @@
 		<?php endforeach;?>
 		</div>
 		<div class="pelisAgregadas">
-		<span class="title">Últimas películas agregadas por <?php echo $this->session->userdata('username');?></span><br />
+		<span class="title">Últimas películas agregadas por 	<?php
+        if (!isset($nick)) {
+        	echo $this->session->userdata('username');
+     
+        }else{ echo $nick; }
+      ?>
+			</span><br />
 			
 		<?php foreach ($peliculas as $datosPelis):?>
 			<div>

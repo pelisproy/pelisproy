@@ -103,7 +103,7 @@
 					<a href="">	
 						<div>
 						<img src="<?=base_url("assets/images/users/".$usuarios['avatar']);?>" alt="<?=$usuarios['nickname']?>"/>
-						<span><?=$usuarios['nickname']?></span>
+						<span><a href="<?=base_url("perfil/?nickUsuario=".$usuarios['nickname']);?>"><?=$usuarios['nickname']?></a></span>
 						</div>
 					</a>
 					<?php endforeach;?>

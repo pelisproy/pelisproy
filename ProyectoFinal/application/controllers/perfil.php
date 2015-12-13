@@ -9,6 +9,14 @@ class perfil extends CI_Controller {
 		$this->load->view ( 'templates/headers/headerPrin.php' );
 		$this->load->view ( 'films/body.php' );
 		$idUser=$this->session->userdata('idUsuario');
+		$nick='';
+		
+		if (isset($_GET['nickUsuario'])) {
+			$nick=$_GET['nickUsuario'];
+			
+			$idUser=$this->perfil_model->devolverIdUsuario($nick);
+			$datos['nick']=$nick;
+		}
 		if (isset($_POST['nombre'])) {
 			$nombre='nombre';
 			$nombreCampo = $_POST['nombre'];
@@ -34,6 +42,7 @@ class perfil extends CI_Controller {
 			$nombreCampo = $_POST['biografia'];
 			$this->perfil_model->actualizarDatosPerfil($idUser, $nombre, $nombreCampo);
 		}
+		
 		$datos['contenido']=$this->perfil_model->listarDatosPerfil($idUser);
 		$datos['comentario']=$this->perfil_model->listarComentarios($idUser);
 		$datos['peliculas']=$this->perfil_model->listarPeliculas($idUser);
