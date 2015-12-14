@@ -1,7 +1,6 @@
 
 <form action="<?= base_url();?>admin" method="post">
-<input type="text" name="adm">
-<input type="submit" value="buscar">
+
 
 </form>
 
@@ -13,6 +12,8 @@
 <td>nickname</td>
 <td>nombre</td>
 <td>apellidos</td>
+<td>Tipo de Usuario</td>
+<td>Biografia</td>
 
 </tr>
 </thead>
@@ -25,7 +26,18 @@
 <td><input type="text" name="nickname" value="<?php echo $datos->nickname;?>"></td>
 <td><input type="text" name="nombre" value="<?php echo $datos->nombre;?>"></td>
 <td><input type="text" name="apellido" value="<?php echo $datos->apellidos;?>"></td>
-<td><a href="<?=base_url();?>admin/borrarUser/<?=$datos->id;?>">Borrar Usuario</a></td>
+<td><select name="tipoUsuario" >
+<?php if ($datos->tipoUsuario=="0"){?>
+<option selected>0</option> 
+<option >1</option> 
+<?php } else {?>
+<option>0</option>
+<option selected >1</option>
+<?php }
+?>
+</select></td>
+<td><input type="text" name="biografia" value="<?php echo $datos->biografia;?>"></td>
+<td><button><a href="<?=base_url();?>admin/borrarUser/<?=$datos->id;?>">Borrar Usuario</a></button></td>
 <td><input type="submit" value="Editar Usuario"/></td><!-- <a href="<?=base_url();?>admin/modificarFicha?id=<?=$datos->id?>">Editar Usuario</a> -->
 
 </form>

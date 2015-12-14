@@ -5,11 +5,13 @@ class admin_model extends CI_model{
 
 	}
 	
-	public function modificarFicha($id, $nombre, $apellidos, $nickname){
+	public function modificarFicha($id, $nombre, $apellidos, $nickname, $tipoUsuario, $biografia){
 		$data = array(
 				'nombre'=>$nombre,
 				'apellidos'=>$apellidos,
-				'nickname'=>$nickname
+				'nickname'=>$nickname,
+				'tipoUsuario'=>$tipoUsuario,
+				'biografia'=>$biografia
 				
 		);
 	

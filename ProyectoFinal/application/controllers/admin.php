@@ -28,9 +28,11 @@ public function ad(){
 			$nombre=$this->input->post('nombre');
 			$apellido=$this->input->post('apellido');
 			$nickname=$this->input->post('nickname');
+			$tipoUsuario=$this->input->post('tipoUsuario');
+			$biografia=$this->input->post('biografia');
 // 			
 // 			$this->load->view('films/modificarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÃ�A IR A LA CARPETA FORMULARIOS
-			if ($this->admin_model->modificarFicha($id, $nombre, $apellido, $nickname)) {
+			if ($this->admin_model->modificarFicha($id, $nombre, $apellido, $nickname, $tipoUsuario, $biografia)) {
 // 				echo $id;
 				$this->index();
 			} else {
