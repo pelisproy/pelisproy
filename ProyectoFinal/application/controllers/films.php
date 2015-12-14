@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->model('films_model');
 			$this->load->model('genero_model');
 			$this->load->model('comentario_model');
+			$this->load->helper('Youtube_helper');
 		}
 		public function index(){
 			$this->load->view('templates/headers/headerPrin.php');
@@ -41,7 +42,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$caratula=$nombreImagen;
 					$fechaEstreno=$this->input->post('datetimepicker');
 					$reg=date("Y-m-d");
-					$trailer=$this->input->post('trailer');
+					$trailerIntro=$this->input->post('trailer');
+					$trailer=comprobar($trailerIntro);
 					$director=$this->input->post('director');
 					$actor=$this->input->post('actor');
 					$idGenero=$this->input->post('genero');
