@@ -46,7 +46,7 @@
 	                            <label class="control-label"> Tráiler <span class="obligatorio">*</span></label>
 	                        </div>
 	                        <div class="col-sm-8 col-lg-6">
-	                            <input class="form-control" id="trailer" name="trailer" type="text" placeholder="URL del tráiler" maxlength="500" data-toggle="tooltip" title="URL del tráiler"/>
+	                            <input class="form-control" id="trailer" name="trailer" type="text" placeholder="URL del tráiler" maxlength="500" data-toggle="tooltip" title="URL de YouTube para el tráiler"/>
 	                        </div>
 	                    </div>
                     	<div class="form-group">

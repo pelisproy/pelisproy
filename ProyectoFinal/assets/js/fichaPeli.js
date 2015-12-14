@@ -1,31 +1,5 @@
 $(function () {
 
-	$('.principalInfo .glyphicon-pencil').on('click', function() {
-        var name;
-        if($(this).parent().parent().hasClass('principalInfo')) {
-            if($(this).siblings('b').text() == 'Nombre: ') {
-                name = "nombre";
-            } else if($(this).siblings('b').text() == 'Fecha de estreno: ') {
-                name = "estreno";   
-            }else if($(this).siblings('b').text() == 'Género: ') {
-                name = "genero";
-            }
-            if($(this).siblings('span').is(':hidden')) {
-                $(this).siblings('form').children('.principalInfoEdicion').hide().parent().siblings('span').text($(this).siblings('form').children('.principalInfoEdicion').val().trim()).show();
-                $(this).siblings('form').submit().remove();
-            } else {
-                if($(this).siblings('b').text() == 'Nombre: ') {
-                    $(this).siblings('span').hide().after('<form class="col-xs-5 col-sm-4" action=""><input class="form-control input-sm principalInfoEdicion" name="' + name + '" value="' + $(this).siblings('span').text() + '"/></form>');
-                } else if($(this).siblings('b').text() == 'Fecha de estreno: ') {
-                    $(this).siblings('span').hide().after('<form class="col-xs-5 col-sm-4" action=""><input type="text" class="form-control input-sm principalInfoEdicion" data-date-format="YYYY-MM-DD" id="' + name + '" name="' + name + '" value="' + $(this).siblings('span').text() + '"/></form>');
-                    $('#estreno').datetimepicker();
-                } else if($(this).siblings('b').text() == 'Género: ') {
-                    
-                }
-            }
-        }
-    });
-
     $('.sinopsis .glyphicon-pencil').on('click', function(){
         if($(this).siblings('p').is(':hidden')) {
             $(this).siblings('form').children('.sinopsisEdicion').hide().parent().siblings('p').text($(this).siblings('form').children('.sinopsisEdicion').val().trim()).show();

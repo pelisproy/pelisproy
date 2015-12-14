@@ -9,7 +9,7 @@ if($contenido!=null){
 foreach ($contenido as $comentario):?>
 <?php $idCom=$comentario['id']; ?>
                 <div class="comentario">
-                <?php if (($this->session->userdata('idUsuario')==$comentario['idUsuario'])||$this->session->userdata('tipoUsuario'==2)):?>
+                <?php if (($this->session->userdata('idUsuario')==$comentario['idUsuario'])||($this->session->userdata('tipoUsuario')==2)):?>
                     <a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idCom");?>">
                     <i class="glyphicon glyphicon-remove"></i>
                     </a>

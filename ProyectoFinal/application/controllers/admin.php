@@ -1,6 +1,6 @@
 
 <?php
-class admin extends CI_Controller {
+class Admin extends CI_Controller {
 	public function __construct() {
 		parent::__construct ();
 		$this->load->helper ( 'form' );
@@ -8,7 +8,6 @@ class admin extends CI_Controller {
 	}
 	public function index() {
 		$this->load->view ( 'templates/headers/headerPrin.php' );
-		$this->load->view ( 'films/body.php' );
 		if ($_POST) {
 			$buscar = $this->input->post('adm');
 		} else {
@@ -20,7 +19,8 @@ class admin extends CI_Controller {
 
 public function ad(){
 	$this->load->view('templates/headers/headerPrin.php');
-	$this->load->view ('admin/admin.php');
+	$datos['user']=$this->admin_model->buscar('');
+	$this->load->view ('admin/admin.php', $datos);
 }
 
 	public function modificarFicha(){

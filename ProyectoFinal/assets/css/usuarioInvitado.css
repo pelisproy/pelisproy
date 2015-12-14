@@ -147,8 +147,11 @@
 	.listas > div > div:last-child > a div span {
 		font-size: 115%;
 	}
-	.listas > div > div:last-child > a div:first-child {
-		border-top-left-radius: 10px;
+	.listas > div > div:last-child > a:first-child div {
+		border-bottom-left-radius: 10px;
+	}
+	.listas > div > div:last-child > a:last-child div {
+		border-bottom-right-radius: 10px;
 	}
 	.listas > div > div:last-child > a div:first-child, .listas > div > div:last-child > a div:nth-child(2) {
 		border-bottom: 0;

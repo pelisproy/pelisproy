@@ -1,3 +1,6 @@
+<div class="agregarPelicula">
+	<a href="<?php base_url();?>films/cargarFormCrearFicha"><button>Crear Película</button></a>
+</div>
 <div class="perfil">
 	<div class="cabecera">
 					<?php foreach ($contenido as $datosPerfil):?>
@@ -5,11 +8,12 @@
 			alt="Avatar del usuario" /> <span class="nick">
 			
 			
-			<?php
+	<?php
         if (!isset($nick)) {
         	echo $this->session->userdata('username');
-     
-        }else{ echo $nick; }
+        } else { 
+        	echo $nick; 
+        }
       ?>
 			
 			

@@ -29,9 +29,11 @@ public function __construct(){
 				$datos['user'] = $this->admin_model->buscar($busqueda);
 				$this->load->view('admin/admin.php',$datos);
 			}
+			$this->load->view('templates/footers/foot.php');
 		}
 		else{
-			$this->load->view('errors/errorBusqueda.php');			
+			$this->load->view('errors/errorBusqueda.php');
+			$this->load->view('templates/footers/foot.php');
 		}
 	}
 }

@@ -63,7 +63,7 @@ public function __construct(){
 				$this->email->send();
 				//$this->load->view('correcto/correctoRegistro.php');
 				echo $mail;
-				redirect('registro');
+				redirect('Home');
 			}
 			else{
 				$this->load->view('errors/errorRegistrarUsuario.php');

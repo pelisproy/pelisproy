@@ -1,0 +1,50 @@
+/*-------------------- Administrar --------------------*/
+.administrar {
+	height: auto;
+	width: 76%;
+	margin: 20px 12% 20px 12%;
+}
+.administrar table tr td {
+	text-align: center;
+}
+.administrar table thead tr td {
+	font-family: 'Calibri';
+	font-weight: bold;
+	padding: 1% 0 1% 0;
+}
+.administrar table tbody tr td select {
+	width: 90%;
+}
+.administrar table tbody tr td button {
+	font-family: 'Calibri';
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	background-color: #2447B2;
+}
+.administrar table tbody tr td input[type="submit"] {
+	width: 116px;
+	height: 28px;
+	font-family: 'Calibri';
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	background-color: #2447B2;
+}
+.administrar table tbody tr td button:hover {
+	background-color: #19327D;
+	color: #FFFF00;
+}
+.administrar table tbody tr td input[type="submit"]:hover {
+	background-color: #19327D;
+	color: #FFFF00;
+}
+.administrar table tbody tr td a {
+	text-decoration: none;
+}
+@media only screen and (max-width: 1000px) {
+	.administrar {
+		width: 100%;
+		margin: 20px 0 20px 1%;
+	}
+}

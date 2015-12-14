@@ -70,6 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				
 			$this->load->view('templates/headers/headerPrin.php');
 			$datos['contenido']=$this->films_model->mostrarPeliculaEspecifica($id);
+			$datos['genero']=$this->genero_model->seleccionarGenero();
 			$this->load->view('films/verPeli.php', $datos);
 			//if(isset($idUser)){
 				$comentarios['contenido']=$this->comentario_model->mostrarComentarios($id, $idUser);
@@ -96,8 +97,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			}
 			if (isset($_POST['genero'])) {
 				$idPeli=$this->uri->segment(3);
-				$nombre='genero';
-				$nombreCampo = $_POST['genero'];
+				$nombre='idGenero';
+				$nombreCampo;
+				$idGenero = $_POST['genero'];
+				foreach($idGenero as $k=>$v){
+					$nombreCampo=$v;
+				}
 				$this->films_model->actualizarDatosPeli($idPeli, $nombre, $nombreCampo);
 			}
 			if (isset($_POST['sinopsis'])) {

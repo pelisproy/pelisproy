@@ -7,7 +7,6 @@ class perfil extends CI_Controller {
 	}
 	public function index() {
 		$this->load->view ( 'templates/headers/headerPrin.php' );
-		$this->load->view ( 'films/body.php' );
 		$idUser=$this->session->userdata('idUsuario');
 		$nick='';
 		
@@ -47,6 +46,7 @@ class perfil extends CI_Controller {
 		$datos['comentario']=$this->perfil_model->listarComentarios($idUser);
 		$datos['peliculas']=$this->perfil_model->listarPeliculas($idUser);
 		$this->load->view('perfilUsuario/body.php', $datos);
+		$this->load->view('templates/footers/foot.php');
 	}
 	public function editarPerfi() {
 		$idUser=$this->session->userdata('idUsuario');
