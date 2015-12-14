@@ -10,9 +10,11 @@
 				<div class="resultados">
 					<img src="<?=base_url("assets/images/films/".$info['caratula']);?>" alt="<?=$info['nombre'];?>"/>
 					<form action="" method="">
-					
-						<i class="glyphicon glyphicon-remove"></i>
-					
+					<?php if (($this->session->userdata('idUsuario')==$info['idUsuario'])):?>
+                    <a onclick="return confirm('¿Estás seguro de querer borrar esta pelicula?')" href="<?=base_url("films/borrarFicha/$idPeli");?>">
+                    	<i class="glyphicon glyphicon-remove"></i>
+                    </a>
+                <?php endif;?>
 					</form>
 					<span><?=$info['nombre'];?></span>				
 				</div>

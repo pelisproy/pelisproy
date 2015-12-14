@@ -5,7 +5,7 @@ class Actor_model extends CI_model{
 		$this->load->database();
 	}
 	public function mostrarListaActores(){		
-		$sentencia="SELECT nombre, caratula, director, actor, id
+		$sentencia="SELECT nombre, caratula, director, actor, id, idUsuario
 				FROM pelicula
 				ORDER BY ACTOR";
 		$query=$this->db->query($sentencia);

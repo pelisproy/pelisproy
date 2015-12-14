@@ -5,7 +5,7 @@ class Director_model extends CI_model{
 		$this->load->database();
 	}
 	public function mostrarListaDirectores(){		
-		$sentencia="SELECT nombre, caratula, director, id
+		$sentencia="SELECT nombre, caratula, director, id, idUsuario
 				FROM pelicula
 				ORDER BY DIRECTOR";
 		$query=$this->db->query($sentencia);

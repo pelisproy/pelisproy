@@ -1,6 +1,7 @@
 <div class="comentariosPelicula">
 <?php 
 $idPeli=$idPelicula;
+$idUser=$this->session->userdata('idUsuario');
 ?>
                 <div class="titulo"><span>Comentarios:</span></div>
 <?php
@@ -8,7 +9,7 @@ if($contenido!=null){
 foreach ($contenido as $comentario):?>
 <?php $idCom=$comentario['id']; ?>
                 <div class="comentario">
-                <?php if ($this->session->userdata('tipoUsuario')==0 || $this->session->userdata('idUsuario')==$comentario['idUsuario']):?>
+                <?php if (($this->session->userdata('idUsuario')==$comentario['idUsuario'])||$this->session->userdata('tipoUsuario'==2)):?>
                     <a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idCom");?>">
                     <i class="glyphicon glyphicon-remove"></i>
                     </a>
@@ -25,6 +26,7 @@ else{
 ?>
 <?php 
 }
+if(isset($idUser)){
 ?>
  <div class="comentar">
                     <form id="nuevoComentario" action="<?=base_url('films/nuevoComentario');?>" method="post" name="comentar">
@@ -35,6 +37,15 @@ else{
                         <input type="hidden" name="idUser" value="<?=$this->session->userdata('idUsuario')?>"/>
                     </form>
  </div>
+ <?php }
+ else{
+ 	?>
+ 	<h3>Usted no está registrado, no puede ver los comentarios de otra gente</h3>
+ 	
+ 	Si lo desea, puede registrarse <a href=".<?= base_url(); ?>home/nuevoUsuario"> haciendo click aquí</a>
+<?php 
+ }
+ ?>
 </div>
 <!--
 		<a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idCom");?>">Borrar</a>

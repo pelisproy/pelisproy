@@ -1,5 +1,5 @@
 function validarMsg(){
-	colorOriginal();
+	colorOriginalMsg();
 	
     var nombre = document.getElementById('nombre').value.trim();
     var mail = document.getElementById('mail').value.trim();
@@ -44,7 +44,7 @@ function validarMsg(){
     }
 }
 
-function colorOriginal() {
+function colorOriginalMsg() {
 	document.getElementById('nombre').backgroundColor = '';
 	document.getElementById('mail').backgroundColor = '';
 	

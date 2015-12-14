@@ -21,7 +21,7 @@ class Genero_model extends CI_Model{
 		return $this->db->delete('genero');
 	}
 	public function mostrarListaGenero(){
-		$sentencia="SELECT nombre, caratula, p.id, nombreGenero
+		$sentencia="SELECT nombre, caratula, p.id, nombreGenero, idUsuario
 				FROM pelicula p, genero g
 				WHERE p.idGenero=g.id
 				ORDER BY NOMBREGENERO";

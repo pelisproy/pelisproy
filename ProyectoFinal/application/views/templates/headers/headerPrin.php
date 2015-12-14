@@ -108,8 +108,8 @@
 				<form action="<?= base_url(); ?>buscador" method="post">
 					<div class="buscador">
 						<div>
-							<input type="text" class="form-control" id="campoBusqueda" placeholder="Buscar..."/>
-				        	<select class="form-control">
+							<input type="text" class="form-control" id="campoBusqueda" name="busqueda" placeholder="Buscar..."/>
+				        	<select class="form-control" name="eleccion">
 				            	<option value="defecto" selected="selected"> Buscar por... </option>
 				                <option value="pelicula"> Película </option>
 				                <option value="actor"> Actor </option>
