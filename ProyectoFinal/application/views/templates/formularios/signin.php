@@ -314,10 +314,10 @@ if(($this->session->flashdata("registroFallido"))):
                            		<label class="control-label"> Sexo </label>
                             </div>
                             <div class="radio col-xs-4 col-sm-4 col-md-3 col-lg-1">
-                                <label><input type="radio" name="sexo" id="opcion_1" value="h" checked="checked"> Hombre </label>
+                                <label><input type="radio" name="sexo" id="opcion_1" value="Ho" checked="checked"> Hombre </label>
                             </div>
                             <div class="radio col-xs-4 col-sm-4 col-md-3 col-lg-1">
-                                <label><input type="radio" name="sexo" id="opcion_2" value="m"> Mujer </label>
+                                <label><input type="radio" name="sexo" id="opcion_2" value="Mu"> Mujer </label>
                             </div>
                         </div>
                         <br/>

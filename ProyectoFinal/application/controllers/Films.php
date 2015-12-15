@@ -49,11 +49,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$director=$this->input->post('director');
 					$actor=$this->input->post('actor');
 					$idGenero=$this->input->post('genero');
+					$sexo=$this->input->post('sexo');
 					$genero;
 					foreach($idGenero as $k=>$v){
 						$genero=$v;
 					}
-					$dato=$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $reg, $trailer, $director, $actor, $idUser, $genero);
+					$dato=$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $sexo, $reg, $trailer, $director, $actor, $idUser, $genero);
 					if($dato){
 						$this->session->set_flashdata("fichaCreadaCor",fichaCreadaCor());
 						redirect('Films/listarPelis');
