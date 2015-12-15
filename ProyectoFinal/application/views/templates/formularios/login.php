@@ -1,3 +1,10 @@
+<?php
+if(($this->session->flashdata("loginFallido"))):
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('loginFallido'); ?>
+</div>
+<?php endif;?>
 <div class="container">
 <form class="form-horizontal" action="<?=base_url();?>login" method="post" id="login">
             	<div class="row">

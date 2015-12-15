@@ -4,6 +4,7 @@ public function __construct(){
 		parent::__construct();
 		$this->load->model('sign_model');
 		$this->load->model('user_model');
+		$this->load->helper('Mensajes_helper');
 	}
 	public function buscaNick(){
 		if($this->input->is_ajax_request()){
@@ -61,12 +62,13 @@ public function __construct(){
 				$this->email->subject('Bienvenido a FilmProject');
 				$this->email->message('Hola <b>'.$nickname.'</b><br/>Te damos la bienvenida a FilmProject, tu web de películas. <br/>Tu <b>usuario</b> es '.$nickname.' y tu <b>contraseña</b> es '.$password.'<br/>Si tienes alguna duda, no dudes en mandar un correo a los administradores');
 				$this->email->send();
-				//$this->load->view('correcto/correctoRegistro.php');
-				echo $mail;
+				$this->session->set_flashdata("registroCompleto",registroCompleto());
 				redirect('Home');
 			}
 			else{
-				$this->load->view('errors/errorRegistrarUsuario.php');
+				//$this->load->view('errors/errorRegistrarUsuario.php');
+				$this->session->set_flashdata("registroFallido",registroFallido());
+				redirect('Home/nuevoUsuario');
 			}
 	}
 }

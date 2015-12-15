@@ -27,6 +27,13 @@ $(document).ready(function(){
                           
 });
 </script>
+<?php
+if(($this->session->flashdata("registroFallido"))):
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('registroFallido'); ?>
+</div>
+<?php endif;?>
 <div class="container">
 			<form class="form-horizontal" action="<?=base_url()?>registro/registro_usuario" method="post" id="registro" name="registro">
             	<div class="row">

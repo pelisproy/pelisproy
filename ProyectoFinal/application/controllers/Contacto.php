@@ -2,6 +2,7 @@
 class Contacto extends CI_Controller{
 public function __construct(){
 		parent::__construct();
+		$this->load->helper('mensajes_helper');
 	}
 
 	public function index(){
@@ -51,8 +52,8 @@ public function __construct(){
 		$this->email->subject('Contacto '.$nombre);
 		$this->email->message($contenido);
 		$this->email->send();
-		redirect('contacto');
-		echo "<script>alert(\"Bien\")</script>";
+		$this->session->set_flashdata("correctoContacto",correctoContacto());
+		redirect('Contacto');
 	}
 }
 ?>

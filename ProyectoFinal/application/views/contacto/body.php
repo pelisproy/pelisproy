@@ -1,3 +1,12 @@
+<?php
+if(($this->session->flashdata("correctoContacto"))):
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('correctoContacto'); 
+endif;
+?>
+</div>
+
 <div class="contacto">
 		<div class="localizacion">
 			<p><span> Dirección: </span> Avd. de Irún s/n - 28830 San Fernando, Madrid </p>

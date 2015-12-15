@@ -1,3 +1,35 @@
+<?php
+if(($this->session->flashdata("registroComentario"))){
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('registroComentario'); ?>
+</div>
+<?php }
+else{
+	if(($this->session->flashdata("comentarioFallido"))){
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('comentarioFallido'); ?>
+</div>
+<?php }
+}
+if($this->session->flashdata("borrarFichaFallido")){
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('borrarFichaFallido'); ?>
+</div>
+<?php }
+else{
+	if(($this->session->flashdata("borrarComentarioFallido"))){
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('borrarComentarioFallido'); ?>
+</div>
+<?php }
+}
+?>
+
+
 <div class="comentariosPelicula">
 <?php 
 $idPeli=$idPelicula;
@@ -7,10 +39,12 @@ $idUser=$this->session->userdata('idUsuario');
 <?php
 if($contenido!=null){
 foreach ($contenido as $comentario):?>
-<?php $idCom=$comentario['id']; ?>
+<?php $idCom=$comentario['id']; 
+$idPeli=$comentario['idPelicula'];
+?>
                 <div class="comentario">
                 <?php if (($this->session->userdata('idUsuario')==$comentario['idUsuario'])||($this->session->userdata('tipoUsuario')==2)):?>
-                    <a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idCom");?>">
+                    <a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idPeli/$idCom");?>">
                     <i class="glyphicon glyphicon-remove"></i>
                     </a>
                 <?php endif;?>
@@ -47,10 +81,4 @@ if(isset($idUser)){
  }
  ?>
 </div>
-<!--
-		<a onclick="return confirm('¿Estás seguro de querer borrar este comentario?')" href="<?=base_url("films/borrarComentario/$idCom");?>">Borrar</a>
-		<input type="button" onclick="modificarComentario(<?php echo $idCom ?>)" value="Modificar">
-	</div>
-</div>
--->
 </div>

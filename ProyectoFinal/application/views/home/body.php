@@ -1,4 +1,11 @@
-	<div class="carrusel">
+<?php
+if(($this->session->flashdata("registroCompleto"))):
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('registroCompleto'); ?>
+</div>
+<?php endif;?>
+<div class="carrusel">
 		<img src="<?= base_url(); ?>/assets/images/carrusel/1.jpg" alt="Film Project - Tu Web de Películas"/>
 	</div>
 	<div class="listas">

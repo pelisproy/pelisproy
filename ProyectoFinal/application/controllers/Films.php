@@ -7,7 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->model('films_model');
 			$this->load->model('genero_model');
 			$this->load->model('comentario_model');
-			$this->load->helper('Youtube_helper');
+			$this->load->helper('youtube_helper');
+			$this->load->helper('mensajes_helper');
 		}
 		public function index(){
 			$this->load->view('templates/headers/headerPrin.php');
@@ -43,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$fechaEstreno=$this->input->post('datetimepicker');
 					$reg=date("Y-m-d");
 					$trailerIntro=$this->input->post('trailer');
-					$trailer=comprobar($trailerIntro);
+					$trailer=comprobarVideo($trailerIntro);
 					$director=$this->input->post('director');
 					$actor=$this->input->post('actor');
 					$idGenero=$this->input->post('genero');
@@ -53,11 +54,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					}
 					$dato=$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $reg, $trailer, $director, $actor, $idUser, $genero);
 					if($dato){
-						$this->load->view('correcto/correctoCrearFicha.php');
+						$this->session->set_flashdata("fichaCreadaCor",fichaCreadaCor());
+						redirect('Films/listarPelis');
 					}
 				}
 				else{
-					$this->load->view('errors/errorSubirFicha.php');
+					$this->session->set_flashdata("fichaFallido",fichaFallido());
+					redirect('Films/listarPelis');
 				}
 		}
 		public function listarPelis(){
@@ -74,14 +77,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$datos['contenido']=$this->films_model->mostrarPeliculaEspecifica($id);
 			$datos['genero']=$this->genero_model->seleccionarGenero();
 			$this->load->view('films/verPeli.php', $datos);
-			//if(isset($idUser)){
 				$comentarios['contenido']=$this->comentario_model->mostrarComentarios($id, $idUser);
 				$comentarios['idPelicula']=$id;
 				$this->load->view('comentario/verComentarios.php', $comentarios);
-			/*}
-			else{
-				$this->load->view('errors/errorNoUsuario.php');
-			}*/
+			
 			$this->load->view('templates/footers/foot.php');
 			
 			//MODIFICANDO PELI
@@ -141,7 +140,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$id=$this->uri->segment(3);
 			$bien=$this->films_model->borrarFicha($id);
 		if($bien){
-			$this->load->view('correcto/correctoBorrarFicha.php');
+			//$this->load->view('correcto/correctoBorrarFicha.php');
+			$this->session->set_flashdata("fichaBorradaCor",fichaBorradaCor());
+			redirect('Films/listarPelis');
+		}
+		else{
+			$this->session->set_flashdata("borrarFichaFallido",borrarFichaFallido());
+			redirect('Films/listarPelis');
 		}
 	}
 	
@@ -161,22 +166,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$mensajeReg=comprobar($mensaje);
 			$bien=$this->comentario_model->nuevoComentario($mensajeReg, $dia, $idPeli, $idUser);
 			if($bien){
-				$this->load->view('correcto/correctoComentario');
+				//$this->load->view('correcto/correctoComentario');
+				$this->session->set_flashdata("registroComentario", registroComentario());
+				redirect("Films/verPeli/$idPeli");
 			}
 		}
 		else{
-			$this->load->view('errors/errorComentario.php');
+			//$this->load->view('errors/errorComentario.php');
+			$this->session->set_flashdata("comentarioFallido", comentarioFallido());
+			redirect("Films/verPeli/$idPeli");
 		}
 	}
 	
 	public function borrarComentario(){
-		$idCom=$this->uri->segment(3);
+		$idCom=$this->uri->segment(4);
+		$idPeli=$this->uri->segment(3);
 		$bien=$this->comentario_model->borrarComentario($idCom);
 		if($bien){
-			$this->load->view('correcto/correctoBorrarComentario.php');
+			//$this->load->view('correcto/correctoBorrarComentario.php');
+			$this->session->set_flashdata("fichaBorradaCor",fichaBorradaCor());
+			redirect("Films/verPeli/$idPeli");
 		}
 		else{
-			$this->load->view('errors/errorBorrarcomentario.php');
+			//$this->load->view('errors/errorBorrarcomentario.php');
+			$this->session->set_flashdata("borrarComentarioFallido",borrarComentarioFallido());
+			redirect("Films/verPeli/$idPeli");
 		}
 	}
 	

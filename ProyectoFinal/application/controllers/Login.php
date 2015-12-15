@@ -3,6 +3,7 @@ defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
 class Login extends CI_Controller {
 	public function __construct() {
 		parent::__construct ();
+		$this->load->helper('Mensajes_helper');
 	}
 	public function index() {
 		// si la session no existe userdata ya nos develve false
@@ -27,11 +28,10 @@ class Login extends CI_Controller {
 // 				$this->session->set_userdata ( 'biografia', $this->usuario_model->biografia ( $_POST ['username'] ) );
 				redirect ( 'Home' );
 			} else {
+				$this->session->set_flashdata("loginFallido",loginFallido());
 				redirect ( 'home/login' );
 			}
-		} /*else {
-			
-		}*/
+		}
 	}
 	public function logout() {
 		$this->session->sess_destroy ();
