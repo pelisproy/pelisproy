@@ -60,33 +60,4 @@ $(function() {
 		$(this).css('opacity', '1');
 	});
 
-	$('.cabecera > img')
-			.on(
-					'click',
-					function() {
-						if ($('.cabecera input[type="file"]').length > 0) {
-							var value = $('.cabecera input[type="file"]').val();
-							switch (value.substring(value.lastIndexOf('.') + 1)
-									.toLowerCase()) {
-							case 'gif':
-							case 'jpg':
-							case 'png':
-								$('.cabecera input[type="file"]').parent()
-										.submit();
-								$('.cabecera input[type="file"]').parent()
-										.remove();
-								break;
-							default:
-								value = '';
-								alert("La extenisón de la imagen no es correcta. Debe ser .gif, .jpg o .png");
-								break;
-							}
-						} else {
-							$(this)
-									.after(
-											'<form style="display: none;" action=""><input type="file" name="actualizarImg"/><input type="submit"/></form>');
-							$('.cabecera input[type="file"]').trigger('click');
-						}
-					});
-
 });

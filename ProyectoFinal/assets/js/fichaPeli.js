@@ -25,27 +25,6 @@ $(function () {
     $('.imagenPelicula > img').on('mouseleave', function() {
         $(this).css('opacity', '1');
     });
-
-    $('.imagenPelicula > img').on('click', function() {
-        if($('.imagenPelicula input[type="file"]').length > 0) {
-            var value = $('.imagenPelicula input[type="file"]').val();
-            switch(value.substring(value.lastIndexOf('.') + 1).toLowerCase()){
-                case 'gif': 
-                case 'jpg': 
-                case 'png':
-                    $('.imagenPelicula input[type="file"]').parent().submit();
-                    $('.imagenPelicula input[type="file"]').parent().remove();
-                break;
-                default:
-                    value = '';
-                    alert("La extenisón de la imagen no es correcta. Debe ser .gif, .jpg o .png");
-                break;
-            } 
-        } else {
-            $(this).after('<form style="display: none;" action="" method="POST" enctype="multipart/form-data"><input type="file" name="caratula"/><input type="submit"/></form>');
-            $('.imagenPelicula input[type="file"]').trigger('click');
-        }
-    });
 	
 });
 

@@ -61,7 +61,7 @@ if(isset($idUser)){
  <?php }
  else{
  	?>
- 	<h3>Usted no está registrado, no puede ver los comentarios de otra gente</h3>
+ 	<h3>Usted no está registrado, no puede escribir comentarios</h3>
 <?php 
  }
  ?>
