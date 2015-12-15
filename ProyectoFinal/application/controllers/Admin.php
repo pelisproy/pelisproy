@@ -43,6 +43,7 @@ public function ad(){
 	public function borrarUser(){
 				$id=$this->uri->segment(3);
 				$this->admin_model->borrarUser($id);
+				redirect ('admin/ad');
 	}
 				
 		
