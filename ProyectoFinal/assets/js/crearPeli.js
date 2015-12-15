@@ -36,7 +36,6 @@ function validar() {
 
 	var nombre = document.getElementById('nombre').value.trim();
 	var estreno = document.getElementById('datetimepicker').value.trim();
-	//var genero = document.getElementById('genero').value.trim();
 	var sinopsis = document.getElementById('sinopsis').value.trim();
 	var trailer = document.getElementById('trailer').value.trim();
 	var director = document.getElementById('director').value.trim();
@@ -48,7 +47,7 @@ function validar() {
 	var regExNombre = /^[A-Za-z0-9áéíóúñüÜ&$:,\s!]{3,}$/;
 	var regExEstreno = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 	var regExGenero = /^[A-Za-záéíóúñ\s]{3,}$/;
-	var regExSinopsis = /^[\wáéíóúñÁÉÍÓÚüÜ.:,\(\)\"\-\s!]{100,}$/;
+	var regExSinopsis = /^[\wáéíóúñÁÉÍÓÚüÜ.:,;\(\)\"\-\s!]{100,}$/;
 	var regExDirectorActor = /^[A-Za-záéíóúñ\(\).\s]{3,}$/;
 
 	if(!regExNombre.test(nombre)) {
@@ -74,18 +73,6 @@ function validar() {
 		document.getElementById('datetimepicker').style.backgroundColor = '';
 		document.getElementById('datetimepicker').style.borderColor = '';
 	}
-
-	/*if(!regExGenero.test(genero)) {
-		document.getElementById('genero').style.backgroundColor = '#FFADAD';
-		document.getElementById('genero').style.borderColor = '#A10000';
-		if(correcto) {
-			document.getElementById('genero').focus();
-		}
-		correcto = false;
-	} else {
-		document.getElementById('genero').style.backgroundColor = '';
-		document.getElementById('genero').style.borderColor = '';
-	}*/
 
 	if(!regExSinopsis.test(sinopsis)) {
 		document.getElementById('sinopsis').style.backgroundColor = '#FFADAD';
@@ -151,7 +138,6 @@ function validar() {
 function colorOriginal() {
 	document.getElementById('nombre').backgroundColor = '';
 	document.getElementById('datetimepicker').backgroundColor = '';
-	//document.getElementById('genero').backgroundColor = '';
 	document.getElementById('sinopsis').backgroundColor = '';
 	document.getElementById('trailer').backgroundColor = '';
 	document.getElementById('director').backgroundColor = '';
@@ -159,7 +145,6 @@ function colorOriginal() {
 
 	document.getElementById('nombre').borderColor = '';
 	document.getElementById('datetimepicker').borderColor = '';
-	//document.getElementById('genero').borderColor = '';
 	document.getElementById('sinopsis').borderColor = '';
 	document.getElementById('trailer').borderColor = '';
 	document.getElementById('director').borderColor = '';

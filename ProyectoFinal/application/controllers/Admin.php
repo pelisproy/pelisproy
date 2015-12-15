@@ -1,4 +1,3 @@
-
 <?php
 class Admin extends CI_Controller {
 	public function __construct() {
@@ -21,6 +20,7 @@ public function ad(){
 	$this->load->view('templates/headers/headerPrin.php');
 	$datos['user']=$this->admin_model->buscar('');
 	$this->load->view ('admin/admin.php', $datos);
+	$this->load->view('templates/footers/foot.php');
 }
 
 	public function modificarFicha(){
@@ -39,6 +39,7 @@ public function ad(){
 				echo "Ha ocurrido algún error";
 			
 			}
+			$this->load->view('templates/footers/foot.php');
 	}
 	public function borrarUser(){
 				$id=$this->uri->segment(3);

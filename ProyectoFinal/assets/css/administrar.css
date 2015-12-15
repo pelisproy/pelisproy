@@ -1,8 +1,8 @@
 /*-------------------- Administrar --------------------*/
 .administrar {
 	height: auto;
-	width: 76%;
-	margin: 20px 12% 20px 12%;
+	width: 88%;
+	margin: 8% 0 8% 12%;
 }
 .administrar table tr td {
 	text-align: center;
@@ -16,6 +16,7 @@
 	width: 90%;
 }
 .administrar table tbody tr td button {
+	height: 28px;
 	font-family: 'Calibri';
 	font-size: 16px;
 	font-weight: bold;

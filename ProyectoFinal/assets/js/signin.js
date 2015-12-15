@@ -120,18 +120,6 @@ $(document).ready(function() {
 
 });
 
-/*function condicionesUso() {
-
-	if(!document.querySelector('input[type="checkbox"]').checked) {
-		$('.alert').css('display', 'block');
-	} else {
-		document.registro.submit();
-		document.registro.reset();
-		$('.alert').css('display', 'none');
-	}
-
-}*/
-
 function alertRegistro() {
 	
 	var nombre = document.getElementById('nombre').value.trim();

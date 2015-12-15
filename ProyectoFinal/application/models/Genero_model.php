@@ -38,9 +38,9 @@ class Genero_model extends CI_Model{
 		$query = $this->db->get('genero');
 			if($query->num_rows > 0){
 				foreach ($query->result_array() as $row){
-					$row_set[] = htmlentities(stripslashes($row['nombreGenero'])); //build an array
+					$row_set[] = htmlentities(stripslashes($row['nombreGenero']));
 				}
-				echo json_encode($row_set); //format the array into json data
+				echo json_encode($row_set);
 			}
 	}
 }

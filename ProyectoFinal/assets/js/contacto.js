@@ -34,10 +34,11 @@ function validarMsg(){
     }
     
     if(correcto){
-        document.querySelector('.loading').style.display = 'block';
-        document.querySelector('.container').style.opacity = '0.1';
-        document.querySelector('.footer').style.opacity = '0.1';
-        document.querySelector('body').style.overflow = 'hidden';
+    	document.querySelector('.loading').style.display = 'block';
+		document.querySelector('.container').style.opacity = '0.1';
+		document.querySelector('.contacto').style.opacity = '0.1';
+		document.querySelector('.footer').style.opacity = '0.1';
+		document.querySelector('body').style.overflow = 'hidden';
         setTimeout(function() {
             document.contactar.submit();
         }, 2000);

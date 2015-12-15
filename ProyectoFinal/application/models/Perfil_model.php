@@ -1,5 +1,5 @@
 <?php
-class perfil_model extends CI_model {
+class Perfil_model extends CI_model {
 	public function __construct() {
 		parent::__construct ();
 	}
@@ -12,10 +12,7 @@ class perfil_model extends CI_model {
 		;
 		
 		$this->db->where ( 'id', $id );
-		// $this->db->update('pelicula', $data);
 		if (! $this->db->update ( 'usuario', $data )) {
-			// return mysqli_errno($this->db->update('pelicula', $data));
-			// return mysqli_error($this->db->update('pelicula', $data));
 			return false;
 		}
 		return $data;
@@ -57,7 +54,7 @@ class perfil_model extends CI_model {
 		return $query->result_array ();
 	}
 	public function listarPeliculas($id) {
-		$sentencia = "SELECT nombre, caratula 
+		$sentencia = "SELECT id, nombre, caratula 
 		FROM pelicula 
 		WHERE idUsuario=$id ORDER BY (fechaAgregado) ASC";
 		$query = $this->db->query ( $sentencia );

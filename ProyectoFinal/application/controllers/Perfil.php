@@ -1,5 +1,5 @@
 <?php
-class perfil extends CI_Controller {
+class Perfil extends CI_Controller {
 	public function __construct() {
 		parent::__construct ();
 		$this->load->helper ( 'form' );
@@ -66,10 +66,7 @@ public function ad(){
 			$nombre=$this->input->post('nombre');
 			$apellido=$this->input->post('apellido');
 			$nickname=$this->input->post('nickname');
-// 			
-// 			$this->load->view('films/modificarFicha.php');//FORMULARIO QUE PROBABLEMENTE DEBERÃ�A IR A LA CARPETA FORMULARIOS
 			if ($this->perfil_model->modificarFicha($id, $nombre, $apellido, $nickname)) {
-// 				echo $id;
 				$this->index();
 			} else {
 				echo "Ha ocurrido algún error";

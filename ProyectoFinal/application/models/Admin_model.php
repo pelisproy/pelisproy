@@ -1,5 +1,5 @@
 <?php
-class admin_model extends CI_model{
+class Admin_model extends CI_model{
 	public function __construct(){
 		parent::__construct();
 
@@ -16,11 +16,8 @@ class admin_model extends CI_model{
 		);
 	
 		$this->db->where('id', $id);
-		//$this->db->update('pelicula', $data);
 		if (!$this->db->update('usuario', $data))
 		{
-			//return mysqli_errno($this->db->update('pelicula', $data));
-			//return mysqli_error($this->db->update('pelicula', $data));
 			return false;
 		}
 		return $data;
@@ -43,7 +40,5 @@ class admin_model extends CI_model{
 		public function borrarUser($id){
 			$this->db->where('id', $id);
 			return $this->db->delete('usuario');
-			/*if($data['error'] = $this->db->_error_message());
-				return $data;*/
 		}
 }

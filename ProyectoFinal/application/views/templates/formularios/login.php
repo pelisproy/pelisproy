@@ -1,7 +1,7 @@
 <?php
 if(($this->session->flashdata("loginFallido"))):
 ?>
-<div class="alert alert-danger text-center" role="alert"> 
+<div class="alert alert-danger text-center loginFallido" role="alert"> 
 <?=$this->session->flashdata('loginFallido'); ?>
 </div>
 <?php endif;?>
@@ -28,9 +28,6 @@ if(($this->session->flashdata("loginFallido"))):
                         </div>
                         <div class="error"><span>Usuario o contraseña incorrectos</span></div>
                         <br/>
-                        <div class="link form-group col-xs-12">
-                            <label><a href=""> Olvidé mi contraseña </a></label>
-                        </div>
                         <div class="button">
                             <button type="submit" class="btn btn-primary"> Acceder </button>
                         </div>

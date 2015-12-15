@@ -1,6 +1,3 @@
-<div class="agregarPelicula">
-	<a href="<?php base_url();?>films/cargarFormCrearFicha"><button>Crear Película</button></a>
-</div>
 <div class="perfil">
 	<div class="cabecera">
 					<?php foreach ($contenido as $datosPerfil):?>
@@ -57,12 +54,10 @@
 				<b>Sexo:</b><span>
 						<?php
 						
-						if ($datosPerfil ['sexo'] == "h") {
+						if ($datosPerfil ['sexo'] == "Ho") {
 							echo "Hombre";
-						} else if ($datosPerfil ['sexo'] == "m") {
+						} else if ($datosPerfil ['sexo'] == "Mu") {
 							echo "Mujer";
-						} else {
-							echo "Hay un error en tu sexo";
 						}
 						?></span>
 							<?php
@@ -94,8 +89,6 @@
              
       ?>
           <i class="glyphicon glyphicon-pencil"></i>
-          <i
-				class="glyphicon glyphicon-remove"></i>
       <?php 
         }
       ?>
@@ -119,7 +112,7 @@
 		<?php foreach ($comentario as $datosComen):?>
 			<div>
 				<p>
-					En <a href=""><span><?=$datosComen['nombre']?></span></a>:
+					En <a href="<?=base_url('films/verPeli/'.$datosComen['idPelicula']);?>"><span><?=$datosComen['nombre']?></span></a>:
 				</p>
 				<p><?=$datosComen['texto']?></p>
 			</div>
@@ -136,9 +129,9 @@
 			
 		<?php foreach ($peliculas as $datosPelis):?>
 			<div>
-				<a href=""> <img
-					src="../images/carrusel/<?=$datosPelis['caratula']?>"
-					alt="NombrePelicula" height="90px" width="90px" /><br /> <span><?=$datosPelis['nombre']?></span>
+				<a href="<?=base_url('films/verPeli/'.$datosPelis['id']);?>"> <img
+					src="<?= base_url(); ?>/assets/images/films/<?=$datosPelis['caratula']?>"
+					alt="NombrePelicula" height="90px" width="90px" /><br />
 				</a>
 			</div>
 		<?php endforeach;?>

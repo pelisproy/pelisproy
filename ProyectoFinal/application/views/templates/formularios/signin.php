@@ -30,7 +30,7 @@ $(document).ready(function(){
 <?php
 if(($this->session->flashdata("registroFallido"))):
 ?>
-<div class="alert alert-danger text-center" role="alert"> 
+<div class="alert alert-danger text-center registroFallido" role="alert"> 
 <?=$this->session->flashdata('registroFallido'); ?>
 </div>
 <?php endif;?>

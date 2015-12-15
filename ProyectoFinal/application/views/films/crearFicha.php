@@ -67,7 +67,7 @@
 					    </div>
 	                    <div class="file form-group">
 	                        <div class="col-xs-5 col-sm-4">
-	                            <label class="control-label"> Carátula </label>
+	                            <label class="control-label"> Carátula <span class="obligatorio">*</span></label>
 	                        </div>
 	                        <div class="col-xs-7 col-sm-8 col-lg-6">
 	                            <button onclick="" class="seleccionImg"> Seleccionar </button>

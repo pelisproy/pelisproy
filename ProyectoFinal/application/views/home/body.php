@@ -1,7 +1,7 @@
 <?php
 if(($this->session->flashdata("registroCompleto"))):
 ?>
-<div class="alert alert-danger text-center" role="alert"> 
+<div class="alert alert-success text-center registroCompleto" role="alert"> 
 <?=$this->session->flashdata('registroCompleto'); ?>
 </div>
 <?php endif;?>

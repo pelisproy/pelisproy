@@ -66,7 +66,6 @@ public function __construct(){
 				redirect('Home');
 			}
 			else{
-				//$this->load->view('errors/errorRegistrarUsuario.php');
 				$this->session->set_flashdata("registroFallido",registroFallido());
 				redirect('Home/nuevoUsuario');
 			}

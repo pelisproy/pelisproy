@@ -1,7 +1,7 @@
 <?php
 if(($this->session->flashdata("correctoContacto"))):
 ?>
-<div class="alert alert-danger text-center" role="alert"> 
+<div class="alert alert-success text-center correctoContacto" role="alert"> 
 <?=$this->session->flashdata('correctoContacto'); 
 endif;
 ?>

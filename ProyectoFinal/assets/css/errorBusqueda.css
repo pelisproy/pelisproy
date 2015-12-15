@@ -1,0 +1,32 @@
+.errorBusqueda {
+	height: 300px;
+}
+.errorBusqueda div {
+	width: 90%;
+	margin: 15px 5% 0 5%;
+	font-family: 'Calibri';
+	font-size: 16px;
+}
+.errorBusqueda a {
+	margin: 20px 45% 0 45%;
+}
+@media only screen and (max-width: 800px) {
+	.errorBusqueda a {
+		margin-left: 43%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.errorBusqueda a {
+		margin-left: 41%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.errorBusqueda a {
+		margin-left: 40%;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.errorBusqueda a {
+		margin-left: 39%;
+	}
+}

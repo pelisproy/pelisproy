@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->model('comentario_model');
 			$this->load->helper('youtube_helper');
 			$this->load->helper('mensajes_helper');
+			$this->load->helper('acepto_helper');
 		}
 		public function index(){
 			$this->load->view('templates/headers/headerPrin.php');
@@ -29,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$usuario=$this->session->userdata('username');
 			$idUser=$this->session->userdata('idUsuario');
 				//PARTE DE SUBIR LA IMAGEN
-				$nombreImagen=$_FILES['caratula']['name'];
+				$nombreImagen=comprobarAcento($_FILES['caratula']['name']);
 				$config['max_size']=1024;
 				$config['quality']='90%';
 				$config['upload_path']='./assets/images/films/';
@@ -140,7 +141,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$id=$this->uri->segment(3);
 			$bien=$this->films_model->borrarFicha($id);
 		if($bien){
-			//$this->load->view('correcto/correctoBorrarFicha.php');
 			$this->session->set_flashdata("fichaBorradaCor",fichaBorradaCor());
 			redirect('Films/listarPelis');
 		}
@@ -158,7 +158,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$mensaje=$this->input->post('texto');
 		$dia=date("Y-m-d");
 	
-		$this->form_validation->set_rules('texto', 'Texto', 'required|min_length[5]|max_length[1000]');
+		$this->form_validation->set_rules('texto', 'Texto', 'required|min_length[3]|max_length[1000]');
 		$this->form_validation->set_message('required', '%s: es requerido');
 		$this->form_validation->set_message('min_length', '%s: debe tener al menos %s carácteres');
 		$this->form_validation->set_message('max_length', '%s: debe tener al menos %s carácteres');
@@ -166,13 +166,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$mensajeReg=comprobar($mensaje);
 			$bien=$this->comentario_model->nuevoComentario($mensajeReg, $dia, $idPeli, $idUser);
 			if($bien){
-				//$this->load->view('correcto/correctoComentario');
 				$this->session->set_flashdata("registroComentario", registroComentario());
 				redirect("Films/verPeli/$idPeli");
 			}
 		}
 		else{
-			//$this->load->view('errors/errorComentario.php');
 			$this->session->set_flashdata("comentarioFallido", comentarioFallido());
 			redirect("Films/verPeli/$idPeli");
 		}
@@ -183,12 +181,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$idPeli=$this->uri->segment(3);
 		$bien=$this->comentario_model->borrarComentario($idCom);
 		if($bien){
-			//$this->load->view('correcto/correctoBorrarComentario.php');
-			$this->session->set_flashdata("fichaBorradaCor",fichaBorradaCor());
+			$this->session->set_flashdata("comentarioBorCor",comentarioBorCor());
 			redirect("Films/verPeli/$idPeli");
 		}
 		else{
-			//$this->load->view('errors/errorBorrarcomentario.php');
 			$this->session->set_flashdata("borrarComentarioFallido",borrarComentarioFallido());
 			redirect("Films/verPeli/$idPeli");
 		}

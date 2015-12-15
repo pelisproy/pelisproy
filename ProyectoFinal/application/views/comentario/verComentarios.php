@@ -1,33 +1,21 @@
 <?php
 if(($this->session->flashdata("registroComentario"))){
 ?>
-<div class="alert alert-danger text-center" role="alert"> 
+<div class="alert alert-success text-center registroComentario" role="alert"> 
 <?=$this->session->flashdata('registroComentario'); ?>
 </div>
-<?php }
-else{
-	if(($this->session->flashdata("comentarioFallido"))){
-?>
-<div class="alert alert-danger text-center" role="alert"> 
-<?=$this->session->flashdata('comentarioFallido'); ?>
-</div>
-<?php }
-}
-if($this->session->flashdata("borrarFichaFallido")){
-?>
-<div class="alert alert-danger text-center" role="alert"> 
-<?=$this->session->flashdata('borrarFichaFallido'); ?>
-</div>
-<?php }
-else{
-	if(($this->session->flashdata("borrarComentarioFallido"))){
+<?php  }
+if(($this->session->flashdata("borrarComentarioFallido"))){
 ?>
 <div class="alert alert-danger text-center" role="alert"> 
 <?=$this->session->flashdata('borrarComentarioFallido'); ?>
 </div>
-<?php }
-}
-?>
+<?php } 
+if(($this->session->flashdata("comentarioBorCor"))){ ?>
+<div class="alert alert-success text-center borrarComentarioFallido" role="alert"> 
+<?=$this->session->flashdata('comentarioBorCor'); ?>
+</div>
+<?php } ?>
 
 
 <div class="comentariosPelicula">
@@ -48,11 +36,10 @@ $idPeli=$comentario['idPelicula'];
                     <i class="glyphicon glyphicon-remove"></i>
                     </a>
                 <?php endif;?>
-                    <p><a href="<?php echo $comentario['id'];?>"><?php echo $comentario['nickname'];?></a> el <span class="horaComentario"><?php echo $comentario['fechaComentario'];?></span>:</p><br/>
+                    <p><a href="<?=base_url('perfil');?>/?nickUsuario=<?php echo $comentario['nickname'];?>"><?php echo $comentario['nickname'];?></a> el <span class="horaComentario"><?php echo $comentario['fechaComentario'];?></span>:</p><br/>
                     <?php echo $comentario['texto']?>
                 </div>
 <?php 
-
 endforeach;
 }
 else{

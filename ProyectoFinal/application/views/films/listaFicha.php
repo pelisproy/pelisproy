@@ -1,3 +1,15 @@
+<?php 
+if($this->session->flashdata("borrarFichaFallido")){
+?>
+<div class="alert alert-danger text-center" role="alert"> 
+<?=$this->session->flashdata('borrarFichaFallido'); ?>
+</div>
+<?php }
+if($this->session->flashdata("fichaBorradaCor")){
+	?>
+<div class="alert alert-success text-center fichaBorradaCor" role="alert"> 
+<?=$this->session->flashdata('fichaBorradaCor'); }?>
+</div>
 <?php
 if($this->session->userdata('idUsuario')):
 ?>

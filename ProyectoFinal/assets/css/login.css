@@ -1,7 +1,8 @@
 /*-------------------- Login --------------------*/
 #login {
-	float: left;
+	height: 280px;
 	width: 60%;
+	float: left;
 }
 #login .row {
 	margin: 30px 0 30px 10%;
@@ -27,6 +28,12 @@
 	color: #A94442;
 	border: 1px solid #EBCCD1;
 	border-radius: 5px;
+}
+.loginFallido {
+	width: 90%;
+	margin: 15px 5% 0 5%;
+	font-family: 'Calibri';
+	font-size: 16px;
 }
 #login button[type="submit"] {
 	font-weight: bold;

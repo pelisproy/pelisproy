@@ -93,6 +93,8 @@
 	float: left;
 	padding: 1.5%;
 	border-bottom: 1px solid #808080;
+	overflow-x: hidden; 
+	overflow-y: scroll;
 }
 .perfil .restoPerfil .biografia textarea {
 	resize: none;
@@ -125,12 +127,15 @@
 .perfil .restoPerfil .pelisAgregadas div:last-child {
 	border-right: none;
 }
-.perfil .restoPerfil .pelisAgregadas div img {
-	margin-bottom: 8%;
-}
 .perfil .restoPerfil .pelisAgregadas div a:hover {
 	color: #33BDFF;
 	text-decoration: none;
+}
+.perfil .restoPerfil .pelisAgregadas div a img {
+	margin-bottom: 8%;
+}
+.perfil .restoPerfil .pelisAgregadas div a span {
+	margin-left: 7%;
 }
 .perfil .restoPerfil .title {
 	color: white;	
@@ -139,7 +144,7 @@
 }
 .perfil .restoPerfil .comentarios:hover,
 .perfil .restoPerfil .biografia:hover,
-.perfil .restoPerfil .pelisAgregadas:hover {
+.perfil .restoPerfil .pelisAgregadas div:hover {
 	background-color: #404040;
 }
 .perfil .glyphicon-pencil {

@@ -56,6 +56,7 @@
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/busquedaGenero.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/agregarPelicula.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/administrar.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/errorBusqueda.css">
 	</head>
 	<body>
 		<div class="loading">
