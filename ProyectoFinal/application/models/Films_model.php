@@ -3,13 +3,12 @@ class Films_model extends CI_Model {
 	public function __construct() {
 		$this->load->database ();
 	}
-public function crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $sexo, $registro, $trailer, $director, $actor, $idUsuario, $genero){
+public function crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $registro, $trailer, $director, $actor, $idUsuario, $genero){
 		$data=array(
 			'nombre'=>$nombre,
 			'sinopsis'=>$sinopsis,
 			'caratula'=>$caratula,
 			'fechaEstreno'=>$fechaEstreno,
-			'sexo'=>$sexo,
 			'fechaAgregado'=>$registro,
 			'trailer'=>$trailer,
 			'director'=>$director,

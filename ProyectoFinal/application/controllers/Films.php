@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$usuario=$this->session->userdata('username');
 			$idUser=$this->session->userdata('idUsuario');
 				//PARTE DE SUBIR LA IMAGEN
-				$nombreImagen=comprobarAcento($_FILES['caratula']['name']);
+				$nombreImagen=$_FILES['caratula']['name'];
 				$config['max_size']=1024;
 				$config['quality']='90%';
 				$config['upload_path']='./assets/images/films/';
@@ -45,16 +45,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$fechaEstreno=$this->input->post('datetimepicker');
 					$reg=date("Y-m-d");
 					$trailerIntro=$this->input->post('trailer');
-					$trailer=comprobarVideo($trailerIntro);
+					$trailer=$trailerIntro;
 					$director=$this->input->post('director');
 					$actor=$this->input->post('actor');
 					$idGenero=$this->input->post('genero');
-					$sexo=$this->input->post('sexo');
 					$genero;
 					foreach($idGenero as $k=>$v){
 						$genero=$v;
 					}
-					$dato=$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $sexo, $reg, $trailer, $director, $actor, $idUser, $genero);
+					$dato=$this->films_model->crearFicha($nombre, $sinopsis, $caratula, $fechaEstreno, $reg, $trailer, $director, $actor, $idUser, $genero);
 					if($dato){
 						$this->session->set_flashdata("fichaCreadaCor",fichaCreadaCor());
 						redirect('Films/listarPelis');
